@@ -1,5 +1,5 @@
 # Summary
 
-* Kinds of evaluation, reasons to evaluate
 * Introduction
+* Kinds of evaluation, reasons to evaluate
 
