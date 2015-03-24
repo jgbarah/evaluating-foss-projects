@@ -7,5 +7,5 @@
 * [Evaluating development processes](processes.md)
 * [Evaluation models](evaluation_models.md)
 * [Basics of quantitative evaluation](quantitative.md)
-* Quantitative evaluation with Gtrimoire
+* [Quantitative evaluation with Gtrimoire](grimoire.md)
 
