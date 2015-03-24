@@ -6,4 +6,5 @@
 * [Evaluating the community](community.md)
 * [Evaluating development processes](processes.md)
 * [Basics of quantitative evaluation](quantitative.md)
+* Evaluation models
 
