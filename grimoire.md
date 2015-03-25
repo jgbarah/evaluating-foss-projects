@@ -1,2 +1,2 @@
-# Quantitative evaluation with Gtrimoire
+# Quantitative evaluation with Grimoire
 
