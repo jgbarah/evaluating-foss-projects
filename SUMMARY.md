@@ -8,4 +8,5 @@
 * [Evaluation models](evaluation_models.md)
 * [Basics of quantitative evaluation](quantitative.md)
 * [Quantitative evaluation with Grimoire](grimoire.md)
+* Using Grimoire
 
