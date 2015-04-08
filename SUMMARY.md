@@ -9,5 +9,4 @@
 * [Basics of quantitative evaluation](quantitative.md)
 * [Quantitative evaluation with Grimoire](grimoire.md)
 * [Using Grimoire](grimoire_use.md)
-   * To probe further
 
