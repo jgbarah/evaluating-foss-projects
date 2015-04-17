@@ -4,6 +4,8 @@ There are several aspects of a FOSS project that can be evaluated. Depending on 
 
 ## Evaluation of functionality
 
+This is one of the more commons evaluations that are done when selecting tools, either to use or to integrate with others. 
+
 ## Evaluation of suitability
 
 Example: OpenBRR
