@@ -2,7 +2,23 @@
 
 There are several aspects of a FOSS project that can be evaluated. Depending on the reasons to evaluate, one or more of these aspects will be relevant. This chapter will review some of the kinds of evaluation that are usual, before entering in more detail in the following chapters in specific examples of these kinds of evaluation.
 
+## Steps in evaluation
+
+Most evaluation methods follow several steps:
+
+* Market research, to decide which products or projects are worth including in the evaluation.
+* Defining evaluation criteria.
+* Apply evaluation criteria, and produce evaluation results.
+
 ## Quantitative versus qualitative evaluation
+
+## Criteria for evaluation
+
+* Intangible factors
+* Risk
+* Functionality
+* ...
+
 
 ## Evaluation of functionality
 
