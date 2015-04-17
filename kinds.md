@@ -2,6 +2,12 @@
 
 There are several aspects of a FOSS project that can be evaluated. Depending on the reasons to evaluate, one or more of these aspects will be relevant. This chapter will review some of the kinds of evaluation that are usual, before entering in more detail in the following chapters in specific examples of these kinds of evaluation.
 
+## What is different in FOSS evaluation
+
+### The importance of transparency
+
+### The many facets of transparency
+
 ## Steps in evaluation
 
 Most evaluation methods follow several steps:
