@@ -9,5 +9,4 @@
 * [Comparing OpenBRR, QSOS, and OMM Assessment Models](http://link.springer.com/chapter/10.1007/978-3-642-13244-5_18)
 * [Modèle de maturité OSS](http://inventarisoss.smals.be/fr/160-RCH.html), Smals Recehrche. Evolution of OpenBRR.
 * Qualipso Open Source Maturity Model (OMM). [Entry in Wikipedia](http://en.wikipedia.org/wiki/OpenSource_Maturity_Model), [details in Qualipso-related website](http://qualipso.icmc.usp.br/OMM/)
-
-    
+* [Software Evaluation Guide](http://www.software.ac.uk/software-evaluation-guide), [Criteria-based Software Evaluation](http://software.ac.uk/sites/default/files/SSI-SoftwareEvaluationCriteria.pdf) and [Tutorial-based Software Evaluation](http://software.ac.uk/sites/default/files/SSI-SoftwareEvaluationTutorial.pdf), by the [Software Sustainability Institute](http://www.software.ac.uk). 
