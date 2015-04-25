@@ -10,6 +10,16 @@ Most evaluation methods follow several steps:
 * Defining evaluation criteria.
 * Apply evaluation criteria, and produce evaluation results.
 
+However, in some cases the project (or projects) is already decided beforehand, and that step is skipped. This hapens, for example, when a community decides to evaluate itself, or when a company wants to evaluate the products on which they relay for a service they provide.
+
+### Market research
+
+Most evaluations are for selecting a product, or for deciding to which project to contribute. Before starting the actual evaluation, the set of products of projects to evaluat must be defined. For that, an extensive search for potential subjects is needed. But the research is not only a matter of finding all options. In general, it would be desiderable to evaluate all the products or projects that could have the slightest possibility of being the most appropriate ones, but that is usually impractical. A more cost-effective approach is do perform an extensive market research, but then follow some criteria to perform the actual short list for evaluation. Depending on the resources available for the evaluation, on how expensive that evaluation will be per subject, and on the expected benefits, the size of the short list can be shorter or longer.
+
+In those cases, knowing the different alternatives is very important. Unfortunatel, there is no simple way of performing such a selection that leads to the "best" shortlist.
+ 
+## Goal-question-metric
+
 ## What is different in FOSS evaluation
 
 Evaluation of FOSS products is different for the following reasons:
