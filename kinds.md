@@ -4,21 +4,29 @@ There are several aspects of a FOSS project that can be evaluated. Depending on 
 
 ## Steps in evaluation
 
-Most evaluation methods follow several steps:
+Most evaluation methods follow the following steps:
 
-* Market research, to decide which products or projects are worth including in the evaluation.
-* Defining evaluation criteria.
-* Apply evaluation criteria, and produce evaluation results.
+* Conduct a market research, to decide the subjects (products or projects) to evaluate.
+* Define the evaluation criteria.
+* Perform the actual evaluation, producing the evaluation results.
 
-However, in some cases the project (or projects) is already decided beforehand, and that step is skipped. This hapens, for example, when a community decides to evaluate itself, or when a company wants to evaluate the products on which they relay for a service they provide.
+The first two can be preformed in any order, and both lead to the actual evaluation. In some cases, the process is iterative:
+
+* some subjects are selected, and evaluated according to certain criteria
+* based on the results, the criteria are refined, and the list of subjects redefined
+* a new evaluation is performed, which leads to more precise criteria and subjects, until enough data for a final decision is obtained
 
 ### Market research
 
-Most evaluations are for selecting a product, or for deciding to which project to contribute. Before starting the actual evaluation, the set of products of projects to evaluat must be defined. For that, an extensive search for potential subjects is needed. But the research is not only a matter of finding all options. In general, it would be desiderable to evaluate all the products or projects that could have the slightest possibility of being the most appropriate ones, but that is usually impractical. A more cost-effective approach is do perform an extensive market research, but then follow some criteria to perform the actual short list for evaluation. Depending on the resources available for the evaluation, on how expensive that evaluation will be per subject, and on the expected benefits, the size of the this list can be shorter or longer.
+Before starting the actual evaluation, the set of subjects to evaluate must be defined. For that, an extensive research for potential subjects is needed. But this research is not only a matter of finding all options. It would be desiderable to find all the products or projects that could have the slightest possibility of being the most appropriate ones, but that is usually impractical. A more cost-effective approach is to perform an extensive market research, but then follow some criteria to produce a short list for evaluation.
+
+Depending on the resources available for the evaluation, on how expensive that evaluation will be per subject, and on the expected benefits, the size of the this list can be shorter or longer.
+
+In some cases the subjects are already decided beforehand, and this step is skipped. This happens, for example, when a community decides to evaluate itself, or when a company wants to evaluate the products on which they relay for a service they provide.
 
 ### Defining evaluation criteria
 
-The evaluation criteria can be defined once the subjects to evaluate (projects or products) are defined, 
+The evaluation criteria will determine the information to be obtained after the evaluation process.
 
 ### Performing evaluation
 
