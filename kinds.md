@@ -53,7 +53,16 @@ Once the characteristics to evaluate are clear, and the methods to evaluate them
 * Analysis of messages in mailing lists, to characterize the flow of information in the project.
 * Study of the project bylaws, to determine how formal decisions are taken.
 
-Of course, these 
+These are just examples: many other actions are possible. But usually, we can classify their results in two cathegories:
+
+* Qualitative evaluations. They produce a description of the quality of the evaluated characteristic.
+* Quantitative evaluations. They produce a quantitative description of the evaluated characteristic. It can be for example a number, or a grade in a scale.
+
+Qualitative evaluations can be converted into quantitative ones but using the descriptions to select from a scale of valuers. That allows for easier comparison, but usually some information is lost, the kind of shadows and details that qualitative descriptions provide.
+
+Quantitative evaluations can be converted in qualitative by producing predetermined "factoids". That allows for easier interpretation, but it is convenient to remember that those are "syntetized" qualities: the underlying information is quantitative, and the derived factoids are just descriptions of those quantities.
+
+NOTE: Example of both conversions
 
 ## Goal-question-metric
 <a name="sec:gqm"></a>
