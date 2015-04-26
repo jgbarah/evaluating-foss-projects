@@ -67,7 +67,13 @@ NOTE: TODO. Example of both conversions
 ## Goal-question-metric
 <a name="sec:gqm"></a>
 
+The baseline rationale of the goal-question-matric GQM metric for deteriming the characteristics of subjects to evaluate, and how to evaluate them can be summarized as follows:
 
+> "The Goal Question Metric (GQM) approach is based upon the assumption that for an organization to measure in a purposeful way it must first specify the goals for 
+itself and its projects, then it must trace those goals to the data that are intended to define those 
+goals operationally, and finally provide a framework for interpreting the data with respect to the stated goals."
+
+> The Goal Question Metric Approach 
 
 ## What is different in FOSS evaluation
 
