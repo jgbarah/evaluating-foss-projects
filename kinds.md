@@ -73,7 +73,16 @@ The baseline rationale of the goal-question-matric GQM metric for deteriming the
 itself and its projects, then it must trace those goals to the data that are intended to define those 
 goals operationally, and finally provide a framework for interpreting the data with respect to the stated goals."
 
-> The Goal Question Metric Approach 
+> [The Goal Question Metric Approach](bib:basili-gqm).
+
+In other words, you first have to state the goals of the evaluation. Then, you have to map those goals to characteristics of the subject of evaluation, and how they are going to be evaluated. Finally, you have to find out how to interpret the results of the evaluation with respect to the intended objectives.
+
+Using the terms proposed by GQM, you have to define:
+
+* Goals, at the conceptual level.
+* Questions, at the operational level.
+* Metrics, at the quantitative level.
+
 
 ## What is different in FOSS evaluation
 
