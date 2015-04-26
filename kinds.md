@@ -62,10 +62,12 @@ Qualitative evaluations can be converted into quantitative ones but using the de
 
 Quantitative evaluations can be converted in qualitative by producing predetermined "factoids". That allows for easier interpretation, but it is convenient to remember that those are "syntetized" qualities: the underlying information is quantitative, and the derived factoids are just descriptions of those quantities.
 
-NOTE: Example of both conversions
+NOTE: TODO. Example of both conversions
 
 ## Goal-question-metric
 <a name="sec:gqm"></a>
+
+
 
 ## What is different in FOSS evaluation
 
