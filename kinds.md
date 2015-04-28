@@ -1,4 +1,4 @@
-# Kinds of evaluation, reasons to evaluate
+# Before evaluation
 
 There are several aspects of a FOSS project that can be evaluated. Depending on the reasons to evaluate, one or more of these aspects will be relevant. This chapter will review some of the kinds of evaluation that are usual, before entering in more detail in the following chapters in specific examples of these kinds of evaluation.
 
@@ -91,6 +91,7 @@ Evaluation of FOSS products is different for the following reasons:
 * The easy access to the product to evaluate.
 * The quantity and quality of available information
 * The importance of the community
+* The special case of open devlopment
 * The competing market for deep support
 
 ### Access to the product
@@ -116,6 +117,16 @@ TBD: repositories where the information about development is available.
 Development and user communities are usually key factors for FOSS products. Healthy development communities ensure the future survivability of the product even better than strong companies. Large, involved user communites ensure the needed pressure to keep the product in the leading edge.
 
 Therefore, the evaluatilon of communities is of great importance in the case of FOSS.
+
+## Open development
+
+Some FOSS projects are developed "behind the curtains", not different from traditional projects. For those, little or no infornmation about the development process is available. But fortunately, these projects are the exception in the FOSS world. The usual case is that an open development model is used.
+
+A simple definition of open development is:
+
+> Open development is an emerging term used to describe the community-led development model found within many successful free and open source software projects.
+
+> [Avoiding abandon-ware: getting to grips with the open development method](bib:anderson-avoiding), by Paul Anderson
 
 ## Competing market
 
