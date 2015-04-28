@@ -1,6 +1,6 @@
-# Before evaluation
+# Before evaluating
 
-There are several aspects of a FOSS project that can be evaluated. Depending on the reasons to evaluate, one or more of these aspects will be relevant. This chapter will review some of the kinds of evaluation that are usual, before entering in more detail in the following chapters in specific examples of these kinds of evaluation.
+In this chapter we deal with some preliminary issues, before describing how the evaluation of specific aspects of FOSS products and projects can be done.
 
 ## Steps in evaluation
 
@@ -128,6 +128,8 @@ A simple definition of open development is:
 
 > [Avoiding abandon-ware: getting to grips with the open development method](bib:anderson-avoiding), by Paul Anderson
 
+That kind of development, because of its very nature, usually provides publicly a lot of information about the internals of their development processes. That allows for an evaluation of those processes, something that is impossible in the traditional, closed development cases.
+
 ## Competing market
 
 The existence of a competing market, with many providers of in-depth support, independent of each other, is possible in the case of FOSS. In the case of non-FOSS, due to the strict control granted by maintaining all copyright rights, only companies in agreement with the producer can provide this kind of services, and therefore no real competing market exists.
@@ -137,6 +139,7 @@ TBD: importance of evaluating if such a competing market existis or not, and how
 ## The importance of transparency
 
 ### The many facets of transparency
+
 
 ## Quantitative versus qualitative evaluation
 
