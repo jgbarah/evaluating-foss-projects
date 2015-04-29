@@ -9,14 +9,35 @@ FOSS communities are diverse, and may include many different actors. But in gene
 * The user community, composed by users of the software participating somehow in the community. This can be by asking questions, by attending events, by joining social network groups with interest in the project. etc.
 * The ecosystemn community, composed by all stakeholders not only in the project itself, but in all the ecosystem of projects related to it.
 
-For each of these scopes, different evaluation means can be used.
+For each of these scopes, different evaluation means can be used. But despite this diversity, we can also identify some techniques and parameters that are useful for all of them.  The rest of this chapter will enter into the peculiarities of each community, and will show as well what they have in common and the techniques that are usful for evaluating all of them.
 
-## Evaluating development communities
+## Evaluating different kinds of communities
 
-## Evaluating contributors communities
+### Development communities
 
-## Evaluating users communities
+### Contributors communities
 
-## Evaluating ecosystem communities
+### Uers communities
 
+### Ecosystem communities
+
+## Common techniques
+
+### Surveys and interviews
+
+### Traces in collaboration systems
+
+### Evaluation of documentation and third party studies
+
+## Quantitative analysis
+
+### Activity
+
+### Demography
+
+### Time zones
+
+### Time of collaboration
+
+### Affiliation
 
