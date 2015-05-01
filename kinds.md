@@ -56,7 +56,7 @@ Once the characteristics to evaluate are clear, and the methods to evaluate them
 These are just examples: many other actions are possible. But usually, we can classify their results in two cathegories:
 
 * Qualitative evaluations. They produce a description of the quality of the evaluated characteristic.
-* Quantitative evaluations. They produce a quantitative description of the evaluated characteristic. It can be for example a number, or a grade in a scale.
+* Quantitative evaluations. They produce a quantitative description of the evaluated characteristic. It can be for example a number, or a grade in a scale. An extreme case of quantitative evaluation is when a boolean value ("true" or "false") is used: labels are a good example of this kind of evaluation.
 
 Qualitative evaluations can be converted into quantitative ones but using the descriptions to select from a scale of valuers. That allows for easier comparison, but usually some information is lost, the kind of shadows and details that qualitative descriptions provide.
 
@@ -137,6 +137,10 @@ The existence of a competing market, with many providers of in-depth support, in
 TBD: importance of evaluating if such a competing market existis or not, and how it is.
 
 ## The importance of transparency
+
+Free, open source software communities are a matter of trust. All participants want to feel that the rules of the community are fair, and that everyone is considered on the value of their contributions, with no bias due other factors. For that, it is very important that the information about what happens in the community is transparent, and available to anyone. This is one of the main reasons for adopting open development models in FOSS communities.
+
+But having the data available is not enough. Specially in large projects, the community needs some means to understand what is happening. The quantity of data may be really large, and it is not easy to extract from it useful information. Therefore, transparency is not only providing the data, but providing the data in a way that it is useful for the community, in a way that helps it to understand what's happening at several levels of detail.
 
 ### The many facets of transparency
 
