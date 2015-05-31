@@ -15,3 +15,19 @@ Quantitative evaluation is based on the identification of quantitative parameter
 # Automatic or manual quantitative evaluation
 
 # The Polarsys Maturity Model case
+
+# Activity
+
+# Performance
+
+## New features
+
+## Bug fixing
+
+## Code review
+
+# Diversity
+
+# Structure of the community
+
+# Evaluating effort
