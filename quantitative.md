@@ -2,32 +2,30 @@
 
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
-# Goal-question-metric
+## Goal-question-metric
 
-# Definition of goals
+### Definition of goals
 
-# Definition of questions
+### Definition of questions
 
-# Definition of metrics
+### Definition of metrics
 
-# Available data sources
+## Automatic or manual quantitative evaluation
 
-# Automatic or manual quantitative evaluation
+## The Polarsys Maturity Model case
 
-# The Polarsys Maturity Model case
+## Activity
 
-# Activity
+## Performance
 
-# Performance
+### New features
 
-## New features
+### Bug fixing
 
-## Bug fixing
+### Code review
 
-## Code review
+## Diversity
 
-# Diversity
+## Structure of the community
 
-# Structure of the community
-
-# Evaluating effort
+## Evaluating effort
