@@ -1,5 +1,7 @@
 # Evaluation of FOSS communities
 
+For many FOSS projects, the communities supporting them are the main responsibles for the evolution of the project. Evaluating the communities is therefore fundamental to evaluate the project.
+
 ## Different scopes: developers, contributors, users...
 
 FOSS communities are diverse, and may include many different actors. But in general, attending at the scope, the following, usually overlapping, communities can be defined:
@@ -15,9 +17,19 @@ For each of these scopes, different evaluation means can be used. But despite th
 
 ### Development communities
 
+The developer community is composed of the persons actually developing and maintaining the products produced by the project: software and  related artifacts, such as documentation. In the case of FOSS projects with open development models based on coordination tools, there is a lot of information available about them. That information can be collected from the following repositories:
+
+* Source code management repository.
+* Code review system.
+* Issue tracking system.
+* Asynchronous communication systems.
+* Synchronous communication systems.
+
+
+
 ### Contributors communities
 
-### Uers communities
+### Users communities
 
 ### Ecosystem communities
 
