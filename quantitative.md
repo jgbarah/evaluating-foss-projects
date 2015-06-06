@@ -25,7 +25,19 @@ In this context, evaluating activity refers to finding signs and traces of activ
 
 Not all the activity is observable, and suitable for evaluation. For example, in mailing lists it is easy to know when a message is sent: it is enough to explore the list archive. But it is difficult to know who received that message (the list recipients is usually not public), and almost impossible to know who read it (reading is a private activity performed in your own mailer program).
 
-But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends. The next figures show a summary of activity of the same project, OpenStack, as shown in three different dashboards: Grimoire, Stackalitics, and Open Hub.
+But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends. 
+
+There are several analysis of activity suitable for evaluation. The most common are:
+
+* Parameters reflecting activity for a certain period. For example, number of changes to the source code for the whole history of the project, or number of messages sent to mailing lists of the project during a certain week.
+* People active for a certain period. For example, people fixing bugs during a release period, or people providing code review advise during the last month.
+* Evolution of any of them. For example, new tickets per month for the whole live of the project, or messages sent to IRC channels per week.
+* Trends for any of them. For example, increase (or decrease) in number of messages posted in the forums for the project from December 2014 to January 2015.
+
+![Activity in Puppet (commits per month) circa June 2015](activity-puppet-commits.png)
+*Number of commits per month for Puppet, as [shown by Grimoire Dashboard](http://bitergia.dev.puppetlabs.com), circa June 2015. Trends for the last year, month and week are shown as well.*
+
+The next figures show a summary of activity of the same project, OpenStack, as shown in three different dashboards: Grimoire, Stackalitics, and Open Hub.
 
 ![Activity in OpenStack as shown by Grimoire Dashboard, circa June 2015](activity-openstack.png)
 *Activity in OpenStack: summary of activity in serveral repositories over time, as [shown by Grimoire Dashboard](http://activity.openstack.org), circa June 2015.*
