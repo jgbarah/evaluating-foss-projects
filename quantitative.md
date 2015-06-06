@@ -37,7 +37,15 @@ There are several analysis of activity suitable for evaluation. The most common 
 ![Activity in Puppet (commits per month) circa June 2015](activity-puppet-commits.png)
 *Number of commits per month for Puppet, as [shown by Grimoire Dashboard](http://bitergia.dev.puppetlabs.com), circa June 2015. Trends for the last year, month and week are shown as well.*
 
-The next figures show a summary of activity of the same project, OpenStack, as shown in three different dashboards: Grimoire, Stackalitics, and Open Hub.
+Parameters by themselves only provide a first hint. Saying that a project is performing 2,303 commits in one month is a first indicator about how active is the project, but doesn't provide too much information. Putting it into context starts to make things more interesting. For example, comparing two projects with similar functionality, but one of them committing five times the other, is a first step towards comparing their activities.
+
+However, commit patterns may be very different from project to project, and a simple comparison may be misleading. For example, one of them may be committing a very single change proposal, just to improve them later. Another one, meanwhile, may be following an stringent code review process, committing only after several iterations that improved change proposals. The first pattern will produce much more commits than the second. The same can be said for other parameters.
+
+Comparisons within the same project are usually much more interesting and fair. If the project didn't change policies nor patterns during the last two months, comparing activity parameters will provide a good idea of trends. Comparisons over larger periods of time will allow for detecting the impact of changes in policies, tools or patterns. For excample, changes of the source code management system, or the introduction of code review, or policies on closing old tickets are reflected in the long-term charts about activity. And of course, growth, stagnation or decrease in activity can be clearly perceived over time.
+
+In addition to the raw parameters on activity, the parameters related to persons performing that activity are also relevant. They allow for a first characterization of the active community in several areas. An exponential growth in code authors, or a steady decline in bug fixers will certainly be interesting subjects of further analysis.
+
+Seen several of these parameters together allows for a multifaceted view of the project. As an example, next figures show a summary of activity of the same project, OpenStack, as shown in three different dashboards: Grimoire, Stackalitics, and Open Hub.
 
 ![Activity in OpenStack as shown by Grimoire Dashboard, circa June 2015](activity-openstack.png)
 *Activity in OpenStack: summary of activity in serveral repositories over time, as [shown by Grimoire Dashboard](http://activity.openstack.org), circa June 2015.*
@@ -62,6 +70,7 @@ Activity in source code management reflects how the project is in producing chan
 
 ### Activity in communication systems
 
+
 ## Performance
 
 ### New features
@@ -70,7 +79,9 @@ Activity in source code management reflects how the project is in producing chan
 
 ### Code review
 
-## Diversity
+## Diversity in supporting organizations
+
+Activity by company.
 
 ## Structure of the community
 
