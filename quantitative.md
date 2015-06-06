@@ -25,19 +25,22 @@ In this context, evaluating activity refers to finding signs and traces of activ
 
 Not all the activity is observable, and suitable for evaluation. For example, in mailing lists it is easy to know when a message is sent: it is enough to explore the list archive. But it is difficult to know who received that message (the list recipients is usually not public), and almost impossible to know who read it (reading is a private activity performed in your own mailer program).
 
-But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends.
+But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends. The next figures show a summary of activity of the same project, OpenStack, as shown in three different dashboards: Grimoire, Stackalitics, and Open Hub.
 
 ![Activity in OpenStack as shown by Grimoire Dashboard, circa June 2015](activity-openstack.png)
 *Activity in OpenStack: summary of activity in serveral repositories over time, as [shown by Grimoire Dashboard](http://activity.openstack.org), circa June 2015.*
 
-![Activity in OpenStack as shown by Stackalytics, circa June  2015](activity-openstack-stackalytics.png)
+The Grimoire Dashboard shows activity in each kind of repositories, which allows for easy comparison, while at the same time the general trends of activity in the project are visible. It shows some metrics about the people active in different roles.
 
+![Activity in OpenStack as shown by Stackalytics, circa June  2015](activity-openstack-stackalytics.png)
 *Activity in OpenStack: summary of code merges over time, and split by company and module, as [shown by Stackalytics](http://stackalytics.com), circa June  2015.*
 
-![Activity in OpenStack as shown by Open Hub, circa June 2015](activity-openstack-openhub.png)
+Stackalytics focuses on changes merged, although it shows other activity as well. The summary includes activity by company and by module.
 
+![Activity in OpenStack as shown by Open Hub, circa June 2015](activity-openstack-openhub.png)
 *Activity in OpenStack: summary of activity over time, as [shown by Open Hub](https://www.openhub.net/p/openstack), circa June 2015.*
 
+Open Hub shows a chart with the history of the activity, and some factoids about it, with a focus on activity in the source code management system.
 ## Performance
 
 ### New features
