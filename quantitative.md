@@ -41,6 +41,15 @@ Stackalytics focuses on changes merged, although it shows other activity as well
 *Activity in OpenStack: summary of activity over time, as [shown by Open Hub](https://www.openhub.net/p/openstack), circa June 2015.*
 
 Open Hub shows a chart with the history of the activity, and some factoids about it, with a focus on activity in the source code management system.
+
+### Activity in source code management
+
+Activity in source code management reflects how the project is in producing changes for the products they build. Source code management stores "commits", each of them being a change (or "patch") to the source code. Each change is different in nature, size, complexity, etc., which makes it difficult to compare individual changes. However, when we consider large collections of changes, trends become apparent.
+
+### Activity in code review and ticketing systems
+
+### Activity in communication systems
+
 ## Performance
 
 ### New features
