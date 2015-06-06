@@ -27,11 +27,11 @@ Not all the activity is observable, and suitable for evaluation. For example, in
 
 But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends.
 
-![Activity in OpenStack: summary of activity in serveral repositories over time, as shown by Grimoire Dashboard, circa June 2015.](activity-openstack.png)
+![Activity in OpenStack as shown by Grimoire Dashboard, circa June 2015](activity-openstack.png "Activity in OpenStack: summary of activity in serveral repositories over time, as shown by Grimoire Dashboard, circa June 2015.")
 
-![Activity in OpenStack: summary of code merges over time, and split by company and module, as shown by Stackalytics, circa Jun  2015.](activity-openstack-stackalytics.png)
+![Activity in OpenStack as shown by Stackalytics, circa June  2015](activity-openstack-stackalytics.png "Activity in OpenStack: summary of code merges over time, and split by company and module, as shown by Stackalytics, circa June  2015.")
 
-![Activity in OpenStack: summary of activity over time, as shown by Open Hub, circa Jun 2015](activity-openstack-openhub.png)
+![Activity in OpenStack as shown by Open Hub, circa June 2015](activity-openstack-openhub.png "Activity in OpenStack: summary of activity over time, as shown by Open Hub, circa June 2015.")
 
 ## Performance
 
