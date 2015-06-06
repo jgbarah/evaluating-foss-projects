@@ -16,6 +16,23 @@ Quantitative evaluation is based on the identification of quantitative parameter
 
 ## Activity
 
+In this context, evaluating activity refers to finding signs and traces of activity performed to make the project advance towards its goals. Activity can be of different kinds, such as:
+
+* committing patches to the source code management system
+* reporting, commenting or fixing bugs in the issue tracking system
+* submitting patches or reviewing them in the code review system
+* sending messages to mailing lists or synchronous communication systems
+
+Not all the activity is observable, and suitable for evaluation. For example, in mailing lists it is easy to know when a message is sent: it is enough to explore the list archive. But it is difficult to know who received that message (the list recipients is usually not public), and almost impossible to know who read it (reading is a private activity performed in your own mailer program).
+
+But the observable activity is usually good enough to know about the heartbeat of the project, about how many people is active in different roles, and about the general trends.
+
+![Activity in OpenStack: summary of activity in serveral repositories over time, as shown by Grimoire Dashboard, circa June 2015.](activity-openstack.png)
+
+![Activity in OpenStack: summary of code merges over time, and split by company and module, as shown by Stackalytics, circa Jun  2015.](activity-openstack-stackalytics.png)
+
+![Activity in OpenStack: summary of activity over time, as shown by Open Hub, circa Jun 2015](activity-openstack-openhub.png)
+
 ## Performance
 
 ### New features
