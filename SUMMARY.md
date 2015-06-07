@@ -3,11 +3,11 @@
 * [Summary](README.md)
 * [Introduction](introduction.md)
 * [Before evaluating](kinds.md)
-* Sources of information
 * [Evaluating the community](community.md)
 * [Evaluating development processes](processes.md)
 * [Evaluation models](evaluation_models.md)
 * [Basics of quantitative evaluation](quantitative.md)
+* Sources of information
 * [Quantitative evaluation with Grimoire](grimoire.md)
 * [Using Grimoire](grimoire_use.md)
 * [To probe further](to_probe_further.md)
