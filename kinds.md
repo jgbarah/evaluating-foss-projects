@@ -83,6 +83,11 @@ Using the terms proposed by GQM, you have to define:
 * Questions, at the operational level.
 * Metrics, at the quantitative level.
 
+### Definition of goals
+
+### Definition of questions
+
+### Definition of metrics
 
 ## What is different in FOSS evaluation
 
