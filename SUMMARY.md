@@ -11,4 +11,5 @@
 * [Using Grimoire](grimoire_use.md)
 * [To probe further](to_probe_further.md)
 * [Bibliography](bib.md)
+* Evaluation dashboards
 
