@@ -188,8 +188,17 @@ Usually, the evaluation starts by defining a model of the applications (or softw
 
 The functional model defines the main functional components of the software to evaluate. Now, we can define functional features of relevance, and evaluate each of them. The evaluation can be quantitative or qualitative. In the former case, boolean (the feature is available or not) and fractional (the feature is available to a certain fraction of some "ideal" feature) evaluations can be performed. For example, a certain feature can be present in a product, or "80% present" with respect to some ideal feature. In the latter case, an expert provides a detailed description of each feature. In many cases, both evaluations can be present, since both can be relevant.
 
+For example, in the case of the comparison of LibreOffice and Apache OpenOffice, the next picture shows the main relevant features for evaluation, grouped according to the modules defined in the functional model.
+
 ![Comparing LibreOffice and Apache OpenOffice: relevant features](functional-evaluation-loaoo-features.png)
 *Comparing LibreOffice and Apache OpenOffice: identification of relevant features*
+
+Which are later refined in specific features, which are evaluated to be present or not ("+" or "-" in the next figure).
+
+![Comparing LibreOffice and Apache OpenOffice: evaluation of features](functional-evaluation-loaoo-features-2.png)
+*Comparing LibreOffice and Apache OpenOffice: evaluation of features*
+
+This information can be later used to produce a report on the functionality found, in a comparison between different products, etc.
 
 ## Evaluation of suitability
 
