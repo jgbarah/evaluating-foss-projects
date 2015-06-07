@@ -8,13 +8,6 @@ Of course, there are shadows in a continuum ranging from pure quantitative to pu
 
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
-## Goal-question-metric
-
-### Definition of goals
-
-### Definition of questions
-
-### Definition of metrics
 
 ## Automatic or manual quantitative evaluation
 
