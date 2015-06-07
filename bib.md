@@ -4,3 +4,5 @@
 
 <a name="bib:basili-gqm"></a>Victor R. Basili, Gianluigi Caldiera, H. Dieter Rombach. The Goal Question Metric ([PDF](http://www.cs.umd.edu/~mvz/handouts/gqm.pdf), visited on 2015-04-26). 
 
+<a name="bib:jonkers-nouws-comparing-lo-aoo"></a>Barend Jonkers, Cor Nouws. Comparing LibreOffice and Apache OpenOffice ([PDF](http://www.nouenoff.nl/downloads/LibreOffice_AOO_CompetitiveFeatureMatrix_20150318.pdf), visited on 2015-06-08; [blog post linking to it](http://ostatic.com/blog/apache-openoffice-versus-libreoffice), visited on 2015-06-08).
+
