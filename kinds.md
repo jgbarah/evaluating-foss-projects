@@ -28,15 +28,15 @@ In some cases the subjects are already decided beforehand, and this step is skip
 
 The evaluation criteria will determine the information to be obtained after the evaluation process. It is important to fit those criteria to the objectives of the evaluation. It is quite different, for example, to evaluate some products with the aim of selecting the most mature one, than the one with most perspectives of being improved for a long period.
 
-Therefore, the evaluation criteria are tightly tied to the objectives of the evaluation, and it is necessary to make this relationship explicit. One way is to start by clearly stating the objectives, then map them to specific characteristics of the subject to evaluate, and finally define a procedure to evaluate those chatacteristics.
+Therefore, the evaluation criteria are tightly tied to the objectives of the evaluation, and it is necessary to make this relationship explicit. One way is to start by clearly stating the objectives, then map them to specific characteristics of the subject to evaluate, and finally define a procedure to evaluate those characteristics.
 
-The mapping of objectives to characteristics is not easy, since it is not always obvious which characteristics will have a greater impact on the objectives. For example, if the objective is to select a project with a community easy to join, which characteristics would be evaluated? Maybe how long does it to newcomers to reach the core development team? Maybe how many contributions were performed by newcomers in the past? Maybe the details of formal policies encouraging the participation of newcomers? Or maybe the friendliness of conversations in mailing lists and forums in whcih necomers participate?
+The mapping of objectives to characteristics is not easy, since it is not always obvious which characteristics will have a greater impact on the objectives. For example, if the objective is to select a project with a community easy to join, which characteristics would be evaluated? Maybe how long does it to newcomers to reach the core development team? Maybe how many contributions were performed by newcomers in the past? Maybe the details of formal policies encouraging the participation of newcomers? Or maybe the friendliness of conversations in mailing lists and forums in which newcomers participate?
 
-It is clear how for making this mapping of objectives to characteristics, we needed a model of how the latter lead to the former. Those can rante from informal, simple, rule of thumb models, to formal, theory-backed, and empirically-tested ones. In any case, we need some expertise on how characteristics of projects and products may influence the objectives.
+It is clear how for making this mapping of objectives to characteristics, we needed a model of how the latter lead to the former. Those can range from informal, simple, rule of thumb models, to formal, theory-backed, and empirically-tested ones. In any case, we need some expertise on how characteristics of projects and products may influence the objectives.
 
-The definition of procedures to evaluate the characteristicas can also be tricky. You need to know what can be evaluated, and how you can apply that knowledge to the characteristics of interest.
+The definition of procedures to evaluate the characteristics can also be tricky. You need to know what can be evaluated, and how you can apply that knowledge to the characteristics of interest.
 
-It is very rare that you just find the exact evaluation for your characteristic of choice. For example, how could you characterize expertise in a development community? At least two dimensions are involved: the individual expertise of individuals, and how that expertise permeates the community to be useful to newcomers. But both dimensions are difficult to evaluate, and you usually need to relay on proxies, such as how long have developers stayied in the community, and how experienced people collaborate with newcomers to solve issues and take decissions.
+It is very rare that you just find the exact evaluation for your characteristic of choice. For example, how could you characterize expertise in a development community? At least two dimensions are involved: the individual expertise of individuals, and how that expertise permeates the community to be useful to newcomers. But both dimensions are difficult to evaluate, and you usually need to relay on proxies, such as how long have developers stayed in the community, and how experienced people collaborate with newcomers to solve issues and take decisions.
 
 Because of all these reasons, it is a hard job to start from scratch when evaluating. It is much better if we can find an evaluation model that fits our needs, and we just map it to our specific objectives. A large part of this text will describe some existing models that you could find useful.
 
@@ -53,14 +53,31 @@ Once the characteristics to evaluate are clear, and the methods to evaluate them
 * Analysis of messages in mailing lists, to characterize the flow of information in the project.
 * Study of the project bylaws, to determine how formal decisions are taken.
 
-These are just examples: many other actions are possible. But usually, we can classify their results in two cathegories:
+These are just examples: many other actions are possible. But whatever the case, with the information gathered from those actions, the evaluation is performed.
 
-* Qualitative evaluations. They produce a description of the quality of the evaluated characteristic.
-* Quantitative evaluations. They produce a quantitative description of the evaluated characteristic. It can be for example a number, or a grade in a scale. An extreme case of quantitative evaluation is when a boolean value ("true" or "false") is used: labels are a good example of this kind of evaluation.
+### Evaluation results
 
-Qualitative evaluations can be converted into quantitative ones but using the descriptions to select from a scale of valuers. That allows for easier comparison, but usually some information is lost, the kind of shadows and details that qualitative descriptions provide.
+Depending on the objectives of the evaluation, one of three kinds of resulting information are provided in most evaluation models:
 
-Quantitative evaluations can be converted in qualitative by producing predetermined "factoids". That allows for easier interpretation, but it is convenient to remember that those are "syntetized" qualities: the underlying information is quantitative, and the derived factoids are just descriptions of those quantities.
+* Tags. These are binary valued parameters that result of evaluation. For example, for a certain definition of "mature", a project may be defined as "mature" or "not mature".
+* Scales. Parameters with values that are numbers or elements from a finite set. For example, an scale can be defined as from 0 to 100, trying to show how close to "100%" is the value. For example, a parameter "closed-bugs" could be "78%", meaning that of all bugs reported during a certain period, 78% were closed. Or with a real or integer number. For example, "median of time to close" can be defined to be "178", meaning that the median of time to close a certain set of tickets is 178 hours. Or with values in a set of strings. For example, "maturity" could have values in the set "mature", "close to maturity", "inmature".
+* Metadata. This is usually detailed information about the parameter, from which usually either scales or tags can be produced. For example, detailed metadata for a parameter could be a list of its main statistics, or even a complete list of all its values. That way, from detailed metadata on "time to close" consisting on the time to close all tickets, the above mentioned scale "median of time to close" could be inferred.
+
+In addition, free text evaluation can be useful as well, such as the detailed analysis by an expert.
+
+A very specific case of free text evaluation are factoids. Factoids are predefined pieces of text that describe with natural language some quantitative situation. They are selected based on the results of the quantitative evaluation, but have the appearance of free text. To some extent, they can be better for novices, since they provide an explanation in "common words" of the tags, numbers or scales. 
+
+![Factoids shown by OpenHub for the git project](factoids-openhub-git.png)
+*Factoids shown by OpenHub for the git project, circa June 2015*
+
+We can classify the results of the evaluation process in two categories:
+
+* Quantitative evaluations. They produce a quantitative description of the evaluated characteristic. Tags, scales and metadata are cases of quantitative evaluation.
+* Qualitative evaluations. They produce a description of the quality of the evaluated characteristic. Free text evaluations produced by an expert are an example of qualitative evaluations.
+
+Qualitative evaluations can be converted into quantitative ones by using the descriptions to select from a scale of valuers. That allows for easier comparison, but usually some information is lost, the kind of shadows and details that qualitative descriptions provide.
+
+Quantitative evaluations can be converted in qualitative by producing the alreaready mentioned, predetermined "factoids". That allows for easier interpretation, but it is convenient to remember that those are "syntetized" qualities: the underlying information is quantitative, and the derived factoids are just descriptions of those quantities.
 
 NOTE: TODO. Example of both conversions
 
@@ -149,23 +166,6 @@ But having the data available is not enough. Specially in large projects, the co
 
 ### The many facets of transparency
 
-
-## Quantitative versus qualitative evaluation
-
-## Tagging versus scales versus detailed metadata
-
-Depending on the objectives of the evaluation, one of three kinds of summary information are provided in most evaluation models:
-
-* Tags. These are binary valued parameters that result of evaluation. For example, for a certain definition of "mature", a project may be defined as "mature" or "not mature".
-* Scales. Parameters with values that are numbers or elements from a finite set. For example, an scale can be defined as from 0 to 100, trying to show how close to "100%" is the value. For example, a parameter "closed-bugs" could be "78%", meaning that of all bugs reported during a certain period, 78% were closed. Or with a real or integer number. For example, "median of time to close" can be defined to be "178", meaning that the median of time to close a certain set of tickets is 178 hours. Or with values in a set of strings. For example, "maturity" could have values in the set "mature", "close to maturity", "inmature".
-* Metadata. This is usually detailed information about the parameter, from which usually either scales or tags can be produced. For example, detailed metadata for a parameter could be a list of its main statistics, or even a complete list of all its values. That way, from detailed metadata on "time to close" consisting on the time to close all tickets, the above mentioned scale "median of time to close" could be infered.
-
-In addition, free text evaluation can be useful as well, such as the detailed analysis by an expert.
-
-A very specific case of free text evaluation are factoids. Factoids are predefined pieces of text that describe with natural language some quantitative situation. They are selected based on the results of the quantitative evaluation, but have the appearence of free text. To some extent, they can be better for novices, since they provide an explanation in "common words" of the tags, numbers or scales. 
-
-![Factoids shown by OpenHub for the git project](factoids-openhub-git.png)
-*Factoids shown by OpenHub for the git project, circa June 2015*
 
 ## Criteria for evaluation
 
