@@ -192,3 +192,15 @@ When evaluating FOSS projects there are many potential sources of information, w
 All these systems usually offer means for persons to interact with them, which can be used to get a first hand impression of how the project is using them. Qualitative evaluations can benefit from this kind of browsing of information. This can be done, for example, by reading comments in commit records, messages in mailing list archives or IRC logs, or the history of tickets in ITSs.
 
 It is also possible to use tools to retrieve information from them, usually via APIs designed for that matter. This allows for the automated retrieval of information for performing quantitative evaluation, or for storing all the data in a database for further analysis.
+
+### Source code management systems
+
+Information in SCMs is usually organized in "changes", which in most systems are named "commits". The information stored with each change is different for different SCM systems, but it always incude the change itself (some way of identifying which lines were affected by the change, and how), and some metainformation. The metainformation is about who and when produced the change, and some other information related to it. For example, in the case of git, that metainformation associated with each change includes:
+
+* An identifier for the author (the person writing the change).
+* An identifier for the committer (the person committing the change to the repository)
+* Dates for authoring and committing actions.
+* Branch to which the change is committed
+* Complete diff with the changes (differences introduced by the change with respect to the previous situation).
+
+Identifiers for authors and committers are usually a name and an email address. Dates for authoring and committing include local timezones, usually those of the computer in which the corresponding action was performed. The branch information is not directly in the commit record, but can be infered from mining the commit history in a repository, so we can act as if it was there. The complete diff allows for the complete reconstruction of the code modifications introduced by the change, which is the ultimate reason for storing it. But it can be used for infering the files involved, the size of the change, and other parameters.
