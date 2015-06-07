@@ -9,6 +9,11 @@ Of course, there are shadows in a continuum ranging from pure quantitative to pu
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
 
-## Automatic or manual quantitative evaluation
+## OpenBRR
 
-## The Polarsys Maturity Model case
+## QSOS
+
+## Qualoss
+
+
+## The Polarsys Maturity Model
