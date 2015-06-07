@@ -181,6 +181,11 @@ This is one of the more commons evaluations that are done when selecting tools, 
 
 Most of this evaluation is not different for FOSS and non-FOSS programas, except for the easy of access to the elements to evaluate: source code for the program (for assessing certain aspects of quality) and executable program.
 
+Usually, the evaluation starts by defining a model of the applications (or software modules) to evaluate, and the more relevant characteristics.
+
+![Evaluation of LibreOffice and Apache Open Office: functional model](functional-evaluation-loaoo-model.png)
+*Evaluation of LibreOffice and Apache Open Office: functional model. All the evaluation in the report is based on this model.*
+
 ## Evaluation of suitability
 
 Example: OpenBRR
