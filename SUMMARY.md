@@ -3,7 +3,7 @@
 * [Summary](README.md)
 * [Introduction](introduction.md)
 * [Before evaluating](kinds.md)
-* Sources of information
+* [Sources of information](sources_of_information.md)
 * [Evaluating the community](community.md)
 * [Evaluating development processes](processes.md)
 * [Evaluation models](evaluation_models.md)
