@@ -184,7 +184,7 @@ Most of this evaluation is not different for FOSS and non-FOSS programas, except
 Usually, the evaluation starts by defining a model of the applications (or software modules) to evaluate, and the more relevant characteristics.
 
 ![Evaluation of LibreOffice and Apache Open Office: functional model](functional-evaluation-loaoo-model.png)
-*Evaluation of LibreOffice and Apache Open Office: functional model. All the evaluation in the report is based on this model.*
+*Evaluation of LibreOffice and Apache Open Office: functional model, as shown in [Comparing LibreOffice with Apache OpenOffice](bib:jonkers-nouws-comparing-lo-aoo). All the evaluation in the report is based on this model.*
 
 ## Evaluation of suitability
 
