@@ -278,3 +278,15 @@ The information in the SCM allows for the reconstruction of the whole history of
 The complete diff whcih is available for each change allows for the complete reconstruction of the code modifications, which is the ultimate reason for storing it. But it can be used for infering the files involved, the size of the change, and other parameters.
 
 It is important to note that, from a historical point of view, the information provided by the SCM system is now always reliable. For example, in the case of git, developers can "rewrite" history, when they ammend or rebase. Therefore, a current retrieval of information from a git repository may show different data for some commits in the past than a similar retrieval done some time ago, or even a dfferent list of commits. For systems which only commit with an automated tool after code review, which checks and forbids history rewrites, this is not an issue. But most projects do not have specific rules or technical measueres to avoid history rewrittings, and therefore any results about past history need to be understood as "current past history".
+
+### Issue tracking systems
+
+
+### Code review systems
+
+
+### Asynchronous communication systems
+
+### Synchronous communication systems
+
+### Testing and continuous integration systems (TCI)
