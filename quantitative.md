@@ -50,7 +50,7 @@ Seen several of these parameters together allows for a multifaceted view of the 
 ![Activity in OpenStack as shown by Grimoire Dashboard, circa June 2015](activity-openstack.png)
 *Activity in OpenStack: summary of activity in serveral repositories over time, as [shown by Grimoire Dashboard](http://activity.openstack.org), circa June 2015.*
 
-The Grimoire Dashboard shows activity in each kind of repositories, which allows for easy comparison, while at the same time the general trends of activity in the project are visible. It shows some metrics about the people active in different roles.
+The Grimoire Dashboard shows activity in each kind of repository, which allows for easy comparison, while at the same time the general trends of activity in the project are visible. It shows some metrics about the people active in different roles.
 
 ![Activity in OpenStack as shown by Stackalytics, circa June  2015](activity-openstack-stackalytics.png)
 *Activity in OpenStack: summary of code merges over time, and split by company and module, as [shown by Stackalytics](http://stackalytics.com), circa June  2015.*
