@@ -147,6 +147,17 @@ But having the data available is not enough. Specially in large projects, the co
 
 ## Quantitative versus qualitative evaluation
 
+## Tagging versus scales versus detailed metadata
+
+Depending on the objectives of the evaluation, one of three kinds of summary information are provided in most evaluation models:
+
+* Tags. These are binary valued parameters that result of evaluation. For example, for a certain definition of "mature", a project may be defined as "mature" or "not mature".
+* Scales. Parameters with values that are numbers or elements from a finite set. For example, an scale can be defined as from 0 to 100, trying to show how close to "100%" is the value. For example, a parameter "closed-bugs" could be "78%", meaning that of all bugs reported during a certain period, 78% were closed. Or with a real or integer number. For example, "median of time to close" can be defined to be "178", meaning that the median of time to close a certain set of tickets is 178 hours. Or with values in a set of strings. For example, "maturity" could have values in the set "mature", "close to maturity", "inmature".
+* Metadata. This is usually detailed information about the parameter, from which usually either scales or tags can be produced. For example, detailed metadata for a parameter could be a list of its main statistics, or even a complete list of all its values. That way, from detailed metadata on "time to close" consisting on the time to close all tickets, the above mentioned scale "median of time to close" could be infered.
+
+In addition, free text evaluation can be useful as well, such as the detailed analysis by an expert.
+
+
 ## Criteria for evaluation
 
 * Intangible factors
@@ -287,6 +298,8 @@ It is important to note that, from a historical point of view, the information p
 
 ### Asynchronous communication systems
 
+
 ### Synchronous communication systems
 
-### Testing and continuous integration systems (TCI)
+
+### Testing and continuous integration systems
