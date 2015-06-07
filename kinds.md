@@ -181,10 +181,15 @@ This is one of the more commons evaluations that are done when selecting tools, 
 
 Most of this evaluation is not different for FOSS and non-FOSS programas, except for the easy of access to the elements to evaluate: source code for the program (for assessing certain aspects of quality) and executable program.
 
-Usually, the evaluation starts by defining a model of the applications (or software modules) to evaluate, and the more relevant characteristics.
+Usually, the evaluation starts by defining a model of the applications (or software modules) to evaluate, and the more relevant characteristics. For example, the next picture shows the functional model of LibreOffice and Apahe OpenOffice, which is used in [Comparing LibreOffice with Apache OpenOffice](bib:jonkers-nouws-comparing-lo-aoo).
 
-![Evaluation of LibreOffice and Apache Open Office: functional model](functional-evaluation-loaoo-model.png)
-*Evaluation of LibreOffice and Apache Open Office: functional model, as shown in [Comparing LibreOffice with Apache OpenOffice](bib:jonkers-nouws-comparing-lo-aoo). All the evaluation in the report is based on this model.*
+![Comparing LibreOffice and Apache OpenOffice: functional model](functional-evaluation-loaoo-model.png)
+*Commparing LibreOffice and Apache OpenOffice: functional model. All the evaluation in the report is based on this model.*
+
+The functional model defines the main functional components of the software to evaluate. Now, we can define functional features of relevance, and evaluate each of them. The evaluation can be quantitative or qualitative. In the former case, boolean (the feature is available or not) and fractional (the feature is available to a certain fraction of some "ideal" feature) evaluations can be performed. For example, a certain feature can be present in a product, or "80% present" with respect to some ideal feature. In the latter case, an expert provides a detailed description of each feature. In many cases, both evaluations can be present, since both can be relevant.
+
+![Comparing LibreOffice and Apache OpenOffice: relevant features](functional-evaluation-loaoo-features.png)
+*Comparing LibreOffice and Apache OpenOffice: identification of relevant features*
 
 ## Evaluation of suitability
 
