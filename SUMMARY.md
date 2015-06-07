@@ -3,8 +3,8 @@
 * [Summary](README.md)
 * [Introduction](introduction.md)
 * [Before evaluating](kinds.md)
-* [Evaluating the community](community.md)
 * Sources of information
+* [Evaluating the community](community.md)
 * [Evaluating development processes](processes.md)
 * [Evaluation models](evaluation_models.md)
 * [Basics of quantitative evaluation](quantitative.md)
