@@ -162,6 +162,10 @@ Depending on the objectives of the evaluation, one of three kinds of summary inf
 
 In addition, free text evaluation can be useful as well, such as the detailed analysis by an expert.
 
+A very specific case of free text evaluation are factoids. Factoids are predefined pieces of text that describe with natural language some quantitative situation. They are selected based on the results of the quantitative evaluation, but have the appearence of free text. To some extent, they can be better for novices, since they provide an explanation in "common words" of the tags, numbers or scales. 
+
+![Factoids shown by OpenHub for the git project](factoids-openhub-git.png)
+*Factoids shown by OpenHub for the git project, circa June 2015*
 
 ## Criteria for evaluation
 
