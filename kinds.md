@@ -156,6 +156,10 @@ That kind of development, because of its very nature, usually provides publicly 
 
 The existence of a competing market, with many providers of in-depth support, independent of each other, is possible in the case of FOSS. In the case of non-FOSS, due to the strict control granted by maintaining all copyright rights, only companies in agreement with the producer can provide this kind of services, and therefore no real competing market exists.
 
+In the case of FOSS, that market can exist. But it does not always exists. In fact, for many FOSS products no specific provider of in-depth support can be found. This is the case for most volunteer-driven and in-house projects, when an organization develops the software for its interenal needs. In both cases, until there is enough commercial use of the software, there is no demand for commercial support. Unfortunately, this means that new commercial actors interested in using the software will have more difficulty in doing so, for the very reason they cannot find support.
+
+TBD: Generic support companies can be useful here. Detail the case of a single-provider. 
+
 TBD: importance of evaluating if such a competing market existis or not, and how it is.
 
 ## The importance of transparency
