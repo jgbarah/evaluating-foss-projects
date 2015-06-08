@@ -177,23 +177,23 @@ But having the data available is not enough. Specially in large projects, the co
 
 ## Evaluation of functionality
 
-This is one of the more commons evaluations that are done when selecting tools, either to use or to integrate with others. Usually, this is done in the context of a product acquisition procedure, and considers mainly compliance with requirements, quality, and adaption to certain needs. The evaluation can be used to balance against cost, or to select among products that could fit the requirements.
+This is one of the more commons evaluations when selecting tools, either to use or to integrate with others. Usually, this is done in the context of a product acquisition procedure, and considers mainly compliance with requirements, quality, and adaption to certain needs. The evaluation can be used to balance against cost, or to select among products that could fit the requirements.
 
-Most of this evaluation is not different for FOSS and non-FOSS programas, except for the easy of access to the elements to evaluate: source code for the program (for assessing certain aspects of quality) and executable program.
+Most of this evaluation is not different for FOSS and non-FOSS programas. Only the easy of access to the elements to evaluate make a difference. In the case of FOSS, source and binary code for the program are easily available for evaluation. Source code may be convenient to understand how a certain feature works, or to better evaluate performance. In some specific cases, such as evaluating security features, the availability of source code allows for deep inspection. But usually we can just use the general functional evaluation models. Therefore, instead of entering into details we will just sketch how functional evaluation can be done, illustrating with an example. This example is [Comparing LibreOffice with Apache OpenOffice](bib:jonkers-nouws-comparing-lo-aoo), a comparative functional evaluation of both products.
 
-Usually, the evaluation starts by defining a model of the applications (or software modules) to evaluate, and the more relevant characteristics. For example, the next picture shows the functional model of LibreOffice and Apahe OpenOffice, which is used in [Comparing LibreOffice with Apache OpenOffice](bib:jonkers-nouws-comparing-lo-aoo).
+The evaluation starts by defining a model of the product to evaluate, and a grouping of its more relevant characteristics. The next picture shows a functional model of the LibreOffice and Apahe OpenOffice case.
 
 ![Comparing LibreOffice and Apache OpenOffice: functional model](functional-evaluation-loaoo-model.png)
 *Commparing LibreOffice and Apache OpenOffice: functional model. All the evaluation in the report is based on this model.*
 
 The functional model defines the main functional components of the software to evaluate. Now, we can define functional features of relevance, and evaluate each of them. The evaluation can be quantitative or qualitative. In the former case, boolean (the feature is available or not) and fractional (the feature is available to a certain fraction of some "ideal" feature) evaluations can be performed. For example, a certain feature can be present in a product, or "80% present" with respect to some ideal feature. In the latter case, an expert provides a detailed description of each feature. In many cases, both evaluations can be present, since both can be relevant.
 
-For example, in the case of the comparison of LibreOffice and Apache OpenOffice, the next picture shows the main relevant features for evaluation, grouped according to the modules defined in the functional model.
+In the case of the comparison of LibreOffice and Apache OpenOffice, the next picture shows the main relevant features for evaluation, grouped according to the modules defined in the functional model.
 
 ![Comparing LibreOffice and Apache OpenOffice: relevant features](functional-evaluation-loaoo-features.png)
 *Comparing LibreOffice and Apache OpenOffice: identification of relevant features*
 
-Which are later refined in specific features, which are evaluated to be present or not ("+" or "-" in the next figure).
+Which are later refined in specific features, which are evaluated to be present or not ("+" or "-" in the next figure). In this case, the functionality is related to the corresponding changes in the source code during a certain period. But this is not necessarily the case. A very similar evaluation can be performed just by defining functional aspects and then verifying if they are present or not in a certain product.
 
 ![Comparing LibreOffice and Apache OpenOffice: evaluation of features](functional-evaluation-loaoo-features-2.png)
 *Comparing LibreOffice and Apache OpenOffice: evaluation of features*
