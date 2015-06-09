@@ -102,6 +102,23 @@ It is important to note that, from a historical point of view, the information p
 
 ## Issue tracking systems
 
+Information in issue tracking systems is usually organized in "tickets". This is why they are also called ticketing systems. In fact, the job of the ITS is to track the changes to each ticket. Therefore, most ITS maintain both a record for each ticket with its current state, and a history of all changes to their state, or a list of past states.
+
+The information usually found for a ticket is:
+
+* Identifier. Unique identifier for each ticket.
+* Summary. A one line text summarizing the purpose of the ticket.
+* Description. A longer description of the purpose of the ticket. This can be reporting a bug, requesting a feature, or starting a new task, for example.
+* Opening date. When the ticket was opened.
+* Ticker opener. An identifier for the person opening the ticket. Depending on the ITS, this can be a full name, an email address, or a user name.
+* Ticket asignee. The person asigned by the project to deal with the ticket.
+* Priority. A number or a text informing about the priority for the ticket. This is usually set by the ticket opener, but can be later adjusted by developers.
+* State. A tag with the current state of the ticket. Examples of states are "open" (ticket opened, but still not dealt with by the project), "assigned" (ticket already assigned to some developer),  "fixed" (ticket is considered to be fixed), "closed" (the issue is considered to be done).
+
+Almost all fields in the ticket are subject to changes. When this happens, the change is recorded, including information about who made the change, when, and in which consisted the change.
+
+In addition, a ticket usually have an associated list of comments. These comments are posted by the different persons who contribute to close the ticket. Some of them may be from the ticket opener, such as when a clarification is posted. Some others may be from people interested in the ticket, such as other people experiencing the same problem. Some others may be by developers trying to solve the issue. Each comment is composed by some text (the comment itself), the posting date, the author of the comment, and maybe some other fields.
+
 
 ## Code review systems
 
