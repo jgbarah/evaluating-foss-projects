@@ -115,10 +115,14 @@ The information usually found for a ticket is:
 * Priority. A number or a text informing about the priority for the ticket. This is usually set by the ticket opener, but can be later adjusted by developers.
 * State. A tag with the current state of the ticket. Examples of states are "open" (ticket opened, but still not dealt with by the project), "assigned" (ticket already assigned to some developer),  "fixed" (ticket is considered to be fixed), "closed" (the issue is considered to be done).
 
-Almost all fields in the ticket are subject to changes. When this happens, the change is recorded, including information about who made the change, when, and in which consisted the change.
+Almost all fields in the ticket are subject to changes. When this happens, the change is recorded, including information about who made the change, when, and what the change was about.
 
 In addition, a ticket usually have an associated list of comments. These comments are posted by the different persons who contribute to close the ticket. Some of them may be from the ticket opener, such as when a clarification is posted. Some others may be from people interested in the ticket, such as other people experiencing the same problem. Some others may be by developers trying to solve the issue. Each comment is composed by some text (the comment itself), the posting date, the author of the comment, and maybe some other fields.
 
+### Example of ticket in GitHub
+
+![GitHub issue](its-github-example.png)
+*Example of ticket: GitHub issue. The most relevant fields can be observed. The first text on the left column is the description of the ticket, the second one is a comment.*
 
 ## Code review systems
 
