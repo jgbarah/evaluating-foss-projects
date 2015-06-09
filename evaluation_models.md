@@ -13,7 +13,18 @@ Quantitative evaluation is based on the identification of quantitative parameter
 
 ## QSOS
 
+## SQO-OSS
+
+## Open Source Maturity Model
+
+## OpenBQR
+
+
 ## Qualoss
 
 
 ## The Polarsys Maturity Model
+
+## The Apache Maturity Model
+
+## OpenStack Tags
