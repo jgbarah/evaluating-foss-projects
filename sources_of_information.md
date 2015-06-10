@@ -119,10 +119,38 @@ Almost all fields in the ticket are subject to changes. When this happens, the c
 
 In addition, a ticket usually have an associated list of comments. These comments are posted by the different persons who contribute to close the ticket. Some of them may be from the ticket opener, such as when a clarification is posted. Some others may be from people interested in the ticket, such as other people experiencing the same problem. Some others may be by developers trying to solve the issue. Each comment is composed by some text (the comment itself), the posting date, the author of the comment, and maybe some other fields.
 
+But despite having a similar structure, tickets in different ITS may be presented to users in very different ways, as is shown in the next examples.
+
 ### Example of ticket in GitHub
 
+In GitHub, tickets are called "issues". They are presented in a single HTML page, showing the description, history and comments in it. Most of the current state is shown in the right column.
+
 ![GitHub issue](its-github-example.png)
-*Example of ticket: GitHub issue. The most relevant fields can be observed. The first text on the left column is the description of the ticket, the second one is a comment.*
+*Example of ticket: [GitHub issue from the Bicho project](https://github.com/MetricsGrimoire/Bicho/issues/122). The most relevant fields can be observed. The first text on the left column is the description of the ticket, the second one is a comment.*
+
+GitHub also provides the same information via the [GitHub Issues API](https://developer.github.com/v3/issues/), which is easier to use for automated retrieval of information.
+
+### Example of ticket in Bugzilla
+
+In Bugzilla tickets are called "bugs". Bugzilla is one of the earliest free software ITS, and is currently in use by some very large communities, such as Eclipse. In the following example, the status information for a ticket is shown. Below that area, the list of comments to the ticket is found, starting by its description.
+
+![Bugzilla issue](its-bugzilla-example.png)
+*Example of ticket: [Bugzilla issue from the Eclipse Mylin project](https://bugs.eclipse.org/bugs/show_bug.cgi?id=438817). Comments come below this status information.*
+
+Bugzilla provides similar information via an XML file, which is more suitable for automated retrieval.
+
+### Notes on using information from an ITS
+
+First of all, it is important to notice that projects may use tickets for many different kinds of actions. The most known one is reporting a bug, and that's the reason why these systems are also called "bug reporting systems". But tickets may refer to feature requests, tasks being performed, or even policy discussions. It is up to the policies and uses of a project to decide what kind of communication they channel through the ITS, and that varies a lot from project to project. Therefore, counts on for example "open tickets" are different from counts on "open bugs".
+
+ITSs are also very different on which kind of information they store, and what does it mean. For example, all of them include some kind of encoding the "state" of the ticket. But while GitHub uses tags for that, Bugzilla uses a "status" field. In addition, each project may use this information in different ways, and in many cases they define their own tags, status fields, or whatever the ITS uses for this. That makes it very difficult to know at first sight even when a ticket is a bug, or when a bug is actually fixed. The workflow for tickets, and how and who can move them from state to state, is usually project-defined,although the ITS may constrain or recommend about it. For example, the next figure shows the recommended workflow for Bugzilla.
+
+![Bugzilla recommened workflow](its-bugzilla-workflow.png)
+*[Recommended workflow in Bugzilla](https://www.bugzilla.org/docs/3.6/en/html/lifecycle.html). Original figure illustrates [Life Cycle of a Bug](https://www.bugzilla.org/docs/3.6/en/html/lifecycle.html), in [The Bugzilla Guide - 3.6.13 Release](https://www.bugzilla.org/docs/3.6/en/html/index.html) distributed under the GNU Free Documentation License.
+
+This said, ITSs provide a rich information about how the project is dealing with some of its most important development processes. For example, they allow for the calculus of time-to-fix for bugs, or time-to-implementation for feature requests. They allow as well for the identification of the persons carrying on most of the maintenance, or the key developers in implementing some kind of new functionality.
+
+In some cases, the ITS carries too processes such as code review or documentation management, which have their own peculiarities.
 
 ## Code review systems
 
