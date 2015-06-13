@@ -269,5 +269,4 @@ There are some practices that should be followed to ensure that impact on the pr
 
 * Design the retrieving tools as much repository-friendly as possible. For example, use dealys between operations, so that the system is not "hijacked" by the program, letting users perform their tasks
 * Contact the project for advice in case it is anticipated that the infrastructure is going to be stressed. Project sysdamins can help to design retriving scenarios that cause as little harm as possible.
-* Whenever possible, use archives with previously retrieved information. In this case, the information is retrieved only once, but can be later consumed for many different studies by different parties. If the information is reliable enough, there is no need to stress the infrastructure once and again. In addition, you don't have to retrieve the information yourself, and can concentrate in your analysis.
-* 
+* Whenever possible, use archives with previously retrieved information. In this case, the information is retrieved only once, but can be later consumed for many different studies by different parties. If the information is reliable enough, there is no need to stress the infrastructure once and again. In addition, you don't have to retrieve the information yourself, and can concentrate in designing and performing your analysis.
