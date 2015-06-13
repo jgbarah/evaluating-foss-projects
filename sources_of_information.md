@@ -226,10 +226,48 @@ Forums have also their own problems. First of all, each forum has its own peculi
 
 ## Synchronous communication systems
 
+The traditional synchronous communication system of choice in FOSS projects has been IRC (Internet Relay Chat). Those are used for casual conversation, support to users, quick discussions between developers, and even for socializing.
+
+Other communication channels used by FOSS projects have been those based on XMPP, such as those provided by Jabber, and more recently, Slack.
+
+The information obtained from all these systems can be organized in a similar way. The unit of communication is the message, which can be related to its author, and to the date it was posted. In most of these systems, communication is organized in channels, and therefore messages can be related to a channel as well.
+
+### Example of SCS: IRC log
+
+IRC channels on Freenode are one of the most popular synchronous communication channels used by FOSS projects. People participating in the channels use some software to connnect to Freenode. That software lets them see all messages posted to the channel while they are connected, and send messages as well. The software also informs about who is connected to the channel, and produces notifications when new people join or leave it.
+
+To log all these interactions, usually IRC bots are used. Those are programs that connect to the channel, and record all interactions received from it. These bots produce files with those logs that the project uses to make conversations public, and to preserve them for the future.
+
+![IRC log from an OpenStack channel](scs-irc-example.png)
+*Example of SCS: [Log of the #openstack-operators IRC channel](http://eavesdrop.openstack.org/irclogs/%23openstack-operators/%23openstack-operators.2015-06-10.log.html) of the OpenStack project.*
+
+The figure above shows a fraction of the log produced by one of these bots. It can be seen how both messages and join/leave notifications are recorded, and how for each of them the time is available (the date is implicit, since one log file is produced per day). The identifier for the person sending each message or entering or leaving the channel is recorded as well.
+
+In IRC servers, person identifiers can be reserved, so it is usual that frequent participants use always the same name. But this is not always the case: non registered identifiers are available for anyone to use.
+
+### Notes on using information from SCS
+
+One of the main trouble with SCS systems is that it is not usually easy to track the identities of people participating in the channels. Nothing like email addresses is available. Although the regulars in the channels are usually identifiable, for most participants this is not the case.
+
+In some cases there are privacy concerns with logging SCS channels. Although they are usually public, to comply with the openess that most project mandate, they are not perceived by some developers as mailing lists are. Due to their immediacy, people may be inclined to forget that what they say is public, and may find themselves saying words that they wouldn't really say in public. When bots are used for recording, some people may be reluctant to participate, for fearing that those cases are recorded and linked with them in public. However, although these concerns exist, public channels are really public, and most projects are dealing with them exactly as they do with public mailing lists: recording, archiving, and making archives public.
+
+SCS recordings are a good data source to check for people with high involvement in the project. Being available for participating in discussions with anyone joining the channel, or answering quick questions, are signals that can be interesting to track.
 
 ## Testing and continuous integration systems
 
+During the last years more and more projects are including an infrastructure for performing automatic testing. Continuous integration, when used by projecs, usually requiere that those tests are run for each change, so that automatic tools can decide whether it is safe to integrate the change. Wne the project is using code review, automated testing is usually a part of any review cycle, to spare time to reviewers, who can focus on those changes that passed the testing process.
+
+Some of the most used systems for continuous integration in FOSS projects are Jenkins / Hudson and Travis.
 
 ## Impact on the infrastructure of the projects
 
-Mining may have a significant impact on the performance of the infrastructure of the project. In fact, some mining activities can be indentified by the sysadmins for that infrastructure as a kind of DoS (denial of service) attack.
+Mining may have a significant impact on the performance of the infrastructure of the project. In fact, some mining activities can be indentified by the sysadmins for that infrastructure as a kind of DoS (denial of service) attack. But even when they are not, those activities can cause a log of stress in the project infrastructure. For example, retrieving all information from the ITS, means querying it for all tickets, and the for each ticket obtain all changes and comments. This is not only a significant effort for the ITS, but also an effort for which it was not really desingned.
+
+ITS should provide quickly listings of open tickets, or recent tickets asigned to some developers, or the most recent status for a certain ticket. But the actions performed by programs retrieving information for mining are very different from this "usual behaviour".
+
+There are some practices that should be followed to ensure that impact on the project infrastructure is minimum:
+
+* Design the retrieving tools as much repository-friendly as possible. For example, use dealys between operations, so that the system is not "hijacked" by the program, letting users perform their tasks
+* Contact the project for advice in case it is anticipated that the infrastructure is going to be stressed. Project sysdamins can help to design retriving scenarios that cause as little harm as possible.
+* Whenever possible, use archives with previously retrieved information. In this case, the information is retrieved only once, but can be later consumed for many different studies by different parties. If the information is reliable enough, there is no need to stress the infrastructure once and again. In addition, you don't have to retrieve the information yourself, and can concentrate in your analysis.
+* 
