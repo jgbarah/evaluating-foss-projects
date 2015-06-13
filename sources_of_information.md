@@ -195,6 +195,25 @@ In the early ages of FOSS projects, most communication was asynchronous. The mos
 Each of of these systems organize information in a different way, although they have some aspects in common. All of them are organized around "messages" (email messages, posts in a forum, questions in StackOverflow, etc.) which have an author, a date, and in most cases a one-line summary. In most cases messages are related in threads, usually as they reply or mention each other. 
 But common aspects stop here. The structure of messages, how threads are organized, and other ancillary information are different from system to sytem.
 
+## Example of ACS: email message in Mailman
+
+Mailman is a mailing list manager. You can create mailing lists, and manage them via a website. It has been one of the most usual choices for handling mailing lists during the 2000s. It provides an HTML interface, which gives access to all messages. But it also offers archives in mbox format, which is much easier to mine. The information stored in those archives includes usually most of the headers in the original messages. Below you can find an example of one of those messages, as seen via the HTML interface.
+
+![Mailman email message](acs-mailman-example.png)
+*Example of asynchronous communication: [email message in Mailman](https://lists.libresoft.es/pipermail/metrics-grimoire/2015-March/002419.html)*
+
+The main fields of information can be seen in this message: the subject (a summary of the message), the sender (including email address, slightly mangled), the date, and the contents. Some other headers may be available.
+
+One important detail is about the date. In most cases, this includes at least the date as stamped by the mail server (usually, Mailman itself). But it can include as well the date of the mailer program user to send the message, usually set to the local time of the sender. This means that both analysis by local time and by unversal time are possible.
+
+The contents of the message can be huge, since they may include attachements. Depending on the configuration, attachments may be available or not.
+
+Mailman deals with the list of subscribers to the mailing list, but it doesn't track its history. Therefore, the current list of subscribers can be retrieved, but it is not possible to obtain past lists for a historical analysis.
+
+Privacy sets may interfere with mining, even for public mailing lists. For example, archives can be available only for subuscribers, or email addresses may be mangled. Both cases make mining a bit more complicated, or make some analysis imposible.
+
+A final comment: public mailing lists can always be subscribed to. This mean that a miner can subscribe, and produce an archive with all details present in incoming messages. The history before the subscription won't be available, fut from that point on, all details can be easily accessed.
+
 ### Notes on using information from ACS
 
 It was Apache the first FOSS community to explicitly state that "[If it didn't happen on a mailing list, it didn't happen](https://community.apache.org/newbiefaq.html#NewbieFAQ-IsthereaCodeofConductforApacheprojects?)". Since them, but also before them, many others have put in practice this principle, even without stating an specific policy for enforcing it. This means that mailing lists and forums are of great importance to track the coordination activities of projects, and how they discuss and take decissions.
