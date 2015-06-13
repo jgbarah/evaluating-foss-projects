@@ -190,8 +190,27 @@ In many cases, tickets refering bug reports or feture requests corresponding to 
 
 ## Asynchronous communication systems
 
+In the early ages of FOSS projects, most communication was asynchronous. The most popular tools were email (using mailing lists) and USENET News (in some cases, connected to a mailing list). With time, web forums became important in some communities too, and the relevance of USENET News declined, to the point of fading away. Some special-purpose forums, such as StackOverflow or Reddit, emerged during the last years as important points of communication, even if the projects didn't decide on using them.
+
+Each of of these systems organize information in a different way, although they have some aspects in common. All of them are organized around "messages" (email messages, posts in a forum, questions in StackOverflow, etc.) which have an author, a date, and in most cases a one-line summary. In most cases messages are related in threads, usually as they reply or mention each other. 
+But common aspects stop here. The structure of messages, how threads are organized, and other ancillary information are different from system to sytem.
+
+### Notes on using information from ACS
+
+It was Apache the first FOSS community to explicitly state that "[If it didn't happen on a mailing list, it didn't happen](https://community.apache.org/newbiefaq.html#NewbieFAQ-IsthereaCodeofConductforApacheprojects?)". Since them, but also before them, many others have put in practice this principle, even without stating an specific policy for enforcing it. This means that mailing lists and forums are of great importance to track the coordination activities of projects, and how they discuss and take decissions.
+
+But archives for forums and mailing lists are not always available, or they are available only in part, or they are available in ways that are difficult to mine. For example, some projects don't keep archives of some periods of their history, or rely on systems that even when they perform archiving, are very mining-unfriendly. A notable case is Google Groups, which is used as the ACS by many projects. This system doesn't have an API for mining information, which means that web spidering is the only way to retrieve information. On the contrary, several mailing lists software (such as Mailman) and systems (such as GMane) have very good facilities for automatically retrieving archived information.
+
+Privacy of email addresses is a bit problem for mailing lists archivers, but also for mailing list miners. To prevent spam, may archives mangle mailing lists, in a way that it is impossible to know the actual email address of the sender of a message. This means that identification of developers cannot be done based on email addresses, as it can be done for example for git repositories. Threfore, it is not possible to know if a certain poster is the same person that authored a commit. Some types of analysis and evaluation, which rely on this identification, can therefore not be done in thoose cases. An example is the analysis of how many developers participate in a mailing list.
+
+Forums have also their own problems. First of all, each forum has its own peculiarities. Some of them have APIs which make mining very simple. But some others have APIs not really desinged for mining, lacking fundamental capabilities like incremental searching of posts, which makes it complex and resource-demanding to retrieve their information. In some other cases, APIs simply don't exist, and the only way to mine messages is to get database dumps for all the infomation they store, which is obviously difficult.
 
 ## Synchronous communication systems
 
 
 ## Testing and continuous integration systems
+
+
+## Impact on the infrastructure of the projects
+
+Mining may have a significant impact on the performance of the infrastructure of the project. In fact, some mining activities can be indentified by the sysadmins for that infrastructure as a kind of DoS (denial of service) attack.
