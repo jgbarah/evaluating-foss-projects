@@ -53,7 +53,16 @@ Therefore, the source of information to estimate the size of the community of us
 There are some specific cases when a more concrete estimation, or at least a lower watermark for an estimation can be established:
 
 * Software sending "beacons" to the project. This can be desktop or mobile software connecting to a certain location with a "Here I am" message, or a web product including components that are downloaed from a certain website. In both cases, since FOSS software can be changed, maybe there are versions of the product with the beacon removed. In addition, maybe there are products being used withouth Internet connection. But when these cases can be neglected, the estimation of usage can be very good. A very specific case is when the software, as a part of their normal functioning, identifies itself somehow. For example, web browsers send identification strings to web servers. These strings can be used to estimate usage.
+
+![StatCounter stats of browser usage](evaluation-usage-statcounter.png)
+![W3Counter stats of browser usage](evaluation-usage-w3counter.png)
+*Example of usage estimation: [StatCounter top 9 browsers (May 2015)](http://gs.statcounter.com/#all-browser-ww-monthly-201505-201505-bar), top, and [W3Counter web browser market share](http://www.w3counter.com/globalstats.php) (May 2015), bottom. Both surveys are performed by using the identification information from web broswers in large collections of web sites. It is interesting noticing how they differ, even when they seem to use similar methodologies.*
+
 * Software which answers when queried. This a very specific, but very accurate case, when the software can be located and queried. The most well known case is the estimation of web servers, where the user base of Apache or ng-ix is tracked periodically by querying web servers all over the world for their identification string.
+
+![Netcraft stats of active servers](evaluation-usage-netcraft.png)
+*Example of usage estimation: [Netcraft web server survey (May 2015)](http://news.netcraft.com/archives/2015/05/19/may-2015-web-server-survey.html). This survey is performed by querying web servers (in this case, the top million busiest sites) for their identification string.*
+
 * Software distributed through markets. When the product is distributed mainly through a market (a mobile or a distribution app market), usually it provides detailed numbers about installations, deinstallations, etc.
 
 These two cases are rare, but when they happen, estimations can be very accurate.
