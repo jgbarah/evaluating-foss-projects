@@ -13,18 +13,11 @@ FOSS communities are diverse, and may include many different actors. But in gene
 
 For each of these scopes, different evaluation means can be used. But despite this diversity, we can also identify some techniques and parameters that are useful for all of them.  The rest of this chapter will enter into the peculiarities of each community, and will show as well what they have in common and the techniques that are usful for evaluating all of them.
 
-## Evaluating different kinds of communities
-
-For the purposes of evaluation, several communities can be identified around a FOSS project:
-
-* The development community. Those who directly develop and mainntain the software.
-* The contributing community. Those who contribute to the construction and maintenance of the software in a more peripheral and casual way.
-* The users community. Those who use the software.
-* The ecosystem community. All those parties with some interest in the software.
-
 ### Development community
 
-The developer community is composed of the persons actually developing and maintaining the products produced by the project: software and  related artifacts, such as documentation. In the case of FOSS projects with open development models based on coordination tools, there is a lot of information available about them. That information can be collected from the following repositories:
+The development community is composed of the persons developing and maintaining the products produced by the project: software and  related artifacts, such as documentation.
+
+In the case of FOSS projects with open development models based on coordination tools, there is a lot of information available about them. Usually, data can be collected from the following repositories:
 
 * Source code management repository.
 * Code review system.
@@ -32,9 +25,11 @@ The developer community is composed of the persons actually developing and maint
 * Asynchronous communication systems.
 * Synchronous communication systems.
 
-
+In fact, most of the data in those repositories are related to development activities and to developers themselves.
 
 ### Contributing community
+
+
 
 ### Users community
 
