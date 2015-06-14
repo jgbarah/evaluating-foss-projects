@@ -7,9 +7,9 @@ For many FOSS projects, the communities supporting them are the main responsible
 FOSS communities are diverse, and may include many different actors. But in general, attending at the scope, the following, usually overlapping, communities can be defined:
 
 * The development community, composed by people in charge of developing and maintaining the software produced by the company.
-* The contributing community, composed by all the people actively contributing, not only with code. Examples of contributors are: submitters of bug reports, participants in discussions in mailing lists, translators, writers of documentation, etc.
-* The user community, composed by users of the software participating somehow in the community. This can be by asking questions, by attending events, by joining social network groups with interest in the project. etc.
-* The ecosystemn community, composed by all stakeholders not only in the project itself, but in all the ecosystem of projects related to it.
+* The contributing community, composed by all the people actively contributing, not only with code. Examples of contributors are: submitters of bug reports, participants in discussions in mailing lists, translators, writers of documentation, etc. The contributing community includes developers too.
+* The user community, composed by users of the software participating somehow in the community. This can be by asking questions, by attending events, by joining social network groups with interest in the project. etc. Usually the user community includes the development and contributing communities, since they are also users of the system.
+* The ecosystemn community, composed by all stakeholders not only in the project itself, but in all the ecosystem of projects related to it. The user community is a part of the ecosystem community.
 
 For each of these scopes, different evaluation means can be used. But despite this diversity, we can also identify some techniques and parameters that are useful for all of them.  The rest of this chapter will enter into the peculiarities of each community, and will show as well what they have in common and the techniques that are usful for evaluating all of them.
 
@@ -19,17 +19,20 @@ The development community is composed of the persons developing and maintaining 
 
 In the case of FOSS projects with open development models based on coordination tools, there is a lot of information available about them. Usually, data can be collected from the following repositories:
 
-* Source code management repository.
-* Code review system.
-* Issue tracking system.
-* Asynchronous communication systems.
-* Synchronous communication systems.
+* Source code management repository. Almost all the information in is produced by the development community, since they are mainly changes to source code. In fact, one of the ways of defining the development communuity is as "those people who have contributed at least one change".
+* Code review system. All reviewers can be considered as a part of the development communities. Most of the submitters of change proposals are also developers, or they are acquiring that status.
+* Issue tracking system. Developers participate in ITS by opening, commenting and closing tickets. They are not the only ones opening or commenting, but usually only they can fix issues, and close tickets.
+* Asynchronous and synchronous communication. It is very usual to have separate channels for developers, which allow for a separate tracking of this community.
 
-In fact, most of the data in those repositories are related to development activities and to developers themselves.
+In summary, most of the data in those SCM, CRS and ITS repositories are related to development activities, and developers usually have separate channels in ACS and SCS. Therefore, the evaluation of the development community in open projects, where all these repositories are public, can be very detailed.
+
 
 ### Contributing community
 
+The contributing community is a bit in between the development community and the user community. Contributors are usually users that are in the road to become developers, but maybe won't walk that path. This makes it difficult to specifically track contributors who are not developers.
 
+* Issue tracking system.  Tickets are opened by contributors, be them developers or not. Since we consider both feature requests and bug reports as valuable contributions to the project, everything happening in the ITS is performed by the contributing community. However, the "responisve" part of the action is carried on by developers.
+* Asynchronous and synchronous communication. Contributors may join development channels. But being they users as well, contributors are also present in user channels. This makes it difficult to track their activity, except that they can be identified in ITS, and their identity linked to ACS and SCS.
 
 ### Users community
 
