@@ -15,7 +15,14 @@ For each of these scopes, different evaluation means can be used. But despite th
 
 ## Evaluating different kinds of communities
 
-### Development communities
+For the purposes of evaluation, several communities can be identified around a FOSS project:
+
+* The development community. Those who directly develop and mainntain the software.
+* The contributing community. Those who contribute to the construction and maintenance of the software in a more peripheral and casual way.
+* The users community. Those who use the software.
+* The ecosystem community. All those parties with some interest in the software.
+
+### Development community
 
 The developer community is composed of the persons actually developing and maintaining the products produced by the project: software and  related artifacts, such as documentation. In the case of FOSS projects with open development models based on coordination tools, there is a lot of information available about them. That information can be collected from the following repositories:
 
@@ -27,11 +34,11 @@ The developer community is composed of the persons actually developing and maint
 
 
 
-### Contributors communities
+### Contributing community
 
-### Users communities
+### Users community
 
-### Ecosystem communities
+### Ecosystem community
 
 ## Common techniques
 
