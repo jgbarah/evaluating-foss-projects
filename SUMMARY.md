@@ -10,7 +10,7 @@
 * [Evaluation dashboards](evaluation_dashboards.md)
 * [Quantitative evaluation with Grimoire](grimoire.md)
 * [Using Grimoire](grimoire_use.md)
+* Acknowledgements and reuse of materials
 * [To probe further](to_probe_further.md)
 * [Bibliography](bib.md)
-* Acknowledgements and reuse of materials
 
