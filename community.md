@@ -276,10 +276,35 @@ The main advantage about time zone analysis is that it uses geographic informati
 
 * git clients include the local date when commits are created. When those commits are acccepted, merged in other repositories, etc. the time (including the time zone tag) are not altered in most cases. Please, note that we said "in most cases": some actions on commits will alter their time, usually setting the time zone tag to that of the person performing that action. But still, the information is reliable enough to know about the time zones for commit authors.
 
+![Git authors by timezone (OpenStack, 2014)](tz-scm-authors-2014.png)
+*Example of timezone analysis: Number of git authors per time zone, repositories for the OpenStack project, during 2014.*
 
 * Mailers include the local time, including time zone tags, in messages sent. In many cases, mailing list software keep this time. When that is the case, the analysis of mailing list repositories permit the identification of time zone for senders.
 
+![Mail senders by timezone (Eclipse, 2013)](tz-scm-authors-2013.png)
+*Example of timezone analysis: Number of messages per time zone, sent to Eclipse mailing lists during 2014*
 
+In both cases, it is important to notice that there are at least three sources of trouble with this time zone analysis:
+
+* Bots that perform commits or send messages. They can have their local time zone set to whatever is convenient for the machine where they reside. Since in some projects bots can do a lot of these actions, the number of messages or commits per time zone can be greatly affected because of this.
+* People setting their time zone to something else than their time zone of residence. For example, frequent worldwide travellers, or persons with intense interactions with people in other timezones, may have their time zone set to UTC+0 (universal time, formerly Greenwich time). This means that the time zone corresponding to UTC+0 can be overrepresented because of this fact.
+* Many countries are in fact in two timezones, since they change time in Summer (Summer savings time).
+
+![Map of world time zones](Worldwide_Time_Zones.png)
+*Map of world time zones. Original: [Worldwide Time Zones (including DST)](https://commons.wikimedia.org/wiki/File:Worldwide_Time_Zones_%28including_DST%29.png), by Phoenix B 1of3, Creative Commons Attribution-Share Alike 3.0 Unported*
+
+Due to the distribution of population on the surface of the Earth, timezone analysis provides a very high level glimpse of the geographical distribution of the community. There is no way of telling European from African contributors, for example, since they are in the same timezones. But you can roughly identify persons from several regions (the list is not exact, look at the map for details and a more accurate description):
+
+* UTC+12: New Zealand
+* UTC+10, UTC+11: Australia
+* UTC+9: Japan, Korea.
+* UTC+7, UTC+8: China, Eastern Russia, Indochina.
+* UTC+6: India (in fact, it is UTC+5:30).
+* UTC+3 to UTC+5: Western Russia, East Africa, Middle East.
+* UTC+0 to UTC+2: Western and Central Europe, West Africa.
+* UTC-2, UTC-3: Brazil, Argentina, Chile.
+* UTC-4 to UTC-6: North America Central and East Coast (US, Canada, Mexico), Central America, South America West Coast. 
+* UTC-8, UTC-7: North America West Coast (US, Canada).
 
 ## Time of collaboration
 
