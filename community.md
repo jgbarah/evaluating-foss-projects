@@ -375,7 +375,7 @@ There are several metrics for diversity, some of them are:
 
 ### Bus factor
 
-The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who [asked what would happen to Python](http://legacy.python.org/search/hypermail/python-1994q2/1040.html) if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
+The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who in 1994 [asked what would happen to Python](http://legacy.python.org/search/hypermail/python-1994q2/1040.html) if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
 
 If the knowledge on the project is very concentrated on a small group of developers, the trouble for the project if those developers leave is very high. On the contrary, if the knowledge is evenly spread through all the developers, even if a large number of them leave, the project can survive the shock more easily.
 
@@ -383,12 +383,21 @@ A maybe naive, but very practical simplification of the metric is to assume that
 
 A more complete view has into account other sources of information, such as bugs fixed in certain parts of the code, participation in design and decission making, etc.
 
+In any of those cases, some simple metrics that can be defined to get a number representing the bus factor are:
+
+* Minumum number of developers who have a certain fraction of the knowledge. For example, minumum number of developers authoring 50% of the current version of the software.
+* Maximum fraction of the knowledge that have a certain number of developers. For example, maximum fraction of source code authored by 10% of the developers.
+
+Even when these metrices are very simple, they capture a part of the "bus factor" idea. More complex metrics, having into account the complete distribution of knowledge (or source code authorship) across developers, are possible. Factoring these metrics by the time of activity in the project is also interesting (assuming that the longer the experience in the project, the larger the knowledge).
+
 ### Apache Pony Factor
 
+The pony factor was proposed by members of the Apache Software Foundation. The first detailed explanation about it was by Daniel Gruno. It is a number that shows the diversity of a project in terms of the diversity of labor among its developers. From this point of view it is a concrete implementation of the bus factor.
 
+The pony factor is defined as "the lowest number of developers whose total contribution constitutes the majority of the code base". A derived metric is the augmented pony factor, which takes into account if a developer who contributed to the code base is still active or not. In this case, contributions by inactive developers are ignored.
 
+The "contribution" considered for calculating the pony factor is the number of commits. Therefore, we can rephrase the definition of the augmented pony factor as:
 
+>"The augmented pony factor of a project is the lowest number of active developers whose total commit count is at least 50% of the total number of commits to the project".
 
-
-
-
+This single number tries to capture how many active developers have "half of the knowledge on the project". The larger this number, the more diverse it is, and the more people should be affected by the bus factor for the project to experience trouble.
