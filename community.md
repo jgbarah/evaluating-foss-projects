@@ -363,3 +363,26 @@ Once affiliation information is available, any community study can be done by or
 
 ![Top ten organizations in OpenStack, by number of commits (November 2014)](companies-openstack.png)
 *Example of organization analysis: Top ten organizations in OpenStack by number of commits and number of authors of commits for the whole history of the project up to November 2014.*
+
+## Diversity
+
+In FOSS projects, diversity is important. Diversity ensures that dependencies on certain people, or on certain companies, are not a risk for the future of the project. Diversity ensures that control of the project is not in the hands of a few people. Diversity helps to have a healthy community, and lowers the barriers for new people to join the community.
+
+There are several metrics for diversity, some of them are:
+
+* [Bus factor](https://en.wikipedia.org/wiki/Bus_factor): Number of developers it would need to lose to destroy its institutional memory and halt its progress.
+* [Apache Pony Factor](https://ke4qqq.wordpress.com/2015/02/08/pony-factor-math/): Diversity of a project in terms of the division of labor among committers in a project.
+
+### Bus factor
+
+The bus factor is a measurement of the concentration of information in individual team members. A high bus factor means that many individuals know enough to carry on and the project could still succeed even in very adverse events
+
+### Apache Pony Factor
+
+
+
+
+
+
+
+
