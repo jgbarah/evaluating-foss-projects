@@ -375,7 +375,13 @@ There are several metrics for diversity, some of them are:
 
 ### Bus factor
 
-The bus factor is a measurement of the concentration of information in individual team members. A high bus factor means that many individuals know enough to carry on and the project could still succeed even in very adverse events
+The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who [asked what would happen to Python]() if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
+
+If the knowledge on the project is very concentrated on a small group of developers, the trouble for the project if those developers leave is very high. On the contrary, if the knowledge is evenly spread through all the developers, even if a large number of them leave, the project can survive the shock more easily.
+
+A maybe naive, but very practical simplification of the metric is to assume that the amount of code authored by developers is a good proxy for their knowledge on the system. Therefore, the distribution of the lines of code authored per developer in the current version of the software would allow for calculating the bus factor.
+
+A more complete view has into account other sources of information, such as bugs fixed in certain parts of the code, participation in design and decission making, etc.
 
 ### Apache Pony Factor
 
