@@ -375,7 +375,7 @@ There are several metrics for diversity, some of them are:
 
 ### Bus factor
 
-The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who [asked what would happen to Python]() if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
+The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who [asked what would happen to Python](http://legacy.python.org/search/hypermail/python-1994q2/1040.html) if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
 
 If the knowledge on the project is very concentrated on a small group of developers, the trouble for the project if those developers leave is very high. On the contrary, if the knowledge is evenly spread through all the developers, even if a large number of them leave, the project can survive the shock more easily.
 
