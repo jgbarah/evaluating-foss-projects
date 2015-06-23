@@ -51,7 +51,20 @@ In the former example, before closing the tickets aggregated-time-open is of
 50 x 2 + 100 x 60 = 6100 days
 ```
 
+* aggregated-time-open-diff. We define this as the difference with the previous time-open for all tickets. This allows us to have a comparison about how aggregated-time-open varies over time, if it is measured periodically.
+
 exactly as it will be after closing the 100 old tickets. This allows for a monotonic metric, which produces more intuitive results.
+
+Another example can illustrate a different scenario. Assume now that a project is opening 10 processes every day, and is closing them 2 days later. In this case, metrics will evolve as follows:
+
+|Day|Open|Closed|Time-to-close (median)|Time-open (median)|Agg-time-open| Agg-time-open-diff |
+|---|----|------|----------------------|------------------|-------------|--------------------|
+| 1 | 10 | 0    | N/A                  | 0                | 0           | N/A                |
+| 2 | 20 | 0    | N/A                  | 0                | 10          | 10                 |
+| 3 | 20 | 10   | 2                    | 1                | 30          | 20                 |
+| 4 | 20 | 20   | 2                    | 2                | 50          | 20                 |
+
+It can be seen how the median for time-to-close, times move from N/A to 2 once the project starts to close tickets, and remain there since the time it takes to close tickets is constant. Time open reflects a bit more closely what is happening in days 2, 3 and 4, moving from 0 to two as more tickets are opened. Aggregated-time-open-diff is the metric closer to what is actually happening, moving from N/A to 10 and 20, and remaining there as the number of tickets opened is equal to the number of tickets closed.
 
 In the end, when you are interested in performance of closing processes, you should consider both the backlog and some statistics (usually the median or some quantile) of time-to-close. The backlog will tell you about how much work is pending. The time-to-close about how long did it take to finish the processes.
 
