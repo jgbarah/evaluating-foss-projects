@@ -99,8 +99,19 @@ To better understand how the above metrics evolve over time, it is important to 
 
 Efficiency and time-to metrics are defined on collections based on periods. Backlog is defined on collections based on snapshots. Since snapshots are easier to understand, let's start explaining them.
 
-When we want to analyze the evolution of the backlog over time, we define the sampling rate (say, once per week), and the starting point for the time series (say, January 1st at 00:01). What we do after that is to measure the backlog at the given points in time, by selecting the collection of open processes (if this is the backlog of open processes), and counting it.
+When we want to analyze the evolution of the backlog over time, we define the sampling rate (say, once per week), and the starting point for the time series (say, January 1st at 00:01). What we do after that is to measure the backlog at the given points in time, by selecting the collection of open processes (if this is the backlog of open processes), and counting it:
 
+|Snapshot        |Collection    |Number|
+|----------------|--------------|------|
+|2015-01-01 00:01|Processes open| 34   |
+|2015-01-08 00:01|Processes open| 23   |
+|2015-01-15 00:01|Processes open| 37   |
+|2015-01-22 00:01|Processes open| 46   |
+|2015-01-29 00:01|Processes open| 51   |
+
+Collections based on periods are a bit trickier. If we consider for example efficiency, it is defined as the ratio of opened to closed processes. For comparing how the system is evolving over time, we need to define comparable collections of processes as time passes. But it is not useful to define those collections as "opened processes" and "closed processes" at some snapshots. The reason is clear: at a certain point in time, the collection will contain usually zero, or maybe one (if it was exactly opened or closed at that point in time) process. Which doesn't make sense for studying the evolution.
+
+To avoid this problem, we define collections on periods. For example, all tickets opened during the first week of the year, and all tickets closed during the first week of the year.
 
 ### Some remarks about performance in finishing processes
 
