@@ -35,11 +35,15 @@ As another example, if the 0.95 quantil of time-to-review a change is of 4.34 da
 
 You should notice as well that you can only measure time-to-X if X already happened. For example, time-to-close can only be measured for a ticket if it was already closed. Otherwise, you can only know that time-to-close will be longer than the time it has been open up to now, but nothing else. This is important, because it can cause counter-intuitive situations.
 
-Assume for example a project with 100 still open tickets and 50 already closed tickets. All 50 closed tickets had a time-to-close of 2 days. All the 100 open tickets were open 60 dayss ago. If we measure the median of time-to-close now, it will be of 2 days, since it only applies to closed tickets. Now, the 100 still open tickets are closed during today. At the end of the day, we have 50 tickets with 2 days of time-to-close, and 100 with 60 days of time-to-close. That is, our median of time-to-close raised to 60 days, even when we closed a lot of old tickets. In other words, closing a lot of tickets raised time-to-close, which could be interpreted as a decrease in performance, when it is exaclty the other way around.
+Assume for example a project with 100 still open tickets and 50 already closed tickets. All 50 closed tickets had a time-to-close of 2 days. All the 100 open tickets were open 60 days ago. If we measure the median of time-to-close now, it will be of 2 days, since it only applies to closed tickets. Now, the 100 still open tickets are closed during today. At the end of the day, we have 50 tickets with 2 days of time-to-close, and 100 with 60 days of time-to-close. That is, our median of time-to-close raised to 60 days, even when we closed a lot of old tickets. In other words, closing a lot of tickets raised time-to-close, which could be interpreted as a decrease in performance, when it is exaclty the other way around.
 
 To avoid this effects, there are some other metrics, such as:
 
-* time-open. It is defined as time-to-close for processes already closed, and time since opened for processes still open.
+* time-active. It is defined as time since the process started, only for processes which still didn't finish. In some sense, it is a complement to time-to-finish: while time-to-finish considers only finished processes, time-active provides a similar information, but only for processes still open.
+
+In the former example, time-active before closing the old 100 tickets would be 100 days foro all tickets to consider (those still open). After closing those 100 tickets, there are no tickets to calculate time-active, since all of them are closed.
+
+* time-open. It is defined as time-to-close for processes already closed, and time-active (time since opened) for processes still open.
 
 In the former example, time-open before closing the old 100 tickets would be of 2 days for the closed tickets, and of 60 days for still open tickets. That would be a median of 60 days. After closing the tickets, it would still be of 2 and 60 days, now keeping the median in 60 days, which at least remains constant.
 
@@ -55,27 +59,27 @@ In the former example, before closing the tickets aggregated-time-open is of
 
 exactly as it will be after closing the 100 old tickets. This allows for a monotonic metric, which produces more intuitive results.
 
-Another example can illustrate a different scenario. Assume now that a project is opening 3 processes every day, and is closing them after two days. In this case, metrics will evolve as follows:
+Another example can illustrate a different scenario. Assume now that a project is opening 3 processes every day, and is closing them after two days (at the end of the second day). Metrics will be evaluated at the end of each day. In this case, metrics will evolve as follows:
 
-|Day|New|Finished|Open|Closed|TTF (median)|TO (median)|ATO | ATOD |
-|---|---|--------|----|------|------------|-----------|----|------|
-| 1 | 3 | 0      | 3  | 0    | N/A        | 1         | 3  | N/A  |
-| 2 | 3 | 3      | 3  | 3    | 2          | 1.5       | 9  | 6    |
-| 3 | 3 | 3      | 3  | 6    | 2          | 2         | 15 | 6    |
-| 4 | 3 | 3      | 3  | 9    | 2          | 2         | 21 | 6    |
-*Table describing an scenario of a project opening and closing processes. Each row represents a day. New: number of new processes open during the day. Finished: number of processes finished during the day. Open: number of processes still open at the end of the day (this is the backlog of still open processes). Closed: number of processes already closed at the end of the day. TTF: time-to-finish (or time-to-close) for all closed processes at the end of the day. TO: time-open, for open and closed processes, at the end of the day. ATO: aggregrated-time-open at the end of the day. ATOD: aggregated-time-open-diff at the end of the day. For simplicity, we assume that new processes start at the beginning of the day, and finished processes finish at the end of the day. All times are in days.*
+|Day|New|Finished|Open|Closed|TTF (median)|TA (median)|TO (median)|ATO | ATOD |
+|---|---|--------|----|------|------------|-----------|-----------|----|------|
+| 1 | 3 | 0      | 3  | 0    | N/A        | 1         | 1         | 3  | N/A  |
+| 2 | 3 | 3      | 3  | 3    | 2          | 1         | 1.5       | 9  | 6    |
+| 3 | 3 | 3      | 3  | 6    | 2          | 1         | 2         | 15 | 6    |
+| 4 | 3 | 3      | 3  | 9    | 2          | 1         | 2         | 21 | 6    |
+*Table describing an scenario of a project opening and closing processes. Each row represents a day. New: number of new processes open during the day. Finished: number of processes finished during the day. Open: number of processes still open at the end of the day (this is the backlog of still open processes). Closed: number of processes already closed at the end of the day. TTF: time-to-finish (or time-to-close) for all closed processes at the end of the day. TA: time-active, for open processes. TO: time-open, for open and closed processes, at the end of the day. ATO: aggregrated-time-open at the end of the day. ATOD: aggregated-time-open-diff at the end of the day. For simplicity, we assume that new processes start at the beginning of the day, and finished processes finish at the end of the day. All times are in days.*
 
-The median for time-to-finish quickly moves from N/A to 2 once the project starts to finish processes, and remain there since the time it takes to close tickets is constant. Time-open reflects a bit more closely what is happening in days 1, 2, and 3, moving from 1 to 2 as more new processes start. Aggregated-time-open-diff shows the regularity of the system as well.
+The median for time-to-finish quickly moves from N/A to 2 once the project starts to finish processes, and remain there since the time it takes to close tickets is constant. Time-active remains stable at 1, since at the end of the day, the processes from yesterday were closed, and only those opened when the day started are still active. Time-open reflects a bit more closely what is happening in days 1, 2, and 3, moving from 1 to 2 as more new processes start. Aggregated-time-open-diff shows the regularity of the system as well.
 
 Now, let's see how the metrics reflect a peak in new processes. Let's assume that on day 5, in addition to the 3 new processes that are finished in two days, 10 new processes start, and they are not finished during the following days.
 
-|Day|New|Finished|Open|Closed|TTF (median)|TO (median)|ATO | ATOD |
-|---|---|--------|----|------|------------|-----------|----|------|
-| 5 | 13| 3      | 13 | 12   | 2          | 1         | 37 | 16   |
-| 6 | 3 | 3      | 13 | 15   | 2          | 2         | 53 | 16   |
-| 7 | 3 | 3      | 13 | 18   | 2          | 2         | 69 | 16   |
+|Day|New|Finished|Open|Closed|TTF (median)|TA (median)|TO (median)|ATO | ATOD |
+|---|---|--------|----|------|------------|-----------|-----------|----|------|
+| 5 | 13| 3      | 13 | 12   | 2          | 1         | 1         | 37 | 16   |
+| 6 | 3 | 3      | 13 | 15   | 2          | 2         | 2         | 53 | 16   |
+| 7 | 3 | 3      | 13 | 18   | 2          | 2         | 2         | 69 | 16   |
 
-On day 5, we have 13 new processes: the 3 "regular" ones, and that peak of 10 more. At the endo of the day, we have closed the 3 processes that started on day 4. This means that 13 processes (all that started during the day) remain open at the end of the day. We have a total of 12 closed processes (we had 9 on day 4, plus three more we finished today). The median for time-to-finish remains at 2, since all closed processes took 2 days to finish. The median for time-open, on the contrary, and maybe surprisingly, went down to 1. The accounting is as follows: 12 closed processes took 2 days to finish, while 13 open processes have been open for one day. Therefore, more than 50% of the process have a time-open of 1 day. Aggregated-time-open rose to 37: it was 21, plus 3 more days for the processes finished during the day, plus 13 more days for the new processes that started today. Aggregated-time-open-diff rose to 16 days (37 - 21).
+On day 5, we have 13 new processes: the 3 "regular" ones, and that peak of 10 more. At the end of the day, we have closed the 3 processes that started on day 4. This means that 13 processes (all that started during the day) remain open at the end of the day. We have a total of 12 closed processes (we had 9 on day 4, plus three more we finished today). The median for time-to-finish remains at 2, since all closed processes took 2 days to finish. All processes still open were opened at the beginning of the day, therefore time-active is 1 for all of them, and the median too. The median for time-open, on the contrary, and maybe surprisingly, went down to 1. The accounting is as follows: 12 closed processes took 2 days to finish, while 13 open processes have been open for one day. Therefore, more than 50% of the process have a time-open of 1 day. Aggregated-time-open rose to 37: it was 21, plus 3 more days for the processes finished during the day, plus 13 more days for the new processes that started today. Aggregated-time-open-diff rose to 16 days (37 - 21).
 
 On day 6, we have only three new "regular" processes, and we finish the three "regulars" that started on day 5. That means that the number of processes still open at the end of the day remains at 13, since none of the 10 "extra" processes that started on day 5 finished. The number of closed processes is rises to 15, with the 3 from day 5 that were finished. Time-to-finish remains at 2, since still all finished processes took 2 days to finish. Time-open now rises to 2, with the following accounting: 15 closed processes took 2 days to finish; 10 processes that started on day 5 have been open for 2 days; 3 processes open today were open for 1 day. In short: for 25 processes time-open is 2, for 3 it is 1. Therefore, the median is 2. From this accounting it is clear that aggregated-time-open is 53, and aggregated-time-open-diff is 16.
 
