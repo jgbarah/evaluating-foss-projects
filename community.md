@@ -184,19 +184,220 @@ But nummbers for different points in time can be compared, whcih allows for dete
 
 ## Active persons
 
-In addition to activity, knowing who are the persons causing that activity is very immportant when evaluating a community. Active persons in a project can be measured in several repositories:
+In addition to activity itself, knowing who are the persons causing that activity is very important when evaluating a community. Active persons in a project can be measured in several repositories:
 
-* SCM: In modern SCM systems, such as git, authors and committers can be counted separately.
-* CRS: Change proposers, reviewers, rejecters, and accepters.
-* ITS: Ticker openers and closers, and people participating by changing states or commenting.
-* Communication channels: number of senders or posters can 
-usually be measured.
+* SCM: In modern SCM systems, such as git, authors and committers can be counted separately. Authors are persons authoring changes to source code. Committers are persons commiting those changes to the repository. Authors can be also committers, if they have commit rights. But if they don't, usually they send their changes to committers, who are those merging them into the repository. However, sites such as GitHub ot GitLab make things more complex, since when the changes are contributed via the web interface, as pull requests, authors are considered as committers even if they don't have commit access to the repository.
 
-## Demography
+![Evolution of authors in Puppet](activity-scm-authors-puppet.png)
+*Example of active persons: Active authors per month in the Puppet project, circa June 2015.*
 
-## Time zones
+* CRS: Code review systems allow for the identification of several populations of active persons: change proposers (initiators of review processes), reviewers, rejecters (reviewers rejecting changes, asking for new versions), accepters (reviewers accepting changes), and abandoners (submitters abandoning a proposed change).
+
+![Evolution of change submitters in Wikimedia](crs-activity-submitters-wikimedia.png)
+*Example of active change submitters: Active summitters of proposed changes for code review, per month, in the Wikimedia projects, circa June 2015.*
+
+* ITS: The main active populations to track are ticket openers and closers, and people participating by changing states or commenting. Openers are persons contributing with new bug reports or feature requests. In many cases they are not developers, but people hit by a bug, or needed a new feature, and engaged enough with the project to devote some time to file the new ticket. People changing stated and closing tickets are very likely developers in the project. People commenting are either developers, or non-developers (maybe the one who submitted the ticket) collaborating in the bug-fixing or feature-implementation processes.
+
+![Evolution of ticket closers](its-activity-closers-cloudstack.png)
+*Example of active ticket closers: Active people closing tickets, per month, in the CloudStack project, circa June 2015.*
+
+* Communication channels: In most communcation channels, be them synchronous or asynchronous, active persons that can be measured are senders (or posters). In most of these systems the information about who is actually reading, or even receiving, those messages sent is not easy to obtain, or does not exist. In the systems that allow for it, the number of persons actively answering or following-up to a message is interesting as well.
+
+![Evolution of senders in IRC](mls-activity-senders-openstack.png)
+*Example of active senders in IRC channels: Active people sending messages in IRC channels, per week, in the OpenStack project, circa June 2015.*
+
+Of course, in addition to the raw numbers of active persons, the ratio of any parameter showing activity to the numbers of the group causing that activity is specially relevant. For example, the ratio of commits to authors of those commits over time shows quickly if the number of commits per author are growing or not.
+
+## Merging identities
+
+For most of the studies based on tracking persons, it is important to merge all identities that a single person may have in the repositories in a single merged identity. That can be done at four levels:
+
+* The repository level. That consists of merging all the identities of the same person in a given repository. For example, meging all your identities in a certain git repository. This is useful, for example, to count the real number of people working in that repository.
+* The repository kind level. In this case, all the identities of the same person, across all the repositories of the same kind for a certain project, will be merged. This is useful for studies for all repositories of the same kind. For example, for counting the total number of developers contributing to source code, and thus to git repositories, of a certain project.
+* The project level. In this case, all identities of the same person, across all the repositories of any kind of the same project will be merged. This is needed to know about persons at the project level, such as for evaluating the population of contributors of a project across all its repositories of any kind.
+* The global level. All identities for a certain person, in any repository of any analyzed project, is merged into a single merged identity. This is useful when tracking people working in several projects. For example, for finding developers working both in project X and project Y.
+
+In some cases, the projects keep some information to track the multiple identities of developers. But in most cases, you can only relay on heuristics and in manual comparison and merging of identities. There are many heuristics that can be used, but they can be tricky depending on the circumstances, over- or underperforming in specific projects. One example is comparison of email addresses when the complete name string matches. To illustrate this heuristic, let's use the following email addresses:
+
+```
+Jesus M. Gonzalez-Barahona <jgb@bitergia.com>
+Jesus M. Gonzalez-Barahona <jgb@gsyc.es>
+```
+
+A heuristics finding exact matches in names would correctly merge these two indentities. But now consider the same heuristics applied to these two addesses:
+
+```
+John Smith <john@somecompany.com>
+John Smith <js@someothercompany.com>
+```
+
+Given that John Smith is a very common name, it could perfectly be the case, specially in a large community, that those identities correspond to different persons, and therefore shouldn't be merged.
+
+In general, this happens with any heuristics you may find out. That is the reason why usually the merging of identities is really a mix of applying heuristics and manual check of the identities. Of course, when the project itself is involved, and the real persons whose identities are merged collaborate, the process can be reviewed by them. This is the better way of ensuring accuracy.
+
+As was commented at the beginning of this section, the most accurate this merging process is, the better estimation of parameters that depend on identfying persons, and not identities.
+
+## Aging
+
+Of the many aspects to explore in the community of a FOSS project, turnover and age structure are some of the more important. Turnover shows how people are entering and leaving the community. It tells how attractive is the community, and how it retains people once they join. Age structure, understanding age as "time in the project" shows for how long members have joined it. It tells how many people are available in different stages of experience, from old-timers to newbies. Together, both can be used to estimate engagement, to predict the future structure and size of the community, and to detect early potential problems that could prevent a healthy growth.
+
+### The community aging chart
+
+Both turnover and age structure can be estimated from data in software development repositories. A single chart can be used to visualize turnover and age structure data obtained from these repositories: the community aging chart. This chart resembles to some extent the [population pyramid](http://en.wikipedia.org/wiki/Population_pyramid) used to learn about the age of populations. It represents the "age" of developers in the project, in a way that provides insight on its structure.
+
+![Aging charts for the OpenStack community](aging-openstack.png)
+*Example of aging charts: [Community aging charts](http://activity.openstack.org/dash/browser/demographics.html) for authors of code, as found in git repositories of the OpenStack project (left) and ticket participants, as found in the OpenStack Launchpad (right), circa June 2015. Each pair of blue and green bars corresponds to a generation of six months.*
+
+In the aging chart, each pair of two horizontal bars shows how a "generation" is behaving. The Y axis represents how old is each generations, with younger ones at the bottom. For each generation, the green bar (attraction) represents the number of people that joined it. In other words, how many people were attracted to the community during the corresponding period (say, first semester of 2010). Meanwhile, the blue bar (retention) represents how many people in that generation are still active in the community. In other words, how many of those that were attracted are still retained.
+
+### One chart, many views
+
+The aging chart shows many different aspects of the community. Let's review some of them.
+
+The ratio of the pair of bars for each generation is its retention ratio. For the newest generation, it is 100%, since people recently entering the community are still considered to be active (but that depends on the inactivity period, see below). A ratio of 50% means that half the people in the generation are still retained. Comparing the length of each pair of bars, we can quickly learn about which generations were most successfully retained, and which ones mostly abandoned the project.
+
+The evolution of green bars tells us about the evolution of attraction over time. Most successful projects start with low attraction, but at some point they starts to become very attractive, and the bars grow very quickly. When a project enters maturity, usually its attraction becomes more stable, and can even start to decline, with the project being still extremely successful, just because it is no longer "sexy enough" for potential newbies.
+
+The evolution of blue bars tells us about the current age structure of the community. If bars in the top are large, but those in the bottom are small, the community is retaining early generations very well, but having difficulties with retain new blood. On the contrary, if bars in the top are small while those in the bottom are large, newcomers are staying, while experienced people already left. Blue bars can only be as large as green bars (you cannot retain more people, for a certain generation, that those that you attracted to it). Therefore, "large" and "small" for blue bars is always relative to green bars.
+
+### Different charts for different information
+
+To build the community aging chart, three parameters have to be considered: generation period, inactivity period, and snapshot date:
+
+* The generation period defines how long generations are: that is the granularity of the chart. It is usually one year, or maybe six months for younger communities. People in the community is going to be charted according to their generation, using this granularity.
+* The inactivity period is how long we wait before considering that somebody left the community. We don't know if persons really left the community: maybe they are on vacation, or on a medical leave. So, we have to estimate that "if somebody was not active during the last m months, we consider that person as a departure from the community". That m is the inactivity period, which is usually equal to the generation period, but could be different.
+* The snapshot date is when we consider as "now". That is, we can calculate the the community aging chart for today, but also for any time in the past. In fact, comparisons of charts for different snapshot dates say a lot about the evolution of the attraction and retention of the project over time.
+
+Comparing a community aging chart from the past with the current one let us compare the potential we had some time ago with the reality now. In most development communities, people inactive for a long period are very unlikely to show up again. That means that the sum of the retention bars in the chart snapshoted two years ago are the maximum population that the community is going to have two years later, save the generations entering during these two years.
+
+## One example and some comments
+
+As an example, we can compare the aging chart for OpenStack in July 2014 with the same chart for July 2013. Both charts show six-month generations and use six month inactivity period as well. Obviously enough, the latter includes two bars less, those corresponding to the two last generations, who still had not joined the project in July 2013. Green bars corresponding to generations more than one year old in July 2014 are exactly the same as those in the chart for July 2014, only shifted by one year. If a generation attracted a number of people, that does not depend on when we set the snapshot.
+
+![Aging chart for OpenStack authors, circa July 2013](openstack-scm-aging-2013-07.png)
+*Aging chart for authors in OpenStack git repositories in July 2013*
+
+![Aging chart for OpenStack authors, circa July 2014](openstack-scm-aging-2014-07.png)
+*Aging chart for authors in OpenStack git repositories in July 2014*
+
+If we focus now on the one-year-old generation for July 2013 (the third one, counting bottom-up), we can see how it is represented one year later. From a total of about 190 persons attracted, about 100 were still retained in July 2013. That means that in July 2014 we could expect at most 100 persons still retained in that generation. Now, fast forward to the future: in the chart for July 2014, about 70 persons are still retained from the (now) two-years-old generation. In other words, the project lost a much higher share of the generation during the first year than during the second one, even if we consider the latter case relative to those that still were in the project in July 2013.
+
+This is a very common fact found in most projects: they lose a large fraction of attracted persons during the first year, but are more likely to retain them after that point. This depends as well on the policies of the project, and how you enter the community. Retention ratio for the first year usually reflects more than anything how difficult it is to enter the community. The more difficult it is to get in, usually the most engaged people are, and the less likely to leave quickly. But the more difficult it is to get in, the less people in the newer generation are going to be attracted. Therefore, projects with different entry barriers can attract very different quantities of people, but maybe the retained people after one year is very similar. Of course, volunteers and hired developers have different entry / leave patterns too, that influence these ratios.
+
+We can also read the future a bit. Assuming the current retention rates per generation, we could estimate the size of the retention bars for the future, and from it the total size of the community with a certain experience in the project. For example, all those staying more than two years in the project in one year from now, are in the blue bars corresponding to generations currently older than one year. This allows for the prediction of shortages of developers, or of experienced developers, for example.
+
+In fact, any policy oriented to improve attraction or retention of people can be easily tracked with these aging charts, by defining the ideal charts for the future, and then comparing with the actual ones.
+
+## Time zones and other geographical information
+
+Knowing about the geographical location of the members of the community is difficult. In some projects, when people register in the project, they can enter some geographical information. That can be the country or city of residence, or even their coordinates. As an example, see below the map of Debian developers (well, in fact, the map of some of the Debian developers, who specified their location).
+
+![Map showing location of Debian developers](location-debian-devel.png)
+*Example of geographical information for a community: [Map showing Debian developers location](https://www.debian.org/devel/developers.loc), for those developers who registered their coordinates.*
+
+But having this level of information is unusual, and usually incomplete, since it covers only community members who want to fill in this information.
+
+When the project records IP addresses accesing its infrastructure, they can do IP geo-location on them. Since different types of access can be tracked (access to the development repositories, to the downlowad area, to the forums, etc), those projects can track with detail the location of different actors in the community. But again, this is unusual. Most projects don't have these capabilities, or don't want to put this tracking in place.
+
+For projects willing to have some information about the geographic location of their community, but not using the former techniqueus, there is still something to be done: time zone analysis.
+
+The main advantage about time zone analysis is that it uses geographic information that individuals provide when using some repositories. Well, as is usual in these cases, it is not exactly individuals, but the software they use. The most two widespread cases are git and mailers:
+
+* git clients include the local date when commits are created. When those commits are acccepted, merged in other repositories, etc. the time (including the time zone tag) are not altered in most cases. Please, note that we said "in most cases": some actions on commits will alter their time, usually setting the time zone tag to that of the person performing that action. But still, the information is reliable enough to know about the time zones for commit authors.
+
+![Git authors by timezone (OpenStack, 2014)](tz-scm-authors-2014.png)
+*Example of timezone analysis: Number of git authors per time zone, repositories for the OpenStack project, during 2014.*
+
+* Mailers include the local time, including time zone tags, in messages sent. In many cases, mailing list software keep this time. When that is the case, the analysis of mailing list repositories permit the identification of time zone for senders.
+
+![Mail senders by timezone (Eclipse, 2013)](tz-scm-authors-2013.png)
+*Example of timezone analysis: Number of messages per time zone, sent to Eclipse mailing lists during 2014*
+
+In both cases, it is important to notice that there are at least three sources of trouble with this time zone analysis:
+
+* Bots that perform commits or send messages. They can have their local time zone set to whatever is convenient for the machine where they reside. Since in some projects bots can do a lot of these actions, the number of messages or commits per time zone can be greatly affected because of this.
+* People setting their time zone to something else than their time zone of residence. For example, frequent worldwide travellers, or persons with intense interactions with people in other timezones, may have their time zone set to UTC+0 (universal time, formerly Greenwich time). This means that the time zone corresponding to UTC+0 can be overrepresented because of this fact.
+* Many countries are in fact in two timezones, since they change time in Summer (Summer savings time).
+
+![Map of world time zones](Worldwide_Time_Zones.png)
+*Map of world time zones. Original: [Worldwide Time Zones (including DST)](https://commons.wikimedia.org/wiki/File:Worldwide_Time_Zones_%28including_DST%29.png), by Phoenix B 1of3, Creative Commons Attribution-Share Alike 3.0 Unported*
+
+Due to the distribution of population on the Earth, timezone analysis provides a very high level glimpse of the geographical distribution of the community. There is no way of telling European from African contributors, for example, since they are in the same timezones. But you can roughly identify persons from several regions (the list is not exact, look at the map for details and a more accurate description):
+
+* UTC+12: New Zealand
+* UTC+10, UTC+11: Australia
+* UTC+9: Japan, Korea.
+* UTC+7, UTC+8: China, Eastern Russia, Indochina.
+* UTC+6: India (in fact, it is UTC+5:30).
+* UTC+3 to UTC+5: Western Russia, East Africa, Middle East.
+* UTC+0 to UTC+2: Western and Central Europe, West Africa.
+* UTC-2, UTC-3: Brazil, Argentina, Chile.
+* UTC-4 to UTC-6: North America Central and East Coast (US, Canada, Mexico), Central America, South America West Coast. 
+* UTC-8, UTC-7: North America West Coast (US, Canada).
+
+For some uses, this split in regions is enough. For example, in the above chart about OpenStack git auhtors it is clear how most of the developers are from North America and Western Europe, with some participations of the Far East and other regions. But the distribution of the Eclipse mail senders is even more centered in Western Europe, with a large participation from North America, a only some presence from the rest of the world.
+
+This kind of study is enough to assess the results of policies for increasing geographical participation, or to know where developers come from to decide on a meeting location.
 
 ## Time of collaboration
 
+In global communities, knowing when people is working is important for many issues. For example, for deciding on coordination synchrounous distance meetings, for estimating to which extent the work on issues may be continuous because there are people working at any time, or to know about work timing patterns in the project.
+
+People work at different times of the day due to being in different time zones, but also due to different working habits. For example, many people working for companies tend to follow the office hours schedule, from 8 to 5 or similar. But volunteers tend to work on their spare time, that is in the evenings and during the night. The same can be said about day of the week: office workers tend to be active from Monday to Friday, while volunteers tend to work also during weekends. There are similar differences in vacation periods too.
+
+These work patterns can be estimated from dates in almost any of the repositories that we can use as data source, since activity is usually tagged with a time. This allows for very detailed analysis of when people perform that activity.
+
 ## Affiliation
 
+In FOSS communities, many develpers are not working as volunteers, but as paid workers. In this case, it may be important to know for which organization each of these developers is working. Knowing it allows for several kinds of higher level studies, such as diversity in organizations contributing to a project, or how each organziation collaborates with others. In general, any study that can be performed at the person level, can be performed at the organization level just by aggregating the activity of all their employees.
+
+The basis of these analysis is therefore identifying to which organziation is affiliated each developer, if any, and during which time period. In some cases, this information is maintained to some extent by the projects themselves. For example, the Eclipse Foundation and the OpenStack Foundation maintain detailed affiliation information for all their committers. But even in those cases, there are other people, such as casual posters to mailing lists, that cannot be identified in a coompulsory way, and who have little motivation to collaborate in any affiliation tracking schema maintained by the projects.
+
+There are other techniques that may work in a certain fraction of the cases to track affiliations. It is important to notice how this problem is related to the merging of identities, which was mentioned earlier in this chapter. Assumming that the merging of identities is already done and accurate, some of the techniques for finding affiliation information are:
+
+* Using domains in email addresses to identify companies. Not all domains are useful for this. For example, @gmail.com or @hotmail.com refer to the mailing system that the person is using, and has nothing to do with the organization for which they are working. But many other addresses, such as @redhat.com, @ibm.com or @hp.com can be easily tracked to Red Hat, IBM or HP. An specific case when this technique doesn't work is when there is a project policy or tradition of using project addresses. Thuius is the case, for example, of Apache, with @apache.org addresses, customarily used by Apache developers in activities related to the project. Obviously, those addresses have no use for fiinding affiliations.
+* Getting listitgs from involved companies. Companies contributing to a project may maintain such listings for their own interest. If they are willing to share them, they are a precious source of information to assign affiliation. An specific case of this is when the project itself tries to track affiliation for all contributors, as was commented earlier.
+* Internet searches. People can be usually found in social networks, web pages, etc. From the information found in those places, in many cases their affiliation (at least their current afiliation) can be inferred.
+
+Once affiliation information is available, any community study can be done by organziation. For example, the next chart shows the most active companies (by changes merged) in the OpenStack project.
+
+![Top ten organizations in OpenStack, by number of commits (November 2014)](companies-openstack.png)
+*Example of organization analysis: Top ten organizations in OpenStack by number of commits and number of authors of commits for the whole history of the project up to November 2014.*
+
+## Diversity
+
+In FOSS projects, diversity is important. Diversity ensures that dependencies on certain people, or on certain companies, are not a risk for the future of the project. Diversity ensures that control of the project is not in the hands of a few people. Diversity helps to have a healthy community, and lowers the barriers for new people to join the community.
+
+There are several metrics for diversity, some of them are:
+
+* [Bus factor](https://en.wikipedia.org/wiki/Bus_factor): Number of developers it would need to lose to destroy its institutional memory and halt its progress.
+* [Apache Pony Factor](https://ke4qqq.wordpress.com/2015/02/08/pony-factor-math/): Diversity of a project in terms of the division of labor among committers in a project.
+
+### Bus factor
+
+The bus factor tracks the concentration of unique knowledge on the software in specific developers. The name "bus factor" comes from the extreme scenario "What would happen to the project if a bus hits certain developers?". The first formulation of this question is attributed to Michael McLay, who in 1994 [asked what would happen to Python](http://legacy.python.org/search/hypermail/python-1994q2/1040.html) if Guido van Rossum (its original author, and leader of the project) were hit by a bus.
+
+If the knowledge on the project is very concentrated on a small group of developers, the trouble for the project if those developers leave is very high. On the contrary, if the knowledge is evenly spread through all the developers, even if a large number of them leave, the project can survive the shock more easily.
+
+A maybe naive, but very practical simplification of the metric is to assume that the amount of code authored by developers is a good proxy for their knowledge on the system. Therefore, the distribution of the lines of code authored per developer in the current version of the software would allow for calculating the bus factor.
+
+A more complete view has into account other sources of information, such as bugs fixed in certain parts of the code, participation in design and decission making, etc.
+
+In any of those cases, some simple metrics that can be defined to get a number representing the bus factor are:
+
+* Minumum number of developers who have a certain fraction of the knowledge. For example, minumum number of developers authoring 50% of the current version of the software.
+* Maximum fraction of the knowledge that have a certain number of developers. For example, maximum fraction of source code authored by 10% of the developers.
+
+Even when these metrices are very simple, they capture a part of the "bus factor" idea. More complex metrics, having into account the complete distribution of knowledge (or source code authorship) across developers, are possible. Factoring these metrics by the time of activity in the project is also interesting (assuming that the longer the experience in the project, the larger the knowledge).
+
+### Apache Pony Factor
+
+The pony factor was proposed by members of the Apache Software Foundation. The first detailed explanation about it was by Daniel Gruno. It is a number that shows the diversity of a project in terms of the diversity of labor among its developers. From this point of view it is a concrete implementation of the bus factor.
+
+The pony factor is defined as "the lowest number of developers whose total contribution constitutes the majority of the code base". A derived metric is the augmented pony factor, which takes into account if a developer who contributed to the code base is still active or not. In this case, contributions by inactive developers are ignored.
+
+The "contribution" considered for calculating the pony factor is the number of commits. Therefore, we can rephrase the definition of the augmented pony factor as:
+
+>"The augmented pony factor of a project is the lowest number of active developers whose total commit count is at least 50% of the total number of commits to the project".
+
+This single number tries to capture how many active developers have "half of the knowledge on the project". The larger this number, the more diverse it is, and the more people should be affected by the bus factor for the project to experience trouble.
