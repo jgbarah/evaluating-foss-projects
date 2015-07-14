@@ -1,0 +1,139 @@
+# Name
+Capgemini Open Source Maturity Model
+Evaluation Framework for Open Source Software
+A Model for Comparative Assessment of Open Source Products
+Navica Open Source Maturity Model
+Woods and Guliani's OSMM
+Open Business Readiness Rating (OpenBRR)
+Atos Origin Method for Qualification and
+Selection of Open Source Software (QSOS)
+Evaluation Criteria for Free/Open Source Software Products
+A Quality Model for OSS Selection
+Selection Process of Open Source Software
+Observatory for Innovation and Technological transfer on Open Source software (OITOS)
+Framework for OS Critical Systems Evaluation (FOCSE)
+Balanced Scorecards for OSS
+Open Business Quality Rating (OpenBQR)
+Evaluating OSS through Prototyping
+A Comprehensive Approach for Assessing Open Source Projects
+Software Quality Observatory for Open Source Software (SQO-OSS)
+An operational approach for selecting open source components in a software development project
+QualiPSo trustworthiness model OpenSource Maturity Model (OMM)
+
+
+# Year
+2003
+2004
+2004
+2004
+2005
+2005
+2006
+2006
+2007
+2007
+2007
+2007
+2007
+2007
+2007
+2008
+2008
+2008
+2008
+2009
+
+
+# Source
+[9]
+[10]
+[11,12]
+[13]
+[14]
+[15,16]
+[17]
+[18]
+[19]
+[20]
+[21,22]
+[23]
+[24]
+[25]
+[26]
+[27]
+[28]
+[29]
+[30,31]
+[32]
+
+
+# Orig.
+I
+R
+R
+I
+I
+R/I
+I
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+R
+
+
+# Method
+Yes
+No
+Yes
+Yes
+No
+Yes
+Yes
+No
+No
+Yes
+Yes
+No
+No
+Yes
+Yes
+No
+Yes
+No
+No
+No
+
+# Reference
+[9] Duijnhouwer, F., and Widdows, C.: 'Open Source Maturity Model', Capgemini Expert Letter, 2003.
+[10] Koponen, T., and Hotti, V.: 'Evaluation framework for open source software'. Proc. Software Engineering and Practice (SERP), Las Vegas, Nevada, USA, June 21-24, 2004.
+[11] Polančič, G., and Horvat, R.V.: 'A Model for Comparative Assessment Of Open Source Products'. Proc. The 8th World Multi-Conference on Systemics, Cybernetics and Informatics, Orlando, USA, 2004.
+[12] Polančič, G., Horvat, R.V., and Rozman, T.: 'Comparative assessment of open source software using easy accessible data'. Proc. 26th International Conference on Information Technology Interfaces, Cavtat, Croatia, June 7-10, 2004, pp. 673-678.
+[13] Golden, B.: 'Succeeding with Open Source' (Addison-Wesley, 2004).
+[14] Woods, D., and Guliani, G.: 'Open Source for the Enterprise: Managing Risks Reaping Rewards' (O'Reilly Media, Inc., 2005). 
+[15] www.openbrr.org: 'Business Readiness Rating for Open Source, RFC 1', 2005.
+[16] Wasserman, A.I., Pal, M., and Chan, C.: 'The Business Readiness Rating: a Framework for Evaluating Open Source', 2006, Technical Report.
+[17] Atos Origin: 'Method for Qualification and Selection of Open Source software (QSOS) version 1.6', 2006, Technical Report.
+[18] Cruz, D., Wieland, T., and Ziegler, A.: 'Evaluation criteria for free/open source software products based on project analysis', Software Process: Improvement and Practice, 2006, 11(2).
+[19] Sung, W.J., Kim, J.H., and Rhew, S.Y.: 'A Quality Model for Open Source Software Selection'. Proc. Sixth International Conference on Advanced Language Processing and Web Information Technology, Luoyang, Henan, China, 2007, pp. 515-519.
+[20] Lee, Y.M., Kim, J.B., Choi, I.W., and Rhew, S.Y.: 'A Study on Selection Process of Open Source Software'. Proc. Sixth International Conference on Advanced Language Processing and Web Information Technology (ALPIT), Luoyang, Henan, China, 2007.
+[21] Cabano, M., Monti, C., and Piancastelli, G.: 'Context-Dependent Evaluation Methodology for Open Source Software'. Proc. Third IFIP WG 2.13 International Conference on Open Source Systems (OSS 2007), Limerick, Ireland, 2007, pp. 301-306.
+[22] Assessment of the degree of maturity of Open Source open source software, http://www.oitos.it/opencms/opencms/oitos/Valutazione_di_prodotti/Modello1.2.pdf.
+[23] Ardagna, C.A., Damiani, E., and Frati, F.: 'FOCSE: An OWA-based Evaluation Framework for OS Adoption in Critical Environments'. Proc. Third IFIP WG 2.13 International Conference on Open Source Systems, Limerick, Ireland, 2007, pp. 3-16.
+[24] Lavazza, L.: 'Beyond Total Cost of Ownership: Applying Balanced Scorecards to OpenSource Software'. Proc. International Conference on Software Engineering Advances (ICSEA) Cap Esterel, French Riviera, France, 2007, pp. 74-74.
+[25] Taibi, D., Lavazza, L., and Morasca, S.: 'OpenBQR: a framework for the assessment of OSS'. Proc. Third IFIP WG 2.13 International Conference on Open Source Systems (OSS 2007), Limerick, Ireland, 2007, pp. 173-186.
+[26] Carbon, R., Ciolkowski, M., Heidrich, J., John, I., and Muthig, D.: 'Evaluating Open Source Software through Prototyping', in St.Amant, K., and Still, B. (Eds.): 'Handbook of Research on Open Source Software: Technological, Economic, and Social Perspectives' (Information Science Reference, 2007), pp. 269-281.
+[27] Ciolkowski, M., and Soto, M.: 'Towards a Comprehensive Approach for Assessing Open Source Projects': 'Software Process and Product Measurement' (Springer-Verlag, 2008).
+[28] Samoladas, I., Gousios, G., Spinellis, D., and Stamelos, I.: 'The SQO-OSS Quality Model: Measurement Based Open Source Software Evaluation'. Proc. Fourth IFIP WG 2.13 International Conference on Open Source Systems (OSS 2008), Milano, Italy, 2008.
+[29] Majchrowski, A., and Deprez, J.: 'An operational approach for selecting open source components in a software development project'. Proc. 15th European Conference, Software Process Improvement (EuroSPI), Dublin, Ireland, September 3-5, 2008.
+[30] del Bianco, V., Lavazza, L., Morasca, S., and Taibi, D.: 'Quality of Open Source Software: The QualiPSo Trustworthiness Model'. Proc. Fifth IFIP WG 2.13 International Conference on Open Source Systems (OSS 2009), Skövde, Sweden, June 3-6, 2009.
+[31] del Bianco, V., Lavazza, L., Morasca, S., and Taibi, D.: 'The observed characteristics and relevant factors used for assessing the trustworthiness of OSS products and artefacts', 2008, Technical Report no. A5.D1.5.3.
+[32] Petrinja, E., Nambakam, R., and Sillitti, A.: 'Introducing the OpenSource Maturity Model'. Proc. ICSE Workshop on Emerging Trends in Free/Libre/Open Source Software Research and Development (FLOSS '09), Vancouver, Canada, 2009, pp. 37-41.
