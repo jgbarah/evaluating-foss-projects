@@ -8,12 +8,59 @@ Of course, there are shadows in a continuum ranging from pure quantitative to pu
 
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
+## A classification of quantitative models
+
+Given the number of evaluation models that exist, Stol and Ali Babar (<a href="#bib:stol-babar-comparison-models">reference</a>) have proposed a 
+comparison framework to evaluate them. In order to do so, the most relevant
+evaluation models were identified. The result of this identification process 
+-after screening around 550 research papers- is provided in following table, with
+20 approaches. The column "Orig" shows if the initiative is the result of
+a research (R) or an industrial (I) effort. Models have been classified as
+industrial if they are associated to at least one company. The column "Method"
+indicates the completeness of the methodology, meaning that if all required
+activities, tasks, inputs and outputs are outlined, the assessment methodology
+offers a complete guide to evaluation. If a mere set of evaluation criteria are
+proposed, then the authors labelled the methodology as not complete. The column
+"Source" lists a reference to the paper or report that presented the evaluation
+method, where details can be found.
+
+| Name     | Year |  Orig | Method | Source |
+| -------- |:----:|:-----:|:------:| ------:|
+| Capgemini Open Source Maturity Model | 2003 | I | Yes | <a name="bib:duijnhouwer-open"></a>" |
+| Evaluation Framework for Open Source Software | 2004 | R | No | <a name="bib:koponen-evaluation"></a>" |
+| A Model for Comparative Assessment of Open Source Products | 2004 | R | Yes | <a name="bib:polančič-model"></a>" ,
+<a name="bib:polančič-comparative"></a>" |
+| Navica Open Source Maturity Model | 2004 | I | Yes | <a name="bib:golden-succeeding"></a>" |
+| Woods and Guliani's OSMM | 2005 | I | No | <a name="bib:woods-open"></a>" |
+| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | <a name="bib:www.openbrr.org-business"></a>" ,
+<a name="bib:wasserman-business"></a>" |
+| Atos Origin Method for Qualification and | 2006 | I | Yes | <a name="bib:ato-method"></a>" |
+| Selection of Open Source Software (QSOS) | 2006 | R | No | <a name="bib:cruz-evaluation"></a>" |
+| Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | <a name="bib:sung-quality"></a>" |
+| A Quality Model for OSS Selection | 2007 | R | Yes | <a name="bib:lee-study"></a>" |
+| Selection Process of Open Source Software | 2007 | R | Yes | <a name="bib:cabano-context-dependent"></a>" ,
+<a name="bib:assessmen-/www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf."></a>" |
+| Observatory for Innovation and Technological transfer on Open Source software (OITOS) | 2007 | R | No | <a name="bib:ardagna-focse"></a>" |
+| Framework for OS Critical Systems Evaluation (FOCSE) | 2007 | R | No | <a name="bib:lavazza-beyond"></a>" |
+| Balanced Scorecards for OSS | 2007 | R | Yes | <a name="bib:taibi-openbqr"></a>" |
+| Open Business Quality Rating (OpenBQR) | 2007 | R | Yes | <a name="bib:carbon-evaluating"></a>" |
+| Evaluating OSS through Prototyping | 2008 | R | No | <a name="bib:ciolkowski-towards"></a>" |
+| A Comprehensive Approach for Assessing Open Source Projects | 2008 | R | Yes | <a name="bib:samoladas-sqo-oss"></a>" |
+| Software Quality Observatory for Open Source Software (SQO-OSS) | 2008 | R | No | <a name="bib:majchrowski-operational"></a>" |
+| An operational approach for selecting open source components in a software development project | 2008 | R | No | <a name="bib:delbianco-quality"></a>" ,
+<a name="bib:delbianco-observed"></a>" |
+| QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | <a name="bib:petrinja-introducing"></a>" |
+
+
 
 ## OpenBRR
 
-The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) (The OpenBRR withe paper: http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
+The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) (The OpenBRR white paper of which a copy can be found in http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
 
-Following figure provides an overview of the how OpenBRR should be applied.
+Following figure provides an overview of the how OpenBRR should be applied. As can be seen,
+OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator
+to adapt the assessment to the specific needs of the organization that wants to deploy the
+software under study-
 
 ![The OpenBRR evaluation process](openbrr.jpg)
 
@@ -43,7 +90,71 @@ To help in the assessment, OpenBRR offers a spreadsheet template (a copy of it c
 * Number of P1/critical bugs opened
 * Average bug age for P1 in last 6 months
 
-These inputs are rated as well from 1 to 5, and the evaluator may then weight them accordingly to her goals.
+These inputs are rated as well from 1 to 5, and the evaluator may then weight them in a posterior step.
+
+<a name="bib:udas-apples"></a>Udas et al. discuss in a report how to apply OpenBRR in real enviroments based on their experience in the evaluation of Learning Management Systems. The
+31 page report is very exhaustive and provides some general guidelines to be followed when
+using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
+
+The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known ones are the ones that assessed Moodle and Sakai, two well-known Learning Management Systems (LMSs) that were widely used in industry and academic institutions. A copy of those worksheets can be obtained from http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc (Sakai) and http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc (Moodle). As they introduce the OpenBRR assessment process very good, we will show them here in detail.
+
+The first step in the process is to select and weigh the criteria to be use in the evaluation process. In the case of Moodle and Sakai, the evaluators chose to use the following:
+
+| Rank | Category      |  Weight |
+| ----:|:------------- | -------:|
+|    1 | Functionality |   	 25% |
+|    2 | Usability     |	 20% |
+|    3 | Documentation |	 15% |
+|    4 | Community     |     12% |
+|    5 | Security      |	 10% |
+|    6 | Support       |     10% |
+|    7 | Adoption      |      8% |
+| Total |              |    100% |
+
+leaving out five criteria: Quality, Performance, Scalability, Architecture and Modularity.
+
+In the following step, each criteria is evaluated on its own. As an example, for the evaluation of the functionality, a list of 27 standard functionality items (that include from discussion forums to surveys or automatic testing) are included, which have been obtained from the edutools.info on-line portal. Depending on the grade of its completeness, each functionality is scored and weighted from 1 to 3 as shown in the following table. Additional 8 extra functionalities (such as LaTeX support or the inclusion of video) are rated in the same fashion.
+
+| Weight & Test Score Specification | Score | 
+|:--------------------------------- | -----:|
+| Very important                    |	3   |
+| Somewhat important				|   2   |
+| Not important						|   1   |
+
+In order to obtain a total score for the functionality criteria, the total weights of the
+standard functionality items is summed up in W. Then the score for the assessed tool is obtained
+by adding all the scores, both from the standard and extended functionality, as T. Depending on the completeness of T related to W (in percentage), a final rating score is provided, using the cutoff values provided in following table.
+
+| Rating Score Table | Percentage Cutoff | Score |
+|:------------------ | -----------------:| -----:|
+| Unacceptable		 |	     0%          |	1    |
+| Poor				 |       65%	     |  2    |
+| Acceptable		 | 	     80%         |	3    |
+| Good				 |       90%         |	4    |
+| Excellent			 |       96%	     |  5    |
+
+In our case studies, Sakai obtains a 3 out of 5 (its percentage is 86.67%, as it has a total score of 52 out of a total weight of 60), while Moodle obtains 5 out of 5 (its percentage is 106.67% with a total score of 64 out of a a total weight of 60.
+
+Once this is done with all evaluation criteria, the score of each of the criteria is introduced in a spreadsheet and the final score is calculated. It should be noted that when doing so the
+previously defined weights are to be taken into consideration. For instance, the results of
+this step is provided in the following table for Moodle and Sakai. The total score of 4.19 for Moodle and of 3.23 for Sakai is finally obtained by summing up all the weighted scores for
+each of the categories.
+
+Rank | Category | Moodle Unweighted | Sakai Unweighted | Weight | Moodle Weighted | Sakai Weighted | 
+|:-- | --------:| -----------------:| ----------------:| ------:| ---------------:| --------:|
+| 1  | Functionality |            5 |                3 |    25% |           1.25  |    0.75  |   
+| 2  | Usability |                4 |                4 |    20% |           0.8   |    0.8   |   
+| 8  | Quality |                  0 |                0 |     0% |           0     |    0     |   
+| 5  | Security |               4.2 |              3.4 |    10% |           0.42  |    0.34  |   
+| 9  | Performance |              0 |                0 |     0% |           0     |    0     |   
+| 10 | Scalability |              0 |                0 |     0% |           0     |    0     |   
+| 11 | Architecture |             0 |                0 |     0% |           0     |    0     |   
+| 6  | Support |                  4 |              1.5 |    10% |           0.4   |    0.15  |   
+| 3  | Documentation |          3.1 |              3.1 |    15% |           0.47  |    0.47  |   
+| 7  | Adoption |               4.4 |              4.2 |     8% |           0.35  |    0.34  |   
+| 4  | Community |              4.2 |              3.2 |    12% |           0.5   |    0.38  |   
+| 12 | Professionalism |          0 |                0 |     0% |           0     |    0     |   
+
 
 Although OpenBRR is one of the most known assessment models, it has not achieved to create a thriving community and currently it seems to have come to a halt.
 
@@ -51,7 +162,7 @@ Although OpenBRR is one of the most known assessment models, it has not achieved
 
 QSOS (Qualification and Selection of Open Source software) is an assessment methodology proposed by ATOS Origin in 2004. It is composed of a formal method that describes a workflow to evaluate proejcts, a set of tools that help to apply the QSOS workflow and a community.
 
-The proposed process is shown in the figure below. It is divided in four iterative steps. The first one is concerned with defining the evaluation criteria in two axes: the project maturity, following some given and mandatory criteria proposed by the QSOS framework that are valid for any type of software, and the functional coverage of the software, with criteria that depend on the software family the project belongs to. The second step involves the evaluation of the projects by obtaining data and measures from the project; raw evaluations are the output of this step. The results of the second step are then weighted depending on the context and the requirements under which the software will be used; specifically this is done by setting weights and filters. The final step is the selection of the most relevant software solution, by comparing the result obtained by several candidate software projects.
+The proposed process is shown in the figure below. It is divided in four iterative steps. The first one is concerned with defining the evaluation criteria in two axes: the project maturity, following some given and mandatory criteria proposed by the QSOS framework that are valid for any type of software, and the functional coverage of the software, with criteria that depend on the software family the project belongs to. The second step involves the evaluation of the projects by obtaining data and measures from the project; raw evaluations are the output of this step. The results of the second step are then weighted depending on the context and the requirements under which the software will be used; specifically this is done by setting weights and filters. The final step is the selection of the most relevant software solution, by 	comparing the result obtained by several candidate software projects.
 
 ![The QSOS evaluation process](qsos.jpg)
 
@@ -61,12 +172,16 @@ The QSOS framework offers a set of tools that help users follow the assessment p
 
 
 ## SQO-OSS
+	
+SQO-OSS is a quality evaluation framework for FLOSS projects.
 
-
+![Cross-Language Metric Tool architecture of SQO-OSS](sqo-oss.png)
 
 ## Open Source Maturity Model
 
+by QualiPSo
 
+![Maturity levels available in the OSMM](osmm.png)
 
 ## OpenBQR
 
@@ -75,7 +190,7 @@ The QSOS framework offers a set of tools that help users follow the assessment p
 ## Qualoss
 
 
-
+	
 ## The Polarsys Maturity Model
 
 
