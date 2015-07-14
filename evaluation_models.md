@@ -92,7 +92,7 @@ To help in the assessment, OpenBRR offers a spreadsheet template (a copy of it c
 
 These inputs are rated as well from 1 to 5, and the evaluator may then weight them in a posterior step.
 
-<a name="bib:udas-apples"></a>Udas et al. discuss in a report how to apply OpenBRR in real enviroments based on their experience in the evaluation of Learning Management Systems. The
+<a name="bib:udas-apples"></a>Udas et al. discuss in a report how to apply OpenBRR in real environments based on their experience in the evaluation of Learning Management Systems. The
 31 page report is very exhaustive and provides some general guidelines to be followed when
 using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
 
@@ -160,15 +160,49 @@ Although OpenBRR is one of the most known assessment models, it has not achieved
 
 ## QSOS
 
-QSOS (Qualification and Selection of Open Source software) is an assessment methodology proposed by ATOS Origin in 2004. It is composed of a formal method that describes a workflow to evaluate proejcts, a set of tools that help to apply the QSOS workflow and a community.
-
-The proposed process is shown in the figure below. It is divided in four iterative steps. The first one is concerned with defining the evaluation criteria in two axes: the project maturity, following some given and mandatory criteria proposed by the QSOS framework that are valid for any type of software, and the functional coverage of the software, with criteria that depend on the software family the project belongs to. The second step involves the evaluation of the projects by obtaining data and measures from the project; raw evaluations are the output of this step. The results of the second step are then weighted depending on the context and the requirements under which the software will be used; specifically this is done by setting weights and filters. The final step is the selection of the most relevant software solution, by 	comparing the result obtained by several candidate software projects.
+QSOS (Qualification and Selection of Open Source software) is an assessment methodology proposed by ATOS Origin in 2004 and updated in 2013. It is composed of a formal method that describes a workflow to evaluate projects, a set of tools that help to apply the QSOS workflow and a community. The proposed process is shown in the figure below. It is divided in four iterative steps and is iterative in nature, meaning that it can be applied with different granularity levels, becoming more detailed in every iteration.
 
 ![The QSOS evaluation process](qsos.jpg)
 
-The QSOS framework offers a set of tools that help users follow the assessment process. Among them, there is an editor (the Freemind well-known minmapping tool) the create evaluation templates. These templates can then be used for the evaluation of a project using a Firefox extension or a stand-alon application. QSOS offers a web backend service where templates and evaluations can be made public and shared. Finally, O3S is a web-based tool that allows to manipulate evaluations, perform comparisons and export them in various formats.
+The first step is concerned with defining the evaluation criteria in three axes: type of software, type of license and type of community. The type of software axis is composed by two additional criteria: a maturity analysis and a functional coverage analysis. The next figure shows a diagram with the specific items that are to be considered when assessing the maturity of a project. These items can be obtained in general from any free software project.
+
+![QSOS criteria to assess the maturity of a project](qsos-maturity.png)
+
+The second item for the type of software is related to the functionality of the project and depends on the software domain.
+
+The type of license criterion evaluates the software licenses for three aspects: if the license is a copyleft license, if copyleft is only bounded to the module level and if the license allows to add restrictions.
+
+Finally, the type of community criterion addresses the :
+
+* A single developer working on his own on the project
+* A group of developers, without formal processes
+* A developer organization with formalized and respected software life cycle, roles and a meritocratic structure
+* A legal entity (such as a foundation) that manages the community and acts as legal umbrella for the project
+* A commercial entity: a company that employs some of the core developers and tries to obtain revenues from the development of the project
+
+
+The second step involves the evaluation of the projects by obtaining data and measures from the project; raw evaluations are the output of this step. For each of the criteria, a score between 0 and 2 is given. The following table provides the scoring rule in the case of the assessment of functionality:
+
+| Score | Description |
+|:----- |:----------- |
+| 0     | Functionality not covered | 
+| 1     | Functionality partially covered |
+| 2     | Functionality fully covered |
+
+The results of the second step are then weighted depending on the context and the requirements under which the software will be used; specifically this is done by setting weights and filters
+in advance. So while in the first step, for instance all functionality may be assessed independently of its importance for its adoption and deployment, in this step the degree of relevance of each functional aspect will be translated into a weighting value. In the case of functionality, this means that functionalities may be considered required, optional or not required.
+
+The final step is the selection of the most relevant software solution, by comparing the result obtained by several candidate software projects. QSOS offers two different modes of selection: strict and loose selection. Within the loose selection process, all software projects under assessment are evaluated for all criteria, and obtains a final rating. Within the strict selection process, as soon as a software does not comply with a relevant criteria of the evaluator, it is eliminated from the evaluation process. So, for instance, if a software does not require the required functionalities it is not further considered. It should be noted that with the strict selection procedure, and depending on the demands of the user, it may happen that no software meets the conditions.
+
+The final result of QSOS can be shown and compared graphically by several means. One of them is using a radar format as shown in the next figure.
+
+![QSOS ](qsos-radar.png)
+
+The QSOS framework offers a set of tools that help users follow the assessment process. Among them, there is an editor (the Freemind well-known mind-mapping tool) the create evaluation templates. These templates can then be used for the evaluation of a project using a Firefox extension or a stand-alone application. QSOS offers a web backend service where templates and evaluations can be made public and shared. Finally, O3S is a web-based tool that allows to manipulate evaluations, perform comparisons and export them in various formats.
 
 ![The QSOS evaluation process](qsos-tools.png)
+
+Finally, the QSOS is an open project by itself, offering support to users and acting as a repository of templates and evaluations in several languages.
 
 
 ## SQO-OSS
