@@ -41,11 +41,9 @@ Given the number of evaluation models that exist, Stol and Ali Babar ([reference
 
 ## OpenBRR
 
-The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) (The OpenBRR white paper of which a copy can be found in http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
+The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) (The OpenBRR white paper ([copy](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343)). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
 
-Following figure provides an overview of the how OpenBRR should be applied. As can be seen,
-OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator
-to adapt the assessment to the specific needs of the organization that wants to deploy the
+Following figure provides an overview of the how OpenBRR should be applied. As can be seen, OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator to adapt the assessment to the specific needs of the organization that wants to deploy the
 software under study-
 
 ![The OpenBRR evaluation process](openbrr.jpg)
@@ -65,9 +63,9 @@ OpenBRR is based on gathering metrics and factual data on up to following ten ca
 * Community
 * Professionalism
 
-For each category, a set of criteria and metrics are proposed. These inputs are then weighted and each of the above introduced categories are given a rating that ranges from 1 to 5. Then, depending on the final usage the software will be given, adopters may weight these categories, obtaining an overall rating of the project. Hence, not all categories are weighted equally, and for some scenarios a category may not be considered at all for the final rating (in that case, its weight factor would be 0\%).
+For each category, a set of criteria and metrics are proposed. These inputs are then weighted and each of the above introduced categories are given a rating that ranges from 1 to 5. Then, depending on the final usage the software will be given, adopters may weight these categories, obtaining an overall rating of the project. Hence, not all categories are weighted equally, and for some scenarios a category may not be considered at all for the final rating (in that case, its weight factor would be 0%).
 
-To help in the assessment, OpenBRR offers a spreadsheet template (a copy of it can be obtained from http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4350) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
+To help in the assessment, OpenBRR offers a spreadsheet template ([copy](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4350)) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
 
 * Number of minor releases in past 12 months
 * Number of point/patch releases in past 12 months
@@ -78,11 +76,9 @@ To help in the assessment, OpenBRR offers a spreadsheet template (a copy of it c
 
 These inputs are rated as well from 1 to 5, and the evaluator may then weight them in a posterior step.
 
-<a name="bib:udas-apples"></a>Udas et al. discuss in a report how to apply OpenBRR in real environments based on their experience in the evaluation of Learning Management Systems. The
-31 page report is very exhaustive and provides some general guidelines to be followed when
-using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
+[Udas et al.](#bib:udas-apples) discuss in a report how to apply OpenBRR in real environments based on their experience in the evaluation of Learning Management Systems. The 31 page report is very exhaustive and provides some general guidelines to be followed when using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
 
-The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known ones are the ones that assessed Moodle and Sakai, two well-known Learning Management Systems (LMSs) that were widely used in industry and academic institutions. A copy of those worksheets can be obtained from http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc (Sakai) and http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc (Moodle). As they introduce the OpenBRR assessment process very good, we will show them here in detail.
+The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known ones are the ones that assessed Moodle and Sakai, two well-known Learning Management Systems (LMSs) that were widely used in industry and academic institutions [copy](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc) (Sakai) and [copy](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc) (Moodle). As they introduce the OpenBRR assessment process very well, we will show them here in detail.
 
 The first step in the process is to select and weigh the criteria to be use in the evaluation process. In the case of Moodle and Sakai, the evaluators chose to use the following:
 
@@ -107,9 +103,7 @@ In the following step, each criteria is evaluated on its own. As an example, for
 | Somewhat important				|   2   |
 | Not important						|   1   |
 
-In order to obtain a total score for the functionality criteria, the total weights of the
-standard functionality items is summed up in W. Then the score for the assessed tool is obtained
-by adding all the scores, both from the standard and extended functionality, as T. Depending on the completeness of T related to W (in percentage), a final rating score is provided, using the cutoff values provided in following table.
+In order to obtain a total score for the functionality criteria, the total weights of the standard functionality items is summed up in W. Then the score for the assessed tool is obtained by adding all the scores, both from the standard and extended functionality, as T. Depending on the completeness of T related to W (in percentage), a final rating score is provided, using the cutoff values provided in following table.
 
 | Rating Score Table | Percentage Cutoff | Score |
 |:------------------ | -----------------:| -----:|
@@ -122,8 +116,7 @@ by adding all the scores, both from the standard and extended functionality, as 
 In our case studies, Sakai obtains a 3 out of 5 (its percentage is 86.67%, as it has a total score of 52 out of a total weight of 60), while Moodle obtains 5 out of 5 (its percentage is 106.67% with a total score of 64 out of a a total weight of 60.
 
 Once this is done with all evaluation criteria, the score of each of the criteria is introduced in a spreadsheet and the final score is calculated. It should be noted that when doing so the
-previously defined weights are to be taken into consideration. For instance, the results of
-this step is provided in the following table for Moodle and Sakai. The total score of 4.19 for Moodle and of 3.23 for Sakai is finally obtained by summing up all the weighted scores for
+previously defined weights are to be taken into consideration. For instance, the results of this step is provided in the following table for Moodle and Sakai. The total score of 4.19 for Moodle and of 3.23 for Sakai is finally obtained by summing up all the weighted scores for
 each of the categories.
 
 Rank | Category | Moodle Unweighted | Sakai Unweighted | Weight | Moodle Weighted | Sakai Weighted | 
