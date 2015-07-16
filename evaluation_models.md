@@ -10,47 +10,33 @@ Quantitative evaluation is based on the identification of quantitative parameter
 
 ## A classification of quantitative models
 
-Given the number of evaluation models that exist, Stol and Ali Babar (<a href="#bib:stol-babar-comparison-models">reference</a>) have proposed a 
-comparison framework to evaluate them. In order to do so, the most relevant
-evaluation models were identified. The result of this identification process 
--after screening around 550 research papers- is provided in following table, with
-20 approaches. The column "Orig" shows if the initiative is the result of
-a research (R) or an industrial (I) effort. Models have been classified as
-industrial if they are associated to at least one company. The column "Method"
-indicates the completeness of the methodology, meaning that if all required
-activities, tasks, inputs and outputs are outlined, the assessment methodology
-offers a complete guide to evaluation. If a mere set of evaluation criteria are
-proposed, then the authors labelled the methodology as not complete. The column
-"Source" lists a reference to the paper or report that presented the evaluation
-method, where details can be found.
+Given the number of evaluation models that exist, Stol and Ali Babar ([reference](#bib:stol-babar-comaprison-models)) have proposed a  comparison framework to evaluate them. In order to do so, the most relevant evaluation models were identified. The result of this identification process, after screening around 550 research papers, is provided in following table, with 20 approaches. The column "Orig" shows if the initiative is the result of a research (R) or an industrial (I) effort. Models have been classified as industrial if they are associated to at least one company. The column "Method" indicates the completeness of the methodology, meaning that if all required activities, tasks, inputs and outputs are outlined, the assessment methodology offers a complete guide to evaluation. If a mere set of evaluation criteria are proposed, then the authors labelled the methodology as not complete. The column "Source" lists a reference to the paper or report that presented the evaluation method, where details can be found.
 
 | Name     | Year |  Orig | Method | Source |
 | -------- |:----:|:-----:|:------:| ------:|
-| Capgemini Open Source Maturity Model | 2003 | I | Yes | <a name="bib:duijnhouwer-open"></a>" |
-| Evaluation Framework for Open Source Software | 2004 | R | No | <a name="bib:koponen-evaluation"></a>" |
-| A Model for Comparative Assessment of Open Source Products | 2004 | R | Yes | <a name="bib:polančič-model"></a>" ,
-<a name="bib:polančič-comparative"></a>" |
-| Navica Open Source Maturity Model | 2004 | I | Yes | <a name="bib:golden-succeeding"></a>" |
-| Woods and Guliani's OSMM | 2005 | I | No | <a name="bib:woods-open"></a>" |
-| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | <a name="bib:www.openbrr.org-business"></a>" ,
-<a name="bib:wasserman-business"></a>" |
-| Atos Origin Method for Qualification and | 2006 | I | Yes | <a name="bib:ato-method"></a>" |
-| Selection of Open Source Software (QSOS) | 2006 | R | No | <a name="bib:cruz-evaluation"></a>" |
-| Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | <a name="bib:sung-quality"></a>" |
-| A Quality Model for OSS Selection | 2007 | R | Yes | <a name="bib:lee-study"></a>" |
-| Selection Process of Open Source Software | 2007 | R | Yes | <a name="bib:cabano-context-dependent"></a>" ,
-<a name="bib:assessmen-/www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf."></a>" |
-| Observatory for Innovation and Technological transfer on Open Source software (OITOS) | 2007 | R | No | <a name="bib:ardagna-focse"></a>" |
-| Framework for OS Critical Systems Evaluation (FOCSE) | 2007 | R | No | <a name="bib:lavazza-beyond"></a>" |
-| Balanced Scorecards for OSS | 2007 | R | Yes | <a name="bib:taibi-openbqr"></a>" |
-| Open Business Quality Rating (OpenBQR) | 2007 | R | Yes | <a name="bib:carbon-evaluating"></a>" |
-| Evaluating OSS through Prototyping | 2008 | R | No | <a name="bib:ciolkowski-towards"></a>" |
-| A Comprehensive Approach for Assessing Open Source Projects | 2008 | R | Yes | <a name="bib:samoladas-sqo-oss"></a>" |
-| Software Quality Observatory for Open Source Software (SQO-OSS) | 2008 | R | No | <a name="bib:majchrowski-operational"></a>" |
-| An operational approach for selecting open source components in a software development project | 2008 | R | No | <a name="bib:delbianco-quality"></a>" ,
-<a name="bib:delbianco-observed"></a>" |
-| QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | <a name="bib:petrinja-introducing"></a>" |
-
+| Capgemini Open Source Maturity Model | 2003 | I | Yes | [reference](#bib:duijnhouwer-open) |
+| Evaluation Framework for Open Source Software | 2004 | R | No | [reference](#bib:koponen-evaluation) |
+| A Model for Comparative Assessment of Open Source Products | 2004 | R | Yes | [reference](#bib:polancic-model), [reference](#bib:polancic-comparative) |
+| Navica Open Source Maturity Model | 2004 | I | Yes | [reference](#bib:golden-succeeding) |
+| Woods and Guliani's OSMM | 2005 | I | No | [reference](#bib:woods-open) |
+| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | [reference](#bib:www.openbrr.org-business) ,
+[reference](#bib:wasserman-business) |
+| Atos Origin Method for Qualification and | 2006 | I | Yes | [reference](#bib:ato-method) |
+| Selection of Open Source Software (QSOS) | 2006 | R | No | [reference](#bib:cruz-evaluation) |
+| Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | [reference](#bib:sung-quality) |
+| A Quality Model for OSS Selection | 2007 | R | Yes | [reference](#bib:lee-study) |
+| Selection Process of Open Source Software | 2007 | R | Yes | [reference](#bib:cabano-context-dependent) ,
+[reference](http://www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf) |
+| Observatory for Innovation and Technological transfer on Open Source software (OITOS) | 2007 | R | No | [reference](#bib:ardagna-focse) |
+| Framework for OS Critical Systems Evaluation (FOCSE) | 2007 | R | No | [reference](#bib:lavazza-beyond) |
+| Balanced Scorecards for OSS | 2007 | R | Yes | [reference](#bib:taibi-openbqr) |
+| Open Business Quality Rating (OpenBQR) | 2007 | R | Yes | [reference](#bib:carbon-evaluating) |
+| Evaluating OSS through Prototyping | 2008 | R | No | [reference](#bib:ciolkowski-towards) |
+| A Comprehensive Approach for Assessing Open Source Projects | 2008 | R | Yes | [reference](#bib:samoladas-sqo-oss) |
+| Software Quality Observatory for Open Source Software (SQO-OSS) | 2008 | R | No | [reference](#bib:majchrowski-operational) |
+| An operational approach for selecting open source components in a software development project | 2008 | R | No | [reference](#bib:delbianco-quality) ,
+[reference](#bib:delbianco-observed) |
+| QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | [reference](#bib:petrinja-introducing) |
 
 
 ## OpenBRR
