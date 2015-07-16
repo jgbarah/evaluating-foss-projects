@@ -119,7 +119,7 @@ Once this is done with all evaluation criteria, the score of each of the criteri
 previously defined weights are to be taken into consideration. For instance, the results of this step is provided in the following table for Moodle and Sakai. The total score of 4.19 for Moodle and of 3.23 for Sakai is finally obtained by summing up all the weighted scores for
 each of the categories.
 
-Rank | Category | Moodle Unweighted | Sakai Unweighted | Weight | Moodle Weighted | Sakai Weighted | 
+| Rank | Category | Moodle Unweighted | Sakai Unweighted | Weight | Moodle Weighted | Sakai Weighted | 
 |:-- | --------:| -----------------:| ----------------:| ------:| ---------------:| --------:|
 | 1  | Functionality |            5 |                3 |    25% |           1.25  |    0.75  |   
 | 2  | Usability |                4 |                4 |    20% |           0.8   |    0.8   |   
