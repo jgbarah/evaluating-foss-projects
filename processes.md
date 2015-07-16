@@ -13,9 +13,9 @@ There are several metrics for evaluating performance in processes. Some of the m
 ![Efficiency in dealing with tickets, OpenStack project](bmiOpenStackSoftware.jpg)
 *Example of efficiency: Ratio of closed to opened tickets per quarter for the OpenStack project. From the [OpenStack Community Activity Report, January-March 2015](), by Bitergia.*
 
-* Backlog. Defined as the number of processes currently open at a certain moment. For example, the backlog of code review processes still in process on a certain date. The backlog is the workload the project has to deal with, assuming no new workload appears. If the backlog increases, efficiency is lower than one, and the project is not coping with new processes.
+* Backlog of open processes. Defined as the number of processes currently open at a certain moment. For example, the backlog of code review processes still in process on a certain date. The backlog of open processes is the workload the project has to deal with, assuming no new workload appears. If the backlog increases, efficiency is lower than one, and the project is not coping with new processes. Of course, other backlogs are possible, for processes in other states different from "open".
  
-![Backlog of code reviews, Wikimedia projects](process-backlog-crs-wikimedia.png)
+![Backlog of pending code reviews, Wikimedia projects](process-backlog-crs-wikimedia.png)
 *Example of backlog: Pending code review processes in Wikimedia projects, evolution per month, circa July 2015.*
 
 * Time to attend. Defined as the time since the moment a process is open, to the time it is first attended by the project. For example, the time to attend a certain bug report. Statistics about time to attend say about how responsive the project is, in regard of providing some early feedback to the initiator of the process. For some cases, this early action on the process may be automatic, performed by a bot. Even when this is still interesting, since in the end the opener gets some feedback, usually it is important when a human is dealing with the process for the first time. 
@@ -51,13 +51,15 @@ In the former example, time-open before closing the old 100 tickets would be of 
 
 In the former example, before closing the tickets aggregated-time-open is of
 
-```
-50 x 2 + 100 x 60 = 6100 days
+```text
+   50 x 2 + 100 x 60 = 6100 days
 ```
 
 * aggregated-time-open-diff. We define this as the difference with the previous time-open for all tickets. This allows us to have a comparison about how aggregated-time-open varies over time, if it is measured periodically.
 
 exactly as it will be after closing the 100 old tickets. This allows for a monotonic metric, which produces more intuitive results.
+
+### Example: regular and burst processes
 
 Another example can illustrate a different scenario. Assume now that a project is opening 3 processes every day, and is closing them after two days (at the end of the second day). Metrics will be evaluated at the end of each day. In this case, metrics will evolve as follows:
 
@@ -91,9 +93,37 @@ Another lesson is that time-open can be masked by a large population of closed p
 
 Aggregated-time-open and specially aggregated-time-open-diff reflect much better what is happening. Aggregated-time-open-diff, in particular shows how we have a continuous "lag" in dealing with processes, those 16 days of "increase" every day. That metric rose immediately when new processes entered, and will only go down when they are finished. It reflects to some extent the "amount of work still open".
 
+### Metrics for periods, metrics for snapshots
 
+To better understand how the above metrics evolve over time, it is important to consider how exactly they are defined when we want periodic samples of them. The key is characterizing the collection of processes used to calculate the metric. In short, some metrics are defined for collections corresponding to periods, and some others are defined for collections fulfilling some property in given snapshots (cuts in time). Depending on whether they are defined on periods or on snapshots, they behave differently.
 
-In the end, when you are interested in performance of closing processes, you should consider both the backlog and some statistics (usually the median or some quantile) of time-to-close. The backlog will tell you about how much work is pending. The time-to-close about how long did it take to finish the processes.
+Efficiency and time-to metrics are defined on collections of processes defined over periods. Backlog is defined on collections of processes defined on a point in time, a "snapshot" of the processes. Since snapshots are easier to understand, let's start explaining them.
+
+When we want to analyze the evolution of the backlog over time, we define the sampling rate (say, once per week), and the starting point for the time series (say, January 1st at 00:01). What we do after that is to measure the backlog at the given points in time, by selecting the collection of open processes (if this is the backlog of open processes), and counting it:
+
+|Snapshot        |Collection    |Number|
+|----------------|--------------|------|
+|2015-01-01 00:01|Processes open| 34   |
+|2015-01-08 00:01|Processes open| 23   |
+|2015-01-15 00:01|Processes open| 37   |
+|2015-01-22 00:01|Processes open| 46   |
+|2015-01-29 00:01|Processes open| 51   |
+
+Collections based on periods are a bit trickier. If we consider for example efficiency, it is defined as the ratio of opened to closed processes. For comparing how the system is evolving over time, we need to define comparable collections of processes as time passes. But it is not useful to define those collections as "opened processes" and "closed processes" at some snapshots. The reason is clear: at a certain point in time, the collection will contain usually zero, or maybe one (if it was exactly opened or closed at that point in time) process. Which doesn't make sense for studying the evolution.
+
+To avoid this problem, we define collections on periods. For example, all tickets opened during the first week of the year, and all tickets closed during the first week of the year.
+
+But periods are not "points on time", and therefore we have to be careful on how we define them. If they are too short, they are going to capture too many occasional effects, and periods are going to be difficult to compare. But if they are too large, they are going to miss seasonal effects, masked by the "mean behavior".
+
+If they are not homogeneous enough, they can be misleading. Consider for example two consecutive periods of 10 days each, but one capturing one weekend (Tuesday 7 to Friday 16), and the second one capturing two (Saturday 17 to Sunday 26). If processes are affected by lower activity during weekends, as is usually the case, the second period will appear less active when in fact maybe it is not, considering the seasonal effect of weekends. There are statistical tools that help with these effects, but a good selection of periods can minimize this effect. Days, weeks, months, quarters of years are usually good periods, when the granularity is good enough for the kind of process being analyzed.
+
+Another effect to have into account is which processes we consider as being included in the period collection. For example, if we are measuring opened versus closed tickets for a given month, say January 2015, we can consider processes closed during that month, or processes closed at any point in time, but opened during that month. The first definition provides information on how the project is performing during a month, in terms of finished work (processes closed) versus new work (processes opened). The second definition provides information about how much work that started that month was already completed. Both are interesting, but both are very different.
+
+Because of these reasons, it is important not only a careful selection of the period, and inclusion criteria for deciding the collections corresponding to the period. It is important as well to define carefully which processes are interesting to select, according to what is interesting to measure. 
+
+### Some remarks about performance in finishing processes
+
+In the end, when you are interested in performance in finishing processes, you should consider both the backlog and some statistics (usually the median or some quantile) of time-to-finish or time-open. The backlog will tell you about how much work is pending. The time-to-close about how long did it take to finish the processes.
 
 All these metrics have to be considered in the context of activity. This applies specially to efficiency and backlog, but affect other metrics too. For example, in the context of a project where activity is growing quickly, it is relatively normal that efficiency is less than one, but still the project is healthy in the long term. When activity is growing quickly, usually the project is receiving more resources, and its community is growing accordingly.
 
@@ -101,9 +131,62 @@ But allocating new effort to deal with processes may take some time, while the g
 
 ### New features
 
+New features are usually found as a kind of tickets in the ITS. But they are not always easy to tell from other tickets, such as bug reports. In some ITS, feature requests are marked as such. But in others only some heuristics can be applied on the description of the ticket or in the comments to it. In any case, once we know which tickets correspond to new features, some of the metrics that we can define on them are:
+
+* Time to attend: Up to the moment there is some comment by a developer, usually commenting on the feasibility of the request, and maybe assigning to a developer for implementation.
+* Time to first patch: Up to the moment a patch implementing the feature is produced.
+* Time to final patch: Up to the moment a patch lands in the code base intended for the next stable release. In some cases, this is equal to time to first patch, because there is no further process once the patch is produced. But in others, code review or automatic testing is in the middle of landing into the code base.
+* Time to release: Up to the moment the patch is included in a public release. If the system is following a continuous release policy, this can be exactly equal to time to final patch. But when point releases are produced at discrete moments, this time can be considerably longer.
+* Time to deployment: Up to the moment the patch is deployed into production systems. In many cases, the FOSS project doesn't have a direct reference to this moment, since it happens downstream, in the institutions using the software.
+
+Ratios between new feature requests and final patches or released patches are interesting to evaluate the performance of the project in terms of how much it is coping with new requests.
+
 ### Bug fixing
 
+As was said when commenting on feature requests, bug reports live too in the ITS of the project. But again as was the case with feature requests, it is not always easy to tell them apart from other tickets.
+
+In any case, the metrics discussed for new features can be applied to bug fixes too. There are some other intersting metrics as well:
+
+* Reopenend bug reports. Those tickets that after being considered closed, because it seemed that the bug was fixed, have to be reopened because it was not fixed at all.
+* Ratio of reopened to closed. Give an idea of how effective is the bug fixing process. If the ratio is high, that means that many bugs are assummed to be fixed when they are not, and therefore have to be reopened.
+
+### Tickets, all together
+
+Because of the difficulty of differentiating between feature requests and bug reports, in many cases it is useful to obtain the metrics for all tickets together.
+
+![Closed and open tickets per month, Apache Cloudstack circa July 2015](processes-tickets-closed-open.png)
+*Evolution of closed and open tickets per month for the Apache Cloudstack project circa July 2015*
+
+For example, the chart above shows the evolution of closed and opened tickets per month for a FOSS project. In this case, it can be observed how the number of opened tickets is larger than closed tickets almost for every month. This situation, which is very common in real projects, means that every month the project is not coping with all the new work they have. From time to time, the project can run "closing parties", or use bots just to close old bugs that are never going to be fixed, and maybe are no longer bugs. The blue spike in Summer 2013 could be one of such cases.
+
 ### Code review
+
+Most of the metrics used for issue tracking systems (either bug fixes or feature requests) can be applied to code review, if we consider the submission of the patch to review as the starting point of the metric. Therefore, we have:
+
+* Time to attention: Up to the moment a reviewer starts taking action on the code review system.
+* Time to review: Up to the moment reviewers take a decision on the review of the code, such are accepting it, or requesting some changes from the submitter.
+* Time to new submission: From the moment some changes were requested by reviewers, to the moment a new patch is sent.
+* Time to merge: From the moment a code review process starts, to the moment the corresponding change lands in the code base.
+
+![Time to merge in Nova (OpenStack), 2013-2014](processes-crs-nova-time-to-merge.png)
+*evolution of time to merge in Nova (an OpenStack subproject), by quarter, during 2013 and 2014.*
+
+Based on these times, aggregated times for each review process can be computed:
+
+* Reviewer time: Aggregated periods while the submitter is waiting for review by reviewers. This metric captures the amount of delay in the process which is under the responsibility of reviewers.
+* Submitter time: Aggregated periods while reviewers are waiting for a new submission. This metric captures the amount of delay which is under the responsibility of submitters.
+
+Therefore, a long time to review may be due to a long reviewer or submitter time. The problems the project is facing in both cases, and the means to solve them, are very different.
+
+Not only time is interesting:
+
+* Number of review cycles: Number of reviews (from submission of a change to acceptance or request for a new change) that are needed to finish a review process.
+
+In addition, metrics about the effectiveness of the code review process are useful too. For example:
+
+* Ratio of abandoned to merged changes. Gives an idea about how many of the submitted proposals for change end nowhere, with respect to how many end in the code base. 
+* Ratio of merged to submitted changes. This is a kind of a success ratio, showing how many review processes finish with a change in the code base with respect to how many were started.
+
 
 ## Workflow patterns
 
