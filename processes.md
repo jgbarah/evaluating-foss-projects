@@ -129,9 +129,60 @@ All these metrics have to be considered in the context of activity. This applies
 
 But allocating new effort to deal with processes may take some time, while the growth in activity is directly linked to the opening of new processes. Therefore, it is usual that there is a certain lag between needs to close processes, and new people dealing with them. As the project stabilizes, it will start to create new processes more slowly, efficiency will increase, and backlog will start to decrease.
 
-### New features
+### New features, bug fixing and code review
 
-New features are usually found as a kind of tickets in the ITS. But they are not always easy to tell from other tickets, such as bug reports. In some ITS, feature requests are marked as such. But in others only some heuristics can be applied on the description of the ticket or in the comments to it. In any case, once we know which tickets correspond to new features, some of the metrics that we can define on them are:
+Among the tickets in the ITS, most issues deal usually with either feature requests or bug fixes. In fact, many projects require that the process towards any change in the code, either to fix a bug or to implement some new functionality, start with filing a ticket.
+
+In the case of new features, the person starting the process may be a developer, and in that case we usually talk about a proposed feature. But it can be a user as well, and then it becomes a feature request. Both developers and users file report bugs by opening a bug report ticket.
+
+From a traditional software engineering point of view, telling features from fixes may be considered important. This is because they signal two different activities: "real" development, when adding new functionality, or maintenance, when fixing bugs. In traditional environments this could be done at different stages in time, and even by different teams with primary responsibilities either in producing the next release (development) or in fixing problems with past releases (maintenance). In many modern projects, specially when they are using continuous release practices, this difference is less important.
+
+From a practical point of view, be it interesting or not, there are practical problems for doing specific analysis for features or bugs. The main one is how to tell feature requests and proposed features from bug fixes. In some cases, the ITS provides a flag to make a difference, but even in thoses cases, it is only an indication that the ticket could be referring to a feature or a bug. On one side, bug fixing can evolve to feature implementation, and the other way around. On the other, it is not always easy to decide if a certain activity is improving the system by adding some missing functionality, or fixing a bug.
+
+Consider for example the case of o form not working properly when using a touchpad. Solving it can be understood as fixing a bug (the form should work always, and it was not working in certain circumstances) or as implementing a new feature (support for touchpad). When you can match against a detailed list of requirements, this could be solved by deciding if the form was intended to work with touchpads or not, and then classify the action as a fix or as new functionality (by adding a new requirement). But most FOSS projects are not that formal, and even when they are, this is in many cases a matter of how requirements are interpreted.
+
+To complicate matters further, in some projects there are more activities being carried on in the ITS. Those can include discussions on requirements, on the policies of the project, or requests related to the use of the development infrastructure.
+
+And still a step beyond in making things difficult for the analyst, some projects use the ticketing system for code review. This has been a natural evolution, when specialized code review systems didn't exist. In fact, writting comments with opinions on a patch linked to a ticket, or to a commit that closed a ticket, are two examples of coded review which can be found in many projects, even when code review was not formally adopted by them. When some projects decided to adopt formal code review procedures, they started by using what they had handy: the ITS. That's how projects such as WebKit defined workflows in the ITS (Bugzilla in their case) to deal with code review. Other projects used workflows defined on Jira.
+
+With time, specialized systems such as Gerrit emerged. Even when they are focused on code review, they still use a model quite similar to ticketing systems, with each code review cycle being modeled as a ticket. Other systems, such as GitHub pull requests, are even closer to tickets, to the point that the interface they offer is almost the same.
+
+New features are usually found as a kind of tickets in the ITS. But they are not always easy to tell from other tickets, such as bug reports. In some ITS, feature requests are marked as such. But in others only some heuristics can be applied on the description of the ticket or in the comments to it. 
+
+### Bug fixing
+
+As was said when commenting on feature requests, bug reports live too in the ITS of the project. But again as was the case with feature requests, it is not always easy to tell them apart from other tickets.
+
+
+
+
+
+### Code review
+
+
+## Workflow patterns
+
+Projects use different workflows to deal with processes. In many cases, even they can have specific policies, such as defining allowed state transitions to deal with tickets, or review patterns to deal with proposals of change to the source code. When the different states and transitions are recorded in some development repository, the complete process can be tracked. This allows for the analysis of the real workflows, and their compliance with good practices or project policies. In addition, time between transitions can be measured, to detect bottlenecks and compute time for different workflows.
+
+### Example: code review
+
+In code review, the workflow can be divided between two stated: waiting for review and waiting for new change proposals.
+
+### Example: tickets
+
+
+
+## Participation
+
+We can also analyze who participated in specific processes in a project. From that point on, we can assess on several dimensions, discussed in sections below, such as diversity in participation or neutrality.
+
+### Ticket closing
+
+Closing tickets usually means workflows moving through a complex collection of states.
+
+Some of the states may imply dependencies on communication with users, or on external projects fixing some issue. Therefore, the detailed analysis of state changes can also be used to attribute delays to developers, to users, or to external projects.
+
+In any case, once we know which tickets correspond to new features, some of the metrics that we can define on them are:
 
 * Time to attend: Up to the moment there is some comment by a developer, usually commenting on the feasibility of the request, and maybe assigning to a developer for implementation.
 * Time to first patch: Up to the moment a patch implementing the feature is produced.
@@ -141,16 +192,10 @@ New features are usually found as a kind of tickets in the ITS. But they are not
 
 Ratios between new feature requests and final patches or released patches are interesting to evaluate the performance of the project in terms of how much it is coping with new requests.
 
-### Bug fixing
-
-As was said when commenting on feature requests, bug reports live too in the ITS of the project. But again as was the case with feature requests, it is not always easy to tell them apart from other tickets.
-
 In any case, the metrics discussed for new features can be applied to bug fixes too. There are some other intersting metrics as well:
 
 * Reopenend bug reports. Those tickets that after being considered closed, because it seemed that the bug was fixed, have to be reopened because it was not fixed at all.
 * Ratio of reopened to closed. Give an idea of how effective is the bug fixing process. If the ratio is high, that means that many bugs are assummed to be fixed when they are not, and therefore have to be reopened.
-
-### Tickets, all together
 
 Because of the difficulty of differentiating between feature requests and bug reports, in many cases it is useful to obtain the metrics for all tickets together.
 
@@ -186,29 +231,6 @@ In addition, metrics about the effectiveness of the code review process are usef
 
 * Ratio of abandoned to merged changes. Gives an idea about how many of the submitted proposals for change end nowhere, with respect to how many end in the code base. 
 * Ratio of merged to submitted changes. This is a kind of a success ratio, showing how many review processes finish with a change in the code base with respect to how many were started.
-
-
-## Workflow patterns
-
-Projects use different workflows to deal with processes. In many cases, even they can have specific policies, such as defining allowed state transitions to deal with tickets, or review patterns to deal with proposals of change to the source code. When the different states and transitions are recorded in some development repository, the complete process can be tracked. This allows for the analysis of the real workflows, and their compliance with good practices or project policies. In addition, time between transitions can be measured, to detect bottlenecks and compute time for different workflows.
-
-### Example: code review
-
-In code review, the workflow can be divided between two stated: waiting for review and waiting for new change proposals.
-
-### Example: tickets
-
-Closing tickets usually means workflows moving through a complex collection of states.
-
-Some of the states may imply dependencies on communication with users, or on external projects fixing some issue. Therefore, the detailed analysis of state changes can also be used to attribute delays to developers, to users, or to external projects.
-
-## Participation
-
-We can also analyze who participated in specific processes in a project. From that point on, we can assess on several dimensions, discussed in sections below, such as diversity in participation or neutrality.
-
-### Ticket closing
-
-### Code review
 
 ### Mailing lists
 
