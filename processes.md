@@ -204,6 +204,25 @@ In the case of code review, the most relevant participants are:
 * Commenters. The persons providing comments. This can be reviewers, commenting on how to improve the change proposal, oor submitters, commenting on how the will address reviewers' suggestions, or third parties.
 * Core reviewers. In some projects, there is a special kind of reviewer, elected by the project, whith have the power to accept or reject changes.
 
+
+
+### Diversity in participation
+
+There are several aspects about participation in processes where diversity has a role:
+
+* Participation from diverse time zones in specific process, which may help to speed the process up, or to slow it down, depending on how is that participation.
+* Participation by organizations, which is an indicator over the level of control that a single actor, or a small group of them, maybe have over a project. Or the level of dependency that the project has on those actors.
+
+To analyze diversity, it is needed to carefully determine the relevant actors, and then characterize them from any of these points of view (geographical area, affiliation to organziations, etc.).
+
+### Neutrality
+
+Neutrality means how neutral the community is to the different individuals or groups that work together in it. Neutrality is important to the community, because it ensures that all actors are considered equal with respect to the characteristics that are not related to their capacities or skills. For example, it ensures that no company intentionally delays fixing bugs that were reported by some other company, or that code proposed by people from a certain region is not taking longer to review, given other aspects are equal.
+
+Once the diversity analysis is performed, and the relevant diversity characteristics to consider are defined, the neutrality analysis produces metrics for each of the individuals or the groups identified, to allow for comparisons. But those metrics have to be considered with some care. For example, a neutrality analysis can show how time-to-review for developers of company A is taking twice than for company B. This could easily to the conclusion that company A is being discriminated by reviewers with respect to company B. But it could happen as well that developers from company A are much less carfull, or less experienced, or less trained, than those of company B. And that could lead to employees of A submitting much worse change proposals than those of B. Which would explain perfectly the difference in time-to-review, since reviewrs could be much more reluctant to decide on their code because of those reasons.
+
+Therefore, the main goal of the neutrality analysis is to provide metrics that are at the same time fair and relevant. That is, that the differences in them are really related to discrimination and lack of neutrality, and not to different skills or expertise.
+
 ## Metrics for tickets
 
 Based on all the information above, in this section we study which metrics are more relevant for tickets. Let's start with some timing metrics for feature requests:
@@ -269,13 +288,3 @@ And some timing information, such as:
 * Time to first answer. From the moment a question is made, to the moment the first answer arrives.
 * Time for whole discussion. Which is the timespan from the first message in a thread to the last one.
 
-
-
-## Diversity in participation
-
-There are several aspects about participation in processes where diversity has a role:
-
-* Participation from diverse time zones in specific process, which may help to speed the process up, or to slow it down, depending on how is that participation.
-* Participation by diverse companies.
-
-## Neutrality
