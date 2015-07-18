@@ -19,8 +19,7 @@ Given the number of evaluation models that exist, Stol and Ali Babar ([reference
 | A Model for Comparative Assessment of Open Source Products | 2004 | R | Yes | [reference](#bib:polancic-model), [reference](#bib:polancic-comparative) |
 | Navica Open Source Maturity Model | 2004 | I | Yes | [reference](#bib:golden-succeeding) |
 | Woods and Guliani's OSMM | 2005 | I | No | [reference](#bib:woods-open) |
-| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | [reference](#bib:www.openbrr.org-business) ,
-[reference](#bib:wasserman-business) |
+| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | [reference](#bib:www.openbrr.org-business),[reference](#bib:wasserman-business) |
 | Atos Origin Method for Qualification and | 2006 | I | Yes | [reference](#bib:ato-method) |
 | Selection of Open Source Software (QSOS) | 2006 | R | No | [reference](#bib:cruz-evaluation) |
 | Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | [reference](#bib:sung-quality) |
