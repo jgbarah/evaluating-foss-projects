@@ -154,7 +154,20 @@ From the analytics point of view, the good news are that given these similaritie
 
 Projects use different workflows to deal with processes. In many cases, even they can have specific policies, such as defining allowed state transitions to deal with tickets, or review patterns to deal with proposals of change to the source code. When the different states and transitions are recorded in some development repository, the complete process can be tracked. This allows for the analysis of the real workflows, and their compliance with good practices or project policies. In addition, time between transitions can be measured, to detect bottlenecks and compute time for different workflows.
 
-### Example: code review
+### Workflows for tickets
+
+The workflow of tickets depend a lot on the specific ITS used. In addition, most of them have a basic workflow defined, but either the administrators of the system, or in some cases its users, can customize it. For example, the next figure shows the default workflow for Bugzilla, whcih different projects adapt in different ways.
+
+![Default workflow in Bugzilla 4.0](bugzilla-lifecycle.png)
+*Default workflow for a ticket in Bugzilla 4.0.1, as shown in [Life cycle of a bug](https://www.bugzilla.org/docs/4.0/en/html/lifecycle.html), in the Bugzilla manual.*
+
+However, there are some aspects in which most, if not all ITS behave teh same way. The life of a ticket starts when it is opened. In some cases there is a specific "new" or "open" state, in which it stays until the first actions are taken, usually assigning it to someone. This process is called "triaging the ticket". It is very important, because until the ticket is assigned, it is very unlikely that someone starts to work with it. Therefore, "time-to-triage" is a meaningfull metric. The process of triaging may involve confirming a bug, or asking more details about it, or discussing whether a feature request makes sense.
+
+Once the ticket is "ready to be worked on", some actions are taken until it is resolved. That means that the person in charge considers that the work is done. But in most cases, that has to verified, so that a third party, maybe the person who open the ticket, considers that indeed the issue is solved.  Therefore, time-to-resolved and time-to-verified are interesting metrics, telling about how developers are working, and about how good their work is (in terms of satisfying third parties verifying the solutions).
+
+In any state, the ticket can be closed. For example, an old untriaged ticket can be closed because no further action can be done on it. Or an unsolved ticket can be closed because new versions render the ticket void. Usually, tickets are closed after being verified. But even in this case, they can be reopen if new evidence arises suggesting that the work is not really done.
+
+## Workflows in code review
 
 In code review, the workflow can be divided between two states: waiting for review and waiting for new change proposals. For entering into details, let's consider two of the most usual CRS these days: Gerrit and GitHub Pull Requests.
 
@@ -168,33 +181,32 @@ This process is more flexible than the Gerrit one, but also more difficult to tr
 
 You can see more details about how a specific project uses Gerrit for code review in the [OpenStack Developers Manual](http://docs.openstack.org/infra/manual/developers.html#code-review). For details on GitHub Pull Requests, you can read [Using pull requests](https://help.github.com/articles/using-pull-requests/).
 
-### Example: tickets
-
-The workflow of tickets depend a lot on the specific ITS used. In addition, most of them have a basic workflow defined, but either the administrators of the system, or in some cases its users, can customize it. For example, the next figure shows the default workflow for Bugzilla, whcih different projects adapt in different ways.
-
-![Default workflow in Bugzilla 4.0](bugzilla-lifecycle.png)
-*Default workflow for a ticket in Bugzilla 4.0.1, as shown in [Life cycle of a bug](https://www.bugzilla.org/docs/4.0/en/html/lifecycle.html), in the Bugzilla manual.*
-
-However, there are some aspects in which most, if not all ITS behave teh same way. The life of a ticket starts when it is opened. In some cases there is a specific "new" or "open" state, in which it stays until the first actions are taken, usually assigning it to someone. This process is called "triaging the ticket". It is very important, because until the ticket is assigned, it is very unlikely that someone starts to work with it. Therefore, "time-to-triage" is a meaningfull metric. The process of triaging may involve confirming a bug, or asking more details about it, or discussing whether a feature request makes sense.
-
-Once the ticket is "ready to be worked on", some actions are taken until it is resolved. That means that the person in charge considers that the work is done. But in most cases, that has to verified, so that a third party, maybe the person who open the ticket, considers that indeed the issue is solved.  Therefore, time-to-resolved and time-to-verified are interesting metrics, telling about how developers are working, and about how good their work is (in terms of satisfying third parties verifying the solutions).
-
-In any state, the ticket can be closed. For example, an old untriaged ticket can be closed because no further action can be done on it. Or an unsolved ticket can be closed because new versions render the ticket void. Usually, tickets are closed after being verified. But even in this case, they can be reopen if new evidence arises suggesting that the work is not really done.
-
-
-
 
 ## Participation
 
 We can also analyze who participated in specific processes in a project. From that point on, we can assess on several dimensions, discussed in sections below, such as diversity in participation or neutrality.
 
-### Ticket closing
+The relevant participants are different depending on the kind of processes. For example, for ticket closing:
 
-Closing tickets usually means workflows moving through a complex collection of states.
+* Openers or submitters. Those that file the tickets, either reporting a bug, requesting or proposing a feature, or raising any other issue.
+* Commenters. Those commenting on the ticket. Comments may be requests for more information, provisions of that requested information, reporting of the progress, proposals to receive feedback, etc.
+* State changers. Those changing the state of the ticket. In some ITS, they can be just flagging the ticket in some way.
+* Closers. Those closing the tickets.
 
-Some of the states may imply dependencies on communication with users, or on external projects fixing some issue. Therefore, the detailed analysis of state changes can also be used to attribute delays to developers, to users, or to external projects.
+But in fact, for any transition of state, an actor can be defined, which leads to very specific kind of actors, depending on the project. This means as well that the identification of states and transitions in the workflow with tickets is fundamental for the identification of relevant participants.
 
-In any case, once we know which tickets correspond to new features, some of the metrics that we can define on them are:
+As a side note, the identification of relevant participants in specific actions in the ITS may be tricky. For example, in the case of OpenStack, the person considered to be closing a ticket is not really the one changing the state to closed, but the owner of the ticket at that time (the owner is the person assigned to it).
+
+In the case of code review, the most relevant participants are:
+
+* Submitters. The persons submiting proposals for change.
+* Reviewers. The persons reviewing the changes.
+* Commenters. The persons providing comments. This can be reviewers, commenting on how to improve the change proposal, oor submitters, commenting on how the will address reviewers' suggestions, or third parties.
+* Core reviewers. In some projects, there is a special kind of reviewer, elected by the project, whith have the power to accept or reject changes.
+
+## Metrics for tickets
+
+Based on all the information above, in this section we study which metrics are more relevant for tickets. Let's start with some timing metrics:
 
 * Time to attend: Up to the moment there is some comment by a developer, usually commenting on the feasibility of the request, and maybe assigning to a developer for implementation.
 * Time to first patch: Up to the moment a patch implementing the feature is produced.
@@ -216,7 +228,7 @@ Because of the difficulty of differentiating between feature requests and bug re
 
 For example, the chart above shows the evolution of closed and opened tickets per month for a FOSS project. In this case, it can be observed how the number of opened tickets is larger than closed tickets almost for every month. This situation, which is very common in real projects, means that every month the project is not coping with all the new work they have. From time to time, the project can run "closing parties", or use bots just to close old bugs that are never going to be fixed, and maybe are no longer bugs. The blue spike in Summer 2013 could be one of such cases.
 
-### Code review
+## Metrics for code review
 
 Most of the metrics used for issue tracking systems (either bug fixes or feature requests) can be applied to code review, if we consider the submission of the patch to review as the starting point of the metric. Therefore, we have:
 
