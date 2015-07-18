@@ -206,10 +206,10 @@ In the case of code review, the most relevant participants are:
 
 ## Metrics for tickets
 
-Based on all the information above, in this section we study which metrics are more relevant for tickets. Let's start with some timing metrics:
+Based on all the information above, in this section we study which metrics are more relevant for tickets. Let's start with some timing metrics for feature requests:
 
 * Time to attend: Up to the moment there is some comment by a developer, usually commenting on the feasibility of the request, and maybe assigning to a developer for implementation.
-* Time to first patch: Up to the moment a patch implementing the feature is produced.
+* Time to first patch: Up to the moment a patch implementing the feature is attacjed to the ticket.
 * Time to final patch: Up to the moment a patch lands in the code base intended for the next stable release. In some cases, this is equal to time to first patch, because there is no further process once the patch is produced. But in others, code review or automatic testing is in the middle of landing into the code base.
 * Time to release: Up to the moment the patch is included in a public release. If the system is following a continuous release policy, this can be exactly equal to time to final patch. But when point releases are produced at discrete moments, this time can be considerably longer.
 * Time to deployment: Up to the moment the patch is deployed into production systems. In many cases, the FOSS project doesn't have a direct reference to this moment, since it happens downstream, in the institutions using the software.
