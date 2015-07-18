@@ -24,8 +24,7 @@ Given the number of evaluation models that exist, Stol and Ali Babar ([reference
 | Selection of Open Source Software (QSOS) | 2006 | R | No | [reference](#bib:cruz-evaluation) |
 | Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | [reference](#bib:sung-quality) |
 | A Quality Model for OSS Selection | 2007 | R | Yes | [reference](#bib:lee-study) |
-| Selection Process of Open Source Software | 2007 | R | Yes | [reference](#bib:cabano-context-dependent) ,
-[reference](http://www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf) |
+| Selection Process of Open Source Software | 2007 | R | Yes | [reference](#bib:cabano-context-dependent),[reference](http://www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf) |
 | Observatory for Innovation and Technological transfer on Open Source software (OITOS) | 2007 | R | No | [reference](#bib:ardagna-focse) |
 | Framework for OS Critical Systems Evaluation (FOCSE) | 2007 | R | No | [reference](#bib:lavazza-beyond) |
 | Balanced Scorecards for OSS | 2007 | R | Yes | [reference](#bib:taibi-openbqr) |
