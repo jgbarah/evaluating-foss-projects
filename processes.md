@@ -35,9 +35,9 @@ As another example, if the 0.95 quantil of time-to-review a change is of 4.34 da
 
 You should notice as well that you can only measure time-to-X if X already happened. For example, time-to-close can only be measured for a ticket if it was already closed. Otherwise, you can only know that time-to-close will be longer than the time it has been open up to now, but nothing else. This is important, because it can cause counter-intuitive situations.
 
-Assume for example a project with 100 still open tickets and 50 already closed tickets. All 50 closed tickets had a time-to-close of 2 days. All the 100 open tickets were open 60 days ago. If we measure the median of time-to-close now, it will be of 2 days, since it only applies to closed tickets. Now, the 100 still open tickets are closed during today. At the end of the day, we have 50 tickets with 2 days of time-to-close, and 100 with 60 days of time-to-close. That is, our median of time-to-close raised to 60 days, even when we closed a lot of old tickets. In other words, closing a lot of tickets raised time-to-close, which could be interpreted as a decrease in performance, when it is exaclty the other way around.
+Assume for example a project with 100 still open tickets and 50 already closed tickets. All 50 closed tickets had a time-to-close of 2 days. All the 100 open tickets were open 60 days ago. If we measure the median of time-to-close now, it will be of 2 days, since it only applies to closed tickets. Now, the 100 still open tickets are closed during today. At the end of the day, we have 50 tickets with 2 days of time-to-close, and 100 with 60 days of time-to-close. That is, our median of time-to-close raised to 60 days, even when we closed a lot of old tickets. In other words, closing a lot of tickets raised time-to-close, which could be interpreted as a decrease in performance, when it is exactly the other way around.
 
-To avoid this effects, there are some other metrics, such as:
+To avoid these effects, there are some other metrics, such as:
 
 * time-active. It is defined as time since the process started, only for processes which still didn't finish. In some sense, it is a complement to time-to-finish: while time-to-finish considers only finished processes, time-active provides a similar information, but only for processes still open.
 
@@ -143,21 +143,11 @@ Consider for example the case of o form not working properly when using a touchp
 
 To complicate matters further, in some projects there are more activities being carried on in the ITS. Those can include discussions on requirements, on the policies of the project, or requests related to the use of the development infrastructure.
 
-And still a step beyond in making things difficult for the analyst, some projects use the ticketing system for code review. This has been a natural evolution, when specialized code review systems didn't exist. In fact, writting comments with opinions on a patch linked to a ticket, or to a commit that closed a ticket, are two examples of coded review which can be found in many projects, even when code review was not formally adopted by them. When some projects decided to adopt formal code review procedures, they started by using what they had handy: the ITS. That's how projects such as WebKit defined workflows in the ITS (Bugzilla in their case) to deal with code review. Other projects used workflows defined on Jira.
+And still a step beyond in making things difficult for the analyst, some projects use the ticketing system for code review. This has been a natural evolution, when specialized code review systems didn't exist. In fact, writing comments with opinions on a patch linked to a ticket, or to a commit that closed a ticket, are two examples of coded review which can be found in many projects, even when code review was not formally adopted by them. When some projects decided to adopt formal code review procedures, they started by using what they had handy: the ITS. That's how projects such as WebKit defined workflows in the ITS (Bugzilla in their case) to deal with code review. Other projects used workflows defined on Jira.
 
 With time, specialized systems such as Gerrit emerged. Even when they are focused on code review, they still use a model quite similar to ticketing systems, with each code review cycle being modeled as a ticket. Other systems, such as GitHub pull requests, are even closer to tickets, to the point that the interface they offer is almost the same.
 
-New features are usually found as a kind of tickets in the ITS. But they are not always easy to tell from other tickets, such as bug reports. In some ITS, feature requests are marked as such. But in others only some heuristics can be applied on the description of the ticket or in the comments to it. 
-
-### Bug fixing
-
-As was said when commenting on feature requests, bug reports live too in the ITS of the project. But again as was the case with feature requests, it is not always easy to tell them apart from other tickets.
-
-
-
-
-
-### Code review
+From the analytics point of view, the good news are that given these similarities, the analysis of bug reports, feature implementation and code review are quite similar. That is the main reason why in most of this chapter we talk about processes instead of tickets or code review. However, there are some important differences too, for example in the workflows, or in some metrics which can be unique to some of these cases but not to the others, but still are very important for the cases that apply.
 
 
 ## Workflow patterns
@@ -166,7 +156,11 @@ Projects use different workflows to deal with processes. In many cases, even the
 
 ### Example: code review
 
-In code review, the workflow can be divided between two stated: waiting for review and waiting for new change proposals.
+In code review, the workflow can be divided between two states: waiting for review and waiting for new change proposals. For entering into details, let's consider two of the most usual CRS these days: Gerrit and GitHub Pull Requests.
+
+For Gerrit, the workflow starts with a developer submitting a proposal for a change (a change). This proposal is composed by a patchset (in fact, the contents of a git commit), and a comment (which may include a reference to the ticket which originated ). 
+
+You can see more details about how a specific project uses Gerrit for code review in the [OpenStack Developers Manual](http://docs.openstack.org/infra/manual/developers.html#code-review).
 
 ### Example: tickets
 
