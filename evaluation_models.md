@@ -33,8 +33,7 @@ Given the number of evaluation models that exist, Stol and Ali Babar ([reference
 | Evaluating OSS through Prototyping | 2008 | R | No | [reference](#bib:ciolkowski-towards) |
 | A Comprehensive Approach for Assessing Open Source Projects | 2008 | R | Yes | [reference](#bib:samoladas-sqo-oss) |
 | Software Quality Observatory for Open Source Software (SQO-OSS) | 2008 | R | No | [reference](#bib:majchrowski-operational) |
-| An operational approach for selecting open source components in a software development project | 2008 | R | No | [reference](#bib:delbianco-quality) ,
-[reference](#bib:delbianco-observed) |
+| An operational approach for selecting open source components in a software development project | 2008 | R | No | [reference](#bib:delbianco-quality),[reference](#bib:delbianco-observed) |
 | QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | [reference](#bib:petrinja-introducing) |
 
 
