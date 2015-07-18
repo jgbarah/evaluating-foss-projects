@@ -270,13 +270,6 @@ And some timing information, such as:
 * Time for whole discussion. Which is the timespan from the first message in a thread to the last one.
 
 
-## Interaction with users
-
-Communication channels can be used by users to solve problems or report them. This interaction can be monitored in several repositories. In our experience, this can be done mainly on both ticketing and asynchronous communication systems. From those, it can be known:
-
-* Who asks for help, or in general comments on issues related to the project.
-* Who participates in solving those issues.
-* Who of those who participate are developers.
 
 ## Diversity in participation
 
