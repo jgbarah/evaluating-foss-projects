@@ -1,0 +1,26 @@
+Notes to be merged in the book at some time.
+
+Complete table of evaluation models, with references. For now, we don't include references in the book.
+
+| Name     | Year |  Orig | Method | Source |
+| -------- |:----:|:-----:|:------:| ------:|
+| Capgemini Open Source Maturity Model | 2003 | I | Yes | [reference](#bib:duijnhouwer-open) |
+| Evaluation Framework for Open Source Software | 2004 | R | No | [reference](#bib:koponen-evaluation) |
+| A Model for Comparative Assessment of Open Source Products | 2004 | R | Yes | [reference](#bib:polancic-model), [reference](#bib:polancic-comparative) |
+| Navica Open Source Maturity Model | 2004 | I | Yes | [reference](#bib:golden-succeeding) |
+| Woods and Guliani's OSMM | 2005 | I | No | [reference](#bib:woods-open) |
+| Open Business Readiness Rating (OpenBRR) | 2005 | R/I | Yes | [reference](#bib:www.openbrr.org-business),[reference](#bib:wasserman-business) |
+| Atos Origin Method for Qualification and | 2006 | I | Yes | [reference](#bib:ato-method) |
+| Selection of Open Source Software (QSOS) | 2006 | R | No | [reference](#bib:cruz-evaluation) |
+| Evaluation Criteria for Free/Open Source Software Products | 2007 | R | No | [reference](#bib:sung-quality) |
+| A Quality Model for OSS Selection | 2007 | R | Yes | [reference](#bib:lee-study) |
+| Selection Process of Open Source Software | 2007 | R | Yes | [reference](#bib:cabano-context-dependent),[reference](http://www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf) |
+| Observatory for Innovation and Technological transfer on Open Source software (OITOS) | 2007 | R | No | [reference](#bib:ardagna-focse) |
+| Framework for OS Critical Systems Evaluation (FOCSE) | 2007 | R | No | [reference](#bib:lavazza-beyond) |
+| Balanced Scorecards for OSS | 2007 | R | Yes | [reference](#bib:taibi-openbqr) |
+| Open Business Quality Rating (OpenBQR) | 2007 | R | Yes | [reference](#bib:carbon-evaluating) |
+| Evaluating OSS through Prototyping | 2008 | R | No | [reference](#bib:ciolkowski-towards) |
+| A Comprehensive Approach for Assessing Open Source Projects | 2008 | R | Yes | [reference](#bib:samoladas-sqo-oss) |
+| Software Quality Observatory for Open Source Software (SQO-OSS) | 2008 | R | No | [reference](#bib:majchrowski-operational) |
+| An operational approach for selecting open source components in a software development project | 2008 | R | No | [reference](#bib:delbianco-quality),[reference](#bib:delbianco-observed) |
+| QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | [reference](#bib:petrinja-introducing) |
