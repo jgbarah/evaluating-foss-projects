@@ -256,7 +256,18 @@ In addition, metrics about the effectiveness of the code review process are usef
 * Ratio of abandoned to merged changes. Gives an idea about how many of the submitted proposals for change end nowhere, with respect to how many end in the code base. 
 * Ratio of merged to submitted changes. This is a kind of a success ratio, showing how many review processes finish with a change in the code base with respect to how many were started.
 
-### Mailing lists
+## Metrics for mailing lists
+
+In mailing lists and other asynchronous communication systems process metrics can be useful as well. Communication channels can be used by users to solve problems or report them. This interaction can be monitored in several repositories. In our experience, this can be done mainly in ITS, but also in asynchronous communication systems. From those, it can be known:
+
+* Who asks for help, or in general comments on issues related to the project.
+* Who participates in solving those issues.
+* Who of those who participate are developers.
+
+And some timing information, such as:
+
+* Time to first answer. From the moment a question is made, to the moment the first answer arrives.
+* Time for whole discussion. Which is the timespan from the first message in a thread to the last one.
 
 
 ## Interaction with users
