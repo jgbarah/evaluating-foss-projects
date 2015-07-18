@@ -35,6 +35,7 @@ Given the number of evaluation models that exist, Stol and Ali Babar ([reference
 | An operational approach for selecting open source components in a software development project | 2008 | R | No | [reference](#bib:delbianco-quality),[reference](#bib:delbianco-observed) |
 | QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No | [reference](#bib:petrinja-introducing) |
 
+Of all these models, we have selected some, that are described in some more detail in the following sections.
 
 ## OpenBRR
 
