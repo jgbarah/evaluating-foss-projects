@@ -8,7 +8,7 @@ Of course, there are shadows in a continuum ranging from pure quantitative to pu
 
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
-Given the number of evaluation models that exist, [Stol and Ali Babar](stol-babar-comaprison-models) have proposed a  comparison framework to evaluate them. In order to do so, the most relevant evaluation models were identified. The result of this identification process, after screening around 550 research papers, is provided in following table, with 20 approaches. The column "Orig" shows if the initiative is the result of a research (R) or an industrial (I) effort. Models have been classified as industrial if they are associated to at least one company. The column "Method" indicates the completeness of the methodology, meaning that if all required activities, tasks, inputs and outputs are outlined, the assessment methodology offers a complete guide to evaluation. If a mere set of evaluation criteria are proposed, then the authors labeled the methodology as not complete.
+Given the number of evaluation models that exist, [Stol and Ali Babar](#bib:stol-babar-comaprison-models) have proposed a  comparison framework to evaluate them. In order to do so, the most relevant evaluation models were identified. The result of this identification process, after screening around 550 research papers, is provided in following table, with 20 approaches. The column "Orig" shows if the initiative is the result of a research (R) or an industrial (I) effort. Models have been classified as industrial if they are associated to at least one company. The column "Method" indicates the completeness of the methodology, meaning that if all required activities, tasks, inputs and outputs are outlined, the assessment methodology offers a complete guide to evaluation. If a mere set of evaluation criteria are proposed, then the authors labeled the methodology as not complete.
 
 | Name     | Year |  Orig | Method |
 | -------- |:----:|:-----:|:------:| ------:|
@@ -89,7 +89,7 @@ The first step in the process is to select and weigh the criteria to be use in t
 |    7 | Adoption      |      8% |
 | Total |              |    100% |
 
-leaving out five criteria: Quality, Performance, Scalability, Architecture and Modularity.
+leaving out five criteria: Quality, Performance, Scalability, Architecture, and Modularity.
 
 In the following step, each criteria is evaluated on its own. As an example, for the evaluation of the functionality, a list of 27 standard functionality items (that include from discussion forums to surveys or automatic testing) are included, which have been obtained from the edutools.info on-line portal. Depending on the grade of its completeness, each functionality is scored and weighted from 1 to 3 as shown in the following table. Additional 8 extra functionalities (such as LaTeX support or the inclusion of video) are rated in the same fashion.
 
@@ -137,7 +137,7 @@ Although OpenBRR is one of the most known assessment models, it has not achieved
 
 QSOS (Qualification and Selection of Open Source software) is an assessment methodology proposed by ATOS Origin in 2004 and updated in 2013. It is composed of a formal method that describes a workflow to evaluate projects, a set of tools that help to apply the QSOS workflow and a community. The proposed process is shown in the figure below. It is divided in four iterative steps and is iterative in nature, meaning that it can be applied with different granularity levels, becoming more detailed in every iteration.
 
-![The QSOS evaluation process](qsos.jpg)
+![The QSOS evaluation process](qsos.png)
 
 The first step is concerned with defining the evaluation criteria in three axes: type of software, type of license and type of community. The type of software axis is composed by two additional criteria: a maturity analysis and a functional coverage analysis. The next figure shows a diagram with the specific items that are to be considered when assessing the maturity of a project. These items can be obtained in general from any free software project.
 
