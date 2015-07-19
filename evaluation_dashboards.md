@@ -30,6 +30,7 @@ GitHub provides some statistics for the repositories it hosts. Most of it is bas
 Even when they don't use the term "dashboard", they provide a simple one. It includes information on contriutors and activity, with a focus on the historical evolution of contributions.
 
 ![GitHub dashboard for OpenStack Nova, activity punchcard](github-punchcard.png)
+*[Activity punchcard for OpenStack Nova](https://github.com/openstack/nova/graphs/punch-card), shown by the GitHub dashboard, as of July 2015*
 
 The dashboards provided by GitHub are intersting because, even being simple, they are available for all the repositories the site hosts. And they host most of the FOSS being developed these days. Therefore, as in the case of Open HUB, it is very likely that if you need some simple metrics for almost any project, you can find a repository in GitHub with it, and therefore a dashboard providing it.
 
@@ -45,7 +46,7 @@ On the other hand, some of the main drawbacks are that the metrics provided are 
 The Stackalytics dashboard shows a summary the activity and the community of the project, including the evolution of several parameters over time, and the current shares of contribution for companies, subprojects and developers.
 
 ![Stackalytics dashboard, view for Mirantis](stackalytics-mirantis.png)
-*View for the activity of Mirantis, Stackalytics dashboard for OpenStack, as of July 2015.*
+*View for the [activity of Mirantis, Stackalytics dashboard for OpenStack](http://stackalytics.com/?company=mirantis), as of July 2015.*
 
 Stackalytics is tailored to the specific needs of the OpenStack community. It provides information not only about commits in the git repositories, but also about tickets, code review and mail messages, making it a comprehensive tool that assists on the understanding of the OpenStack project. Being FOSS, the tool can be adapted to special needs, and is in fact being considered by other communities for providing a dashboard service to their developers.
 
@@ -57,12 +58,14 @@ In its current form, its main drawback is related to its main feature: bein spec
 Grimoire is a software system designed to retrieve information from software development repositories, store in a database, and then use that information for producing dashboards and other visualizations. Grimoire is FOSS, and can be adapted to many different needs, one of them being the grimoire dashboard.
 
 ![Grimoire dashboard for OpenStack](grimoire-openstack.png)
-*Main page of the Grimoire dashboard for OpenStack, as of July 2015*
+*Main page of the [Grimoire dashboard for OpenStack](http://activity.openstack.org), as of July 2015*
 
 Grimoire is capable of extracting information from many different kinds of repositories related to software development. The dashboard uses the information retrieved from them in several panels, which show activity, community data, analysis of processes, diversity reports, and other kinds of studies. 
 
 ![Grimoire dashboard, panel for Wikimedia tickets](grimoire-tickets.png)
-*Tickets panel for the Grimoire Dashboard for the Wikimedia Foundation projects.*
+*Tickets panel for the [Grimoire Dashboard for the Wikimedia Foundation projects](http://korma.wmflabs.org), as of July 2015.*
 
 Grimoire is offered as a maintained service by Bitergia, but being FOSS it can also be deployed and customized by anyone. Currently one of its main drawbacks is that it is not easy to deploy, and that the capabilities for interacting with the data provided are limited. These problems are expected to be mitigated by the new generation of Grimoire, which is under development during Summer 2015.
 
+![Grimoire dashboard (new generation) for OpenStack](grimoireng-openstack.png)
+*Main view of the new generation of the Grimoire dashboard for OpenStack, in a [preview of work in progress](https://projects.bitergia.com/previews/ng/), July 2015.*
