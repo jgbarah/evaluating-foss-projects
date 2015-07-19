@@ -1,5 +1,7 @@
 # To probe further
 
+This is an still disorganized list of random links. It will evolve hopefully in an organized list of useful resources.
+
 ## Evaluation of community growth
 
 * [Brackets Health Report](http://blog.brackets.io/2015/03/27/introducing-brackets-health-report/)
