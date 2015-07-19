@@ -37,6 +37,19 @@ On the other hand, some of the main drawbacks are that the metrics provided are 
 
 ## Stackalytics
 
+[Stackalytics](http://mirantis.com) is a service provided by Mirantis to the OpenStack community. It is based on FOSS, and for that reason it has been considered by other communities to gather and visualize their development metrics.
+
+![Stackalytics dashboard, main view](stackalitics-main.png)
+*Main view of the Stackalytics dashboard for OpenStack, as of July 2015.*
+
+The Stackalytics dashboard shows a summary the activity and the community of the project, including the evolution of several parameters over time, and the current shares of contribution for companies, subprojects and developers.
+
+![Stackalytics dashboard, view for Mirantis](stackalytics-mirantis.png)
+*View for the activity of Mirantis, Stackalytics dashboard for OpenStack, as of July 2015.*
+
+Stackalytics is tailored to the specific needs of the OpenStack community. It provides information not only about commits in the git repositories, but also about tickets, code review and mail messages, making it a comprehensive tool that assists on the understanding of the OpenStack project. Being FOSS, the tool can be adapted to special needs, and is in fact being considered by other communities for providing a dashboard service to their developers.
+
+In its current form, its main drawback is related to its main feature: bein specifically tailored to the needs and characteristics of OpenStack, it can be difficult to adapt to other projects.
 
 
 ## Grimoire Dashboard
