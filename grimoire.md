@@ -1,6 +1,6 @@
 # Quantitative evaluation with Grimoire
 
-[This chapater is still to be written]
+[This chapter is still to be written]
 
 ## Data retrieval
 
