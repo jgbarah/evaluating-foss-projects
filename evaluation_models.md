@@ -8,9 +8,7 @@ Of course, there are shadows in a continuum ranging from pure quantitative to pu
 
 Quantitative evaluation is based on the identification of quantitative parameters that can be significant, and the definition of measurement models for them.
 
-## A classification of quantitative models
-
-Given the number of evaluation models that exist, [Stol and Ali Babar](#bib:stol-babar-comaprison-models) have proposed a  comparison framework to evaluate them. In order to do so, the most relevant evaluation models were identified. The result of this identification process, after screening around 550 research papers, is provided in following table, with 20 approaches. The column "Orig" shows if the initiative is the result of a research (R) or an industrial (I) effort. Models have been classified as industrial if they are associated to at least one company. The column "Method" indicates the completeness of the methodology, meaning that if all required activities, tasks, inputs and outputs are outlined, the assessment methodology offers a complete guide to evaluation. If a mere set of evaluation criteria are proposed, then the authors labeled the methodology as not complete. The column "Source" lists a reference to the paper or report that presented the evaluation method, where details can be found.
+Given the number of evaluation models that exist, [Stol and Ali Babar](#bib:stol-babar-comaprison-models) have proposed a  comparison framework to evaluate them. In order to do so, the most relevant evaluation models were identified. The result of this identification process, after screening around 550 research papers, is provided in following table, with 20 approaches. The column "Orig" shows if the initiative is the result of a research (R) or an industrial (I) effort. Models have been classified as industrial if they are associated to at least one company. The column "Method" indicates the completeness of the methodology, meaning that if all required activities, tasks, inputs and outputs are outlined, the assessment methodology offers a complete guide to evaluation. If a mere set of evaluation criteria are proposed, then the authors labeled the methodology as not complete.
 
 | Name     | Year |  Orig | Method |
 | -------- |:----:|:-----:|:------:| ------:|
@@ -35,11 +33,11 @@ Given the number of evaluation models that exist, [Stol and Ali Babar](#bib:stol
 | An operational approach for selecting open source components in a software development project | 2008 | R | No |
 | QualiPSo trustworthiness model OpenSource Maturity Model (OMM) | 2009 | R | No |
 
-Of all these models, we have selected some, that are described in some more detail in the following sections.
+Of all these models, we have selected some that we describe in some more detail in the following sections.
 
 ## OpenBRR
 
-The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) [The OpenBRR white paper](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343)). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
+The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) [The OpenBRR white paper](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
 
 Following figure provides an overview of the how OpenBRR should be applied. As can be seen, OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator to adapt the assessment to the specific needs of the organization that wants to deploy the
 software under study-
@@ -63,7 +61,7 @@ OpenBRR is based on gathering metrics and factual data on up to following ten ca
 
 For each category, a set of criteria and metrics are proposed. These inputs are then weighted and each of the above introduced categories are given a rating that ranges from 1 to 5. Then, depending on the final usage the software will be given, adopters may weight these categories, obtaining an overall rating of the project. Hence, not all categories are weighted equally, and for some scenarios a category may not be considered at all for the final rating (in that case, its weight factor would be 0%).
 
-To help in the assessment, OpenBRR offers a spreadsheet template ([copy](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4350)) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
+To help in the assessment, OpenBRR offers a [spreadsheet template](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4350) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
 
 * Number of minor releases in past 12 months
 * Number of point/patch releases in past 12 months
@@ -76,7 +74,7 @@ These inputs are rated as well from 1 to 5, and the evaluator may then weight th
 
 [Udas et al.](#bib:udas-apples) discuss in a report how to apply OpenBRR in real environments based on their experience in the evaluation of Learning Management Systems. The 31 page report is very exhaustive and provides some general guidelines to be followed when using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
 
-The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known ones are the ones that assessed Moodle and Sakai, two well-known Learning Management Systems (LMSs) that were widely used in industry and academic institutions [copy](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc) (Sakai) and [copy](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc) (Moodle). As they introduce the OpenBRR assessment process very well, we will show them here in detail.
+The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known assessed Moodle and Sakai, two well-known learning management systems that were widely used in industry and academic institutions. As they introduce the OpenBRR assessment process very well, we will show them here in detail. You can browse the [OpenBRR spreadsheet for Moodle](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc) and the [OpenBRR spreadsheet for Sakai](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc) for more details.
 
 The first step in the process is to select and weigh the criteria to be use in the evaluation process. In the case of Moodle and Sakai, the evaluators chose to use the following:
 
