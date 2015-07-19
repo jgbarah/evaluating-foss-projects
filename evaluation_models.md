@@ -179,7 +179,7 @@ The QSOS framework offers a set of tools that help users follow the assessment p
 
 Finally, the QSOS is an open project by itself, offering support to users and acting as a repository of templates and evaluations in several languages.
 
-
+<!--
 ## SQO-OSS
 	
 SQO-OSS is a quality evaluation framework for FLOSS projects.
@@ -197,6 +197,7 @@ by QualiPSo
 
 
 ## Qualoss
+-->
 
 
 	
