@@ -54,4 +54,15 @@ In its current form, its main drawback is related to its main feature: bein spec
 
 ## Grimoire Dashboard
 
+Grimoire is a software system designed to retrieve information from software development repositories, store in a database, and then use that information for producing dashboards and other visualizations. Grimoire is FOSS, and can be adapted to many different needs, one of them being the grimoire dashboard.
+
+![Grimoire dashboard for OpenStack](grimoire-openstack.png)
+*Main page of the Grimoire dashboard for OpenStack, as of July 2015*
+
+Grimoire is capable of extracting information from many different kinds of repositories related to software development. The dashboard uses the information retrieved from them in several panels, which show activity, community data, analysis of processes, diversity reports, and other kinds of studies. 
+
+![Grimoire dashboard, panel for Wikimedia tickets](grimoire-tickets.png)
+*Tickets panel for the Grimoire Dashboard for the Wikimedia Foundation projects.*
+
+Grimoire is offered as a maintained service by Bitergia, but being FOSS it can also be deployed and customized by anyone. Currently one of its main drawbacks is that it is not easy to deploy, and that the capabilities for interacting with the data provided are limited. These problems are expected to be mitigated by the new generation of Grimoire, which is under development during Summer 2015.
 
