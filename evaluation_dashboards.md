@@ -20,7 +20,18 @@ The main interest of Open HUB is probably the huge number of projects for which 
 
 ## GitHub statistics
 
-GitHub provides some statistics for the repositories it hosts.
+GitHub provides some statistics for the repositories it hosts. Most of it is based on the activity in the git repository, although it provides some basic data about issues and pull requests as well.
+
+![GitHub dashboard for OpenStack Nova, contributors panel](github-contributors.png)
+*Contributors panel of the GitHub dashboard for OpenStack Nova, as of July 2015*
+
+Even when they don't use the term "dashboard", they provide a simple one. It includes information on contriutors and activity, with a focus on the historical evolution of contributions.
+
+![GitHub dashboard for OpenStack Nova, activity punchcard](github-punchcard.png)
+
+The dashboards provided by GitHub are intersting because, even being simple, they are available for all the repositories the site hosts. And they host most of the FOSS being developed these days. Therefore, as in the case of Open HUB, it is very likely that if you need some simple metrics for almost any project, you can find a repository in GitHub with it, and therefore a dashboard providing it.
+
+On the other hand, some of the main drawbacks are that the metrics provided are just a few, and in general simple, that they don't provided aggregated metrics, for example at the level of a whole GitHub organization, and that they are proprietary software, meaning that only they can improve their dashboard.
 
 ## Stackalytics
 
