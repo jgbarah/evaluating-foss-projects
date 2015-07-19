@@ -197,10 +197,8 @@ by QualiPSo
 
 
 ## Qualoss
--->
 
 
-	
 ## The Polarsys Maturity Model
 
 
@@ -211,4 +209,5 @@ by QualiPSo
 
 ## OpenStack Tags
 
+-->
 
