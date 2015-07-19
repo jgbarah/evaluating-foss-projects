@@ -18,6 +18,8 @@ The dashboard offers several views, each showing a different aspect of the proje
 
 The main interest of Open HUB is probably the huge number of projects for which they offer information. It is very like that if you look for any even minimally known project, Open HUB maintains a dashboard for it.
 
+The main problems with this dashboard lie on the lack of support for data sources other than the SCM, on its relative simplicity, and on the fact that being proprietary software, only they can improve and customize it.
+
 ## GitHub statistics
 
 GitHub provides some statistics for the repositories it hosts. Most of it is based on the activity in the git repository, although it provides some basic data about issues and pull requests as well.
@@ -34,6 +36,8 @@ The dashboards provided by GitHub are intersting because, even being simple, the
 On the other hand, some of the main drawbacks are that the metrics provided are just a few, and in general simple, that they don't provided aggregated metrics, for example at the level of a whole GitHub organization, and that they are proprietary software, meaning that only they can improve their dashboard.
 
 ## Stackalytics
+
+
 
 ## Grimoire Dashboard
 
