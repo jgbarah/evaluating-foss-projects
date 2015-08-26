@@ -11,7 +11,7 @@ A comparison framework for open source software evaluation methods. Open Source 
 
 <a name="bib:carbon-evaluating"></a>Carbon, R., Ciolkowski, M., Heidrich, J., John, I., and Muthig, D. Evaluating Open Source Software through Prototyping, in St.Amant, K., and Still, B. (Eds.) Handbook of Research on Open Source Software Technological, Economic, and Social Perspectives (Information Science Reference, 2007), pp. 269-281.
 
-<a name="bib:assessmen-/www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf."></a>Assessment of the degree of maturity of Open Source open source software, http//www.oitos.it/opencms/opencms/oitos/Valutazione_di_prodotti/Modello1.2.pdf.
+<a name="bib:assessmen-/www.oitos.it/opencms/opencms/oitos/valutazione_di_prodotti/modello1.2.pdf."></a>Assessment of the degree of maturity of Open Source open source software, ([PDF](http//www.oitos.it/opencms/opencms/oitos/Valutazione_di_prodotti/Modello1.2.pdf).)
 
 <a name="bib:lavazza-beyond"></a>Lavazza, L. Beyond Total Cost of Ownership Applying Balanced Scorecards to OpenSource Software. Proc. International Conference on Software Engineering Advances (ICSEA) Cap Esterel, French Riviera, France, 2007, pp. 74-74.
 
@@ -57,4 +57,4 @@ A comparison framework for open source software evaluation methods. Open Source 
 
 <a name="bib:polancic-comparative"></a>Polančič, G., Horvat, R.V., and Rozman, T. Comparative assessment of open source software using easy accessible data. Proc. 26th International Conference on Information Technology Interfaces, Cavtat, Croatia, June 7-10, 2004, pp. 673-678.
 
-<a name="bib:udas-apples"></a>Udas, K., and Feldstein, M. Apples to Apples: Guidelines for Comparative Evaluation of Proprietary and Open Educational Technology Systems. May 2006. SUNY Learning Network at the State University of New York, USA. ([PDF](http://vcampus.uom.ac.mu/vcilt/resources/ApplestoApples.pdf), visited on 2015-07-15.
+<a name="bib:udas-apples"></a>Udas, K., and Feldstein, M. Apples to Apples: Guidelines for Comparative Evaluation of Proprietary and Open Educational Technology Systems. May 2006. SUNY Learning Network at the State University of New York, USA. ([PDF](http://vcampus.uom.ac.mu/vcilt/resources/ApplestoApples.pdf), visited on 2015-07-15).
