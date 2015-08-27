@@ -7,7 +7,7 @@ When evaluating FOSS projects there are many potential sources of information, w
 * Code review systems (CRS). Used to track the code review process. They are usually modeled very similar to ITS, but specialized for code review, and in many cases integrated with SCM. Some examples are Gerrit and GitHub Pull Requests.
 * Asynchronous communication systems (ACS). The most classical ones are mailing lists and forums. But more recently others are emerging, such as question/answer systems, of which StackOverflow and Askbot are good examples. The repositories for ACSs are usually modeled as messages, grouped in threads, either implicit or explicit. Each message includes content, but also metainformation such as author, date, etc.
 * Synchronous communication systems (SCS). Some examples of them are IRC or more recently, Slack.
-* Testing and continuous integration systems (TCI). Some examples are Jenkins, Hudson and TravisCI.
+* Testing and continuous integration systems (CI). Some examples are Jenkins, Hudson and TravisCI.
 * Web sites and other repositories for content related to the project. They may include documentation, download areas with binaries ready to run, etc.
 
 All these systems usually offer means for persons to interact with them, which can be used to get a first hand impression of how the project is using them. Qualitative evaluations can benefit from this kind of browsing of information. This can be done, for example, by reading comments in commit records, messages in mailing list archives or IRC logs, or the history of tickets in ITSs.
