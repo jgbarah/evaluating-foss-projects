@@ -204,25 +204,25 @@ Mailman is a mailing list manager. You can create mailing lists, and manage them
 
 The main fields of information can be seen in this message: the subject (a summary of the message), the sender (including email address, slightly mangled), the date, and the contents. Some other headers may be available.
 
-One important detail is about the date. In most cases, this includes at least the date as stamped by the mail server (usually, Mailman itself). But it can include as well the date of the mailer program user to send the message, usually set to the local time of the sender. This means that both analysis by local time and by unversal time are possible.
+One important detail is about the date. In most cases, this includes at least the date as stamped by the mail server (usually, Mailman itself). But it can include as well the date of the mailer program user to send the message, usually set to the local time of the sender. This means that both analysis by local time and by universal time are possible.
 
-The contents of the message can be huge, since they may include attachements. Depending on the configuration, attachments may be available or not.
+The contents of the message can be huge, since they may include attachments. Depending on the configuration, attachments may be available or not.
 
 Mailman deals with the list of subscribers to the mailing list, but it doesn't track its history. Therefore, the current list of subscribers can be retrieved, but it is not possible to obtain past lists for a historical analysis.
 
-Privacy sets may interfere with mining, even for public mailing lists. For example, archives can be available only for subuscribers, or email addresses may be mangled. Both cases make mining a bit more complicated, or make some analysis imposible.
+Privacy sets may interfere with mining, even for public mailing lists. For example, archives can be available only for subscribers, or email addresses may be mangled. Both cases make mining a bit more complicated, or make some analysis impossible.
 
 A final comment: public mailing lists can always be subscribed to. This mean that a miner can subscribe, and produce an archive with all details present in incoming messages. The history before the subscription won't be available, fut from that point on, all details can be easily accessed.
 
 ### Notes on using information from ACS
 
-It was Apache the first FOSS community to explicitly state that "[If it didn't happen on a mailing list, it didn't happen](https://community.apache.org/newbiefaq.html#NewbieFAQ-IsthereaCodeofConductforApacheprojects?)". Since them, but also before them, many others have put in practice this principle, even without stating an specific policy for enforcing it. This means that mailing lists and forums are of great importance to track the coordination activities of projects, and how they discuss and take decissions.
+It was Apache the first FOSS community to explicitly state that "[If it didn't happen on a mailing list, it didn't happen](https://community.apache.org/newbiefaq.html#NewbieFAQ-IsthereaCodeofConductforApacheprojects?)". Since them, but also before them, many others have put in practice this principle, even without stating an specific policy for enforcing it. This means that mailing lists and forums are of great importance to track the coordination activities of projects, and how they discuss and take decisions.
 
 But archives for forums and mailing lists are not always available, or they are available only in part, or they are available in ways that are difficult to mine. For example, some projects don't keep archives of some periods of their history, or rely on systems that even when they perform archiving, are very mining-unfriendly. A notable case is Google Groups, which is used as the ACS by many projects. This system doesn't have an API for mining information, which means that web spidering is the only way to retrieve information. On the contrary, several mailing lists software (such as Mailman) and systems (such as GMane) have very good facilities for automatically retrieving archived information.
 
-Privacy of email addresses is a bit problem for mailing lists archivers, but also for mailing list miners. To prevent spam, may archives mangle mailing lists, in a way that it is impossible to know the actual email address of the sender of a message. This means that identification of developers cannot be done based on email addresses, as it can be done for example for git repositories. Threfore, it is not possible to know if a certain poster is the same person that authored a commit. Some types of analysis and evaluation, which rely on this identification, can therefore not be done in thoose cases. An example is the analysis of how many developers participate in a mailing list.
+Privacy of email addresses is a bit problem for mailing lists archives, but also for mailing list miners. To prevent spam, may archives mangle mailing lists, in a way that it is impossible to know the actual email address of the sender of a message. This means that identification of developers cannot be done based on email addresses, as it can be done for example for git repositories. Therefore, it is not possible to know if a certain poster is the same person that authored a commit. Some types of analysis and evaluation, which rely on this identification, can therefore not be done in those cases. An example is the analysis of how many developers participate in a mailing list.
 
-Forums have also their own problems. First of all, each forum has its own peculiarities. Some of them have APIs which make mining very simple. But some others have APIs not really desinged for mining, lacking fundamental capabilities like incremental searching of posts, which makes it complex and resource-demanding to retrieve their information. In some other cases, APIs simply don't exist, and the only way to mine messages is to get database dumps for all the infomation they store, which is obviously difficult.
+Forums have also their own problems. First of all, each forum has its own peculiarities. Some of them have APIs which make mining very simple. But some others have APIs not really designed for mining, lacking fundamental capabilities like incremental searching of posts, which makes it complex and resource-demanding to retrieve their information. In some other cases, APIs simply don't exist, and the only way to mine messages is to get database dumps for all the infomation they store, which is obviously difficult.
 
 ## Synchronous communication systems
 
@@ -234,7 +234,7 @@ The information obtained from all these systems can be organized in a similar wa
 
 ### Example of SCS: IRC log
 
-IRC channels on Freenode are one of the most popular synchronous communication channels used by FOSS projects. People participating in the channels use some software to connnect to Freenode. That software lets them see all messages posted to the channel while they are connected, and send messages as well. The software also informs about who is connected to the channel, and produces notifications when new people join or leave it.
+IRC channels on Freenode are one of the most popular synchronous communication channels used by FOSS projects. People participating in the channels use some software to connect to Freenode. That software lets them see all messages posted to the channel while they are connected, and send messages as well. The software also informs about who is connected to the channel, and produces notifications when new people join or leave it.
 
 To log all these interactions, usually IRC bots are used. Those are programs that connect to the channel, and record all interactions received from it. These bots produce files with those logs that the project uses to make conversations public, and to preserve them for the future.
 
@@ -249,24 +249,24 @@ In IRC servers, person identifiers can be reserved, so it is usual that frequent
 
 One of the main trouble with SCS systems is that it is not usually easy to track the identities of people participating in the channels. Nothing like email addresses is available. Although the regulars in the channels are usually identifiable, for most participants this is not the case.
 
-In some cases there are privacy concerns with logging SCS channels. Although they are usually public, to comply with the openess that most project mandate, they are not perceived by some developers as mailing lists are. Due to their immediacy, people may be inclined to forget that what they say is public, and may find themselves saying words that they wouldn't really say in public. When bots are used for recording, some people may be reluctant to participate, for fearing that those cases are recorded and linked with them in public. However, although these concerns exist, public channels are really public, and most projects are dealing with them exactly as they do with public mailing lists: recording, archiving, and making archives public.
+In some cases there are privacy concerns with logging SCS channels. Although they are usually public, to comply with the openness that most project mandate, they are not perceived by some developers as mailing lists are. Due to their immediacy, people may be inclined to forget that what they say is public, and may find themselves saying words that they wouldn't really say in public. When bots are used for recording, some people may be reluctant to participate, for fearing that those cases are recorded and linked with them in public. However, although these concerns exist, public channels are really public, and most projects are dealing with them exactly as they do with public mailing lists: recording, archiving, and making archives public.
 
 SCS recordings are a good data source to check for people with high involvement in the project. Being available for participating in discussions with anyone joining the channel, or answering quick questions, are signals that can be interesting to track.
 
 ## Testing and continuous integration systems
 
-During the last years more and more projects are including an infrastructure for performing automatic testing. Continuous integration, when used by projecs, usually requiere that those tests are run for each change, so that automatic tools can decide whether it is safe to integrate the change. Wne the project is using code review, automated testing is usually a part of any review cycle, to spare time to reviewers, who can focus on those changes that passed the testing process.
+During the last years more and more projects are including an infrastructure for performing automatic testing. Continuous integration, when used by projects, usually require that those tests are run for each change, so that automatic tools can decide whether it is safe to integrate the change. When the project is using code review, automated testing is usually a part of any review cycle, to spare time to reviewers, who can focus on those changes that passed the testing process.
 
 Some of the most used systems for continuous integration in FOSS projects are Jenkins / Hudson and Travis.
 
 ## Impact on the infrastructure of the projects
 
-Mining may have a significant impact on the performance of the infrastructure of the project. In fact, some mining activities can be indentified by the sysadmins for that infrastructure as a kind of DoS (denial of service) attack. But even when they are not, those activities can cause a log of stress in the project infrastructure. For example, retrieving all information from the ITS, means querying it for all tickets, and the for each ticket obtain all changes and comments. This is not only a significant effort for the ITS, but also an effort for which it was not really desingned.
+Mining may have a significant impact on the performance of the infrastructure of the project. In fact, some mining activities can be identified by the sysadmins for that infrastructure as a kind of DoS (denial of service) attack. But even when they are not, those activities can cause a log of stress in the project infrastructure. For example, retrieving all information from the ITS, means querying it for all tickets, and the for each ticket obtain all changes and comments. This is not only a significant effort for the ITS, but also an effort for which it was not really designed.
 
-ITS should provide quickly listings of open tickets, or recent tickets asigned to some developers, or the most recent status for a certain ticket. But the actions performed by programs retrieving information for mining are very different from this "usual behaviour".
+ITS should provide quickly listings of open tickets, or recent tickets assigned to some developers, or the most recent status for a certain ticket. But the actions performed by programs retrieving information for mining are very different from this "usual behavior".
 
 There are some practices that should be followed to ensure that impact on the project infrastructure is minimum:
 
 * Design the retrieving tools as much repository-friendly as possible. For example, use delays between operations, so that the system is not "hijacked" by the program, letting users perform their tasks
-* Contact the project for advice in case it is anticipated that the infrastructure is going to be stressed. Project sysdamins can help to design retriving scenarios that cause as little harm as possible.
+* Contact the project for advice in case it is anticipated that the infrastructure is going to be stressed. Project sysdamins can help to design retrieving scenarios that cause as little harm as possible.
 * Whenever possible, use archives with previously retrieved information. In this case, the information is retrieved only once, but can be later consumed for many different studies by different parties. If the information is reliable enough, there is no need to stress the infrastructure once and again. In addition, you don't have to retrieve the information yourself, and can concentrate in designing and performing your analysis.
