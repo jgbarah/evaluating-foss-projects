@@ -1,6 +1,19 @@
-Notes to be merged in the book at some time.
+= Notes to be merged in the book at some time.
 
-Complete table of evaluation models, with references. For now, we don't include references in the book.
+== Data by James Falkner, Liferay, about developer motivation
+
+
+Blog: http://www.liferay.com/web/james.falkner/blog/-/blogs/what-do-you-think-
+
+Slideshare of complete results: http://www.slideshare.net/mobile/schtool/liferay-2012-community-survey-summary
+
+
+== Scancode: license scannner
+
+https://github.com/nexB/scancode-toolkit/releases
+
+
+== Complete table of evaluation models, with references. For now, we don't include references in the book.
 
 | Name     | Year |  Orig | Method | Source |
 | -------- |:----:|:-----:|:------:| ------:|
