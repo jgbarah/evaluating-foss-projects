@@ -1,4 +1,4 @@
-# Before evaluating
+# Before Evaluating
 
 In this chapter we deal with some preliminary issues, then describe how to evaluate specific aspects of FOSS products and projects.
 
@@ -8,7 +8,8 @@ Most evaluation methods follow the following steps:
 
 * Conduct market research to decide which products or projects to evaluate.
 * Define the evaluation criteria.
-* Perform the actual evaluation, producing the evaluation results.
+* Perform the actual evaluation
+* Produce the evaluation results.
 
 You can perform the first two in any order. Both lead to the actual evaluation. In some cases, the process is iterative:
 
