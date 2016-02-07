@@ -1,48 +1,46 @@
 # Before evaluating
 
-In this chapter we deal with some preliminary issues, before describing how the evaluation of specific aspects of FOSS products and projects can be done.
+In this chapter we deal with some preliminary issues, then describe how to evaluate specific aspects of FOSS products and projects.
 
 ## Steps in evaluation
 
 Most evaluation methods follow the following steps:
 
-* Conduct a market research, to decide the subjects (products or projects) to evaluate.
+* Conduct market research to decide which products or projects to evaluate.
 * Define the evaluation criteria.
 * Perform the actual evaluation, producing the evaluation results.
 
-The first two can be preformed in any order, and both lead to the actual evaluation. In some cases, the process is iterative:
+You can perform the first two in any order. Both lead to the actual evaluation. In some cases, the process is iterative:
 
-* some subjects are selected, and evaluated according to certain criteria
-* based on the results, the criteria are refined, and the list of subjects redefined
-* a new evaluation is performed, which leads to more precise criteria and subjects, until enough data for a final decision is obtained
+* you select some subjects and evaluate them according to certain criteria
+* based on the results, you refine the criteria and redefine the list of subjects
+* you perform a new evaluation, which leads to more precise criteria and subjects, until you obtain enough data for a final decision
 
 ### Market research
 
-Before starting the actual evaluation, the set of subjects to evaluate must be defined. For that, an extensive research for potential subjects is needed. But this research is not only a matter of finding all options. It would be desiderable to find all the products or projects that could have the slightest possibility of being the most appropriate ones, but that is usually impractical. A more cost-effective approach is to perform an extensive market research, but then follow some criteria to produce a short list for evaluation.
+Before starting the actual evaluation, define the set of subjects to evaluate. This calls for extensive research on the potential subjects. This research is not only a matter of identifying all your options. It would desirable to find all the products or projects that could be the most appropriate, but this is usually impractical. A more cost-effective approach is to perform extensive market research, then follow some criteria to produce a short list for evaluation.
 
-Depending on the resources available for the evaluation, on how expensive that evaluation will be per subject, and on the expected benefits, the size of the this list can be shorter or longer.
+The length of this list will depend on the resources available for the evaluation, the cost per subject of that evaluation, and the expected benefits.
 
-In some cases the subjects are already decided beforehand, and this step is skipped. This happens, for example, when a community decides to evaluate itself, or when a company wants to evaluate the products on which they relay for a service they provide.
+In some cases the subjects are already decided beforehand, and you can skip this step. This happens, for example, when a community decides to evaluate itself, or when a company wants to evaluate the products they rely upon to deliver services.
 
 ### Defining evaluation criteria
 
-The evaluation criteria will determine the information to be obtained after the evaluation process. It is important to fit those criteria to the objectives of the evaluation. It is quite different, for example, to evaluate some products with the aim of selecting the most mature one, than the one with most perspectives of being improved for a long period.
+The evaluation criteria will determine the information to be obtained after the evaluation process. It is important to tie those criteria to the evaluation's objectives. Make this relationship explicit. One way is to start out by clearly stating the objectives; map them to specific characteristics of the evaluation subject; and, finally, define a procedure to evaluate those characteristics. Evaluating some products in order to select the most mature one is different from choosing the product that has improved most over a long period.
 
-Therefore, the evaluation criteria are tightly tied to the objectives of the evaluation, and it is necessary to make this relationship explicit. One way is to start by clearly stating the objectives, then map them to specific characteristics of the subject to evaluate, and finally define a procedure to evaluate those characteristics.
+Mapping objectives to characteristics is not easy, because it is not always obvious which characteristics will have a greater impact on the objectives. For example, if the objective is to select a project whose community is easy to join, which characteristics would you evaluate? The length of time it takes for newcomers to reach the core development team, perhaps? The number of contributions already performed by newcomers? The details of formal policies encouraging newcomer participation? The friendliness of conversations in mailing lists and forums in which newcomers participate?
 
-The mapping of objectives to characteristics is not easy, since it is not always obvious which characteristics will have a greater impact on the objectives. For example, if the objective is to select a project with a community easy to join, which characteristics would be evaluated? Maybe how long does it to newcomers to reach the core development team? Maybe how many contributions were performed by newcomers in the past? Maybe the details of formal policies encouraging the participation of newcomers? Or maybe the friendliness of conversations in mailing lists and forums in which newcomers participate?
+To map objectives to characteristics, you need to use a model of how the latter led to the former. Models can range from informal, simple, andrule-of-thumb to formal, theory-backed, and empirically-tested ones. In any case, expertise on how characteristics of projects and products may influence the objectives is essential.
 
-It is clear how for making this mapping of objectives to characteristics, we needed a model of how the latter lead to the former. Those can range from informal, simple, rule of thumb models, to formal, theory-backed, and empirically-tested ones. In any case, we need some expertise on how characteristics of projects and products may influence the objectives.
+Defining procedures for evaluating characteristics can also be tricky. You need to know what can be evaluated, and how you can apply that knowledge to the characteristics of interest.
 
-The definition of procedures to evaluate the characteristics can also be tricky. You need to know what can be evaluated, and how you can apply that knowledge to the characteristics of interest.
+It's uncommon to find an exact evaluation of your characteristic of choice. For example, how can you characterize expertise in a development community? At least two dimensions are involved: the expertise of individuals, and how that expertise permeates the community so that newcomers can capitalize upon it. Both dimensions are difficult to evaluate. You usually need to relay on proxies, such as the average length of time developers remain in the community, and how experienced people collaborate with newcomers to solve issues and make decisions.
 
-It is very rare that you just find the exact evaluation for your characteristic of choice. For example, how could you characterize expertise in a development community? At least two dimensions are involved: the individual expertise of individuals, and how that expertise permeates the community to be useful to newcomers. But both dimensions are difficult to evaluate, and you usually need to relay on proxies, such as how long have developers stayed in the community, and how experienced people collaborate with newcomers to solve issues and take decisions.
+For all these reasons, it's hard to start from scratch when evaluating. It is much better to find an evaluation model that fits our needs, and just map it to our specific objectives. A large part of this text will describe some existing models that you will hopefully find useful.
 
-Because of all these reasons, it is a hard job to start from scratch when evaluating. It is much better if we can find an evaluation model that fits our needs, and we just map it to our specific objectives. A large part of this text will describe some existing models that you could find useful.
+In addition, it is convenient to explain how these models can be produced in systematic way. For that we will introduce the goal-question-metric (GQM) method in a [later section](#sec:gqm). It will serve both as an illustration of how models can be produced, and as a tool to produce new models. You can use GQM not only to derive your own models, if you have the expertise and resources, but also to adapt existing ones to your specific environment. 
 
-In addition, it is convenient to explain how these models can be produced in systematic way. For that we will introduce the goal-question-metric (GQM) method in a [later section](#sec:gqm). It will serve both as an illustration of how models can be produced, and as a tool to produce new models, if you need that. But you can use GQM not only to derive your own models, if you have the expertise and resources for that, but also to adapt existing ones to your specific environment. 
-
-### Performing evaluation
+### Performing an evaluation
 
 Once the characteristics to evaluate are clear, and the methods to evaluate them too, you can start the actual evaluation. Depending on how you defined the evaluation methods, several actions may be performed, such as:
 
