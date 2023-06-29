@@ -37,7 +37,7 @@ Of all these models, we have selected some that we describe in some more detail 
 
 ## OpenBRR
 
-The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) [The OpenBRR white paper](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4343). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
+The OpenBRR (Open Business Readiness Rating) is an evaluation method proposed in 2005 and sponsored most notably by Carnegie Mellon and some industrial partners (CodeZoo, SpikeSource and Intel) [The OpenBRR white paper](https://gsyc.urjc.es//~grex/evaluating/OpenBRR_Whitepaper.pdf). The goal of this method is to provide an objective manner to assess community-driven projects, offering a final quantitative mark that is intended to provide a measure of its readiness to be deployed in a business environment.
 
 Following figure provides an overview of the how OpenBRR should be applied. As can be seen, OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator to adapt the assessment to the specific needs of the organization that wants to deploy the
 software under study-
@@ -61,7 +61,7 @@ OpenBRR is based on gathering metrics and factual data on up to following ten ca
 
 For each category, a set of criteria and metrics are proposed. These inputs are then weighted and each of the above introduced categories are given a rating that ranges from 1 to 5. Then, depending on the final usage the software will be given, adopters may weight these categories, obtaining an overall rating of the project. Hence, not all categories are weighted equally, and for some scenarios a category may not be considered at all for the final rating (in that case, its weight factor would be 0%).
 
-To help in the assessment, OpenBRR offers a [spreadsheet template](http://docencia.etsit.urjc.es/moodle/mod/resource/view.php?id=4350) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
+To help in the assessment, OpenBRR offers a [spreadsheet template](https://gsyc.urjc.es//~grex/evaluating/BRR_TEMPLATE_2005RFC1.ods) that can be used in the evaluation process. Many of the input data in this model are to be obtained by external tools or from the Internet. As an example, the quality category considers the following inputs:
 
 * Number of minor releases in past 12 months
 * Number of point/patch releases in past 12 months
@@ -74,7 +74,7 @@ These inputs are rated as well from 1 to 5, and the evaluator may then weight th
 
 [Udas et al.](#bib:udas-apples) discuss in a report how to apply OpenBRR in real environments based on their experience in the evaluation of Learning Management Systems. The 31 page report is very exhaustive and provides some general guidelines to be followed when using OpenBRR. It also gives an idea of how difficult and time-consuming it is.
 
-The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known assessed Moodle and Sakai, two well-known learning management systems that were widely used in industry and academic institutions. As they introduce the OpenBRR assessment process very well, we will show them here in detail. You can browse the [OpenBRR spreadsheet for Moodle](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc) and the [OpenBRR spreadsheet for Sakai](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc) for more details.
+The OpenBRR website provided a set of examples of use of the evaluation model. Of these, the most known ones were Moodle and Sakai, two well-known learning management systems that were widely used in industry and academic institutions. As they introduce the OpenBRR assessment process very well, we will show them here in detail. You can browse the OpenBRR spreadsheets for [Moodle](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Moodle.sxc) and [Sakai](http://gsyc.es/~grex/evaluating/BRR_Worksheet_25Jul05_Sakai.sxc), as offered by the OpenBRR proponents in 2005, for more details.
 
 The first step in the process is to select and weigh the criteria to be use in the evaluation process. In the case of Moodle and Sakai, the evaluators chose to use the following:
 
@@ -130,6 +130,8 @@ each of the categories.
 | 4  | Community |              4.2 |              3.2 |    12% |           0.5   |    0.38  |   
 | 12 | Professionalism |          0 |                0 |     0% |           0     |    0     |   
 
+
+For more examples, see the evaluations of [OpenSTA](https://gsyc.urjc.es//~grex/evaluating/BRR_Worksheet_27Sept05_OpenSTA.ods), [WebGUI](https://gsyc.urjc.es//~grex/evaluating/BRR_Worksheet_24Jul05_WebGUI.ods), [Mambo](https://gsyc.urjc.es//~grex/evaluating/BRR_Worksheet_24Jul05_Mambo.ods), [Struts](https://gsyc.urjc.es//~grex/evaluating/BRR_Worksheet_21Sept05_Struts.ods) and [JBoss](https://gsyc.urjc.es//~grex/evaluating/BRR_Worksheet_23Aug05_JBoss.ods).
 
 Although OpenBRR is one of the most known assessment models, it has not achieved to create a thriving community and currently it seems to have come to a halt.
 
